@@ -1,0 +1,77 @@
+{
+  "children": [
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Blorpy zibber wocka flember snorp!",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "type": "https://spec.nldoc.nl/Resource/FootnoteReference",
+          "id": "bca2192f-cbe4-4091-9be1-3023ce655680",
+          "descriptors": [],
+          "resource_id": "de095dcb-1441-467b-a80a-4ad684cb4a16"
+        },
+        {
+          "type": "https://spec.nldoc.nl/Resource/FootnoteReference",
+          "id": "50f70bf2-9363-4568-a9cd-f3c491970337",
+          "descriptors": [],
+          "resource_id": "8cfc9b0b-01a2-4cba-80bd-292ded5797d2"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    }
+  ],
+  "footnotes": [
+    {
+      "type": "https://spec.nldoc.nl/Resource/Footnote",
+      "id": "8cfc9b0b-01a2-4cba-80bd-292ded5797d2",
+      "descriptors": [],
+      "children": [
+        {
+          "type": "https://spec.nldoc.nl/Resource/Paragraph",
+          "id": "f6739602-e2da-417e-83f0-38c361d8a8b0",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/Text",
+              "id": "e53b053a-a8f0-437c-9523-e4f2334f1e12",
+              "descriptors": [],
+              "text": "Referenced footnote 2",
+              "styling": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "https://spec.nldoc.nl/Resource/Footnote",
+      "id": "de095dcb-1441-467b-a80a-4ad684cb4a16",
+      "descriptors": [],
+      "children": [
+        {
+          "type": "https://spec.nldoc.nl/Resource/Paragraph",
+          "id": "6fc6df91-fd93-46fb-8782-08289bd93a1e",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/Text",
+              "id": "e7c7e934-c1c8-4dcd-930b-9e2c52d125de",
+              "descriptors": [],
+              "text": "Referenced footnote 1",
+              "styling": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "descriptors": [],
+  "id": "00000000-0000-0000-0000-000000000000",
+  "type": "https://spec.nldoc.nl/Resource/Document"
+}

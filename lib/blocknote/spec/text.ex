@@ -10,6 +10,6 @@ defmodule BlockNote.Spec.Text do
   typedstruct enforce: true do
     field :type, :text, default: :text
     field :text, String.t()
-    field :styles, Styles.t(), default: %Styles{}
+    field :styles, Styles.t(), default: %{}
   end
 end

@@ -85,15 +85,15 @@ defmodule DocSpec.Writer.BlockNote do
   defp convert_styling(styles) do
     Enum.reduce(
       styles,
-      %BlockNote.Spec.Text.Styles{},
+      %{},
       fn
-        :bold, styling = %BlockNote.Spec.Text.Styles{} ->
-          %BlockNote.Spec.Text.Styles{styling | bold: true}
+        :bold, styling = %{} ->
+          Map.put(styling, :bold, true)
 
-        :italic, styling = %BlockNote.Spec.Text.Styles{} ->
-          %BlockNote.Spec.Text.Styles{styling | italic: true}
+        :italic, styling = %{} ->
+          Map.put(styling, :italic, true)
 
-        _, styling = %BlockNote.Spec.Text.Styles{} ->
+        _, styling = %{} ->
           styling
       end
     )

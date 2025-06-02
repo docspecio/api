@@ -1,0 +1,1513 @@
+{
+  "children": [
+    {
+      "caption": [],
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [],
+                      "text": "Instruction for preparation of papers for Pollack Periodica",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    }
+                  ],
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "level": 1,
+                  "type": "https://spec.nldoc.nl/Resource/Heading"
+                },
+                {
+                  "children": [
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [
+                        "bold",
+                        "superscript"
+                      ],
+                      "text": "1 ",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    },
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [
+                        "bold"
+                      ],
+                      "text": "Peter Ivanyi*, ",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    },
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [
+                        "bold",
+                        "superscript"
+                      ],
+                      "text": "2 ",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    },
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [
+                        "bold"
+                      ],
+                      "text": "Amalia Ivanyi",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    }
+                  ],
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph"
+                },
+                {
+                  "children": [
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [
+                        "superscript"
+                      ],
+                      "text": "1 ",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    },
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [],
+                      "text": "Department of Systems and Software Technologies, Faculty of Engineering and Information Technology, University of Pécs, Boszorkány u. 2, H-7624 Pécs, Hungary",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    },
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [
+                        "superscript"
+                      ],
+                      "text": "2 ",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    },
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [],
+                      "text": "Department of Technical Informatics, Faculty of Engineering and Information Technology, University of Pécs, Rókus u. 2, H-7624 Pécs, Hungary ",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    }
+                  ],
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph"
+                },
+                {
+                  "children": [
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [],
+                      "text": "Received day Month year; revised day Month year; accepted day Month year",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    }
+                  ],
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph"
+                },
+                {
+                  "children": [
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [],
+                      "text": "Article type (Original Research Paper)",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    }
+                  ],
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph"
+                },
+                {
+                  "children": [
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [],
+                      "text": "Open Access type (CC-BY-NC 4.0, CC-BY 4.0_SID_1, CC-BY 4.0)",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    }
+                  ],
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph"
+                },
+                {
+                  "children": [
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [],
+                      "text": "Copyright: ",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    },
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [
+                        "bold"
+                      ],
+                      "text": "Publisher",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    },
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [],
+                      "text": " or ",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    },
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [
+                        "bold"
+                      ],
+                      "text": "Open Access",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    },
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [],
+                      "text": " (type CC-BY-NC 4.0, CC-BY 4.0_SID_1, CC-BY 4.0)",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    }
+                  ],
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph"
+                },
+                {
+                  "children": [
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [],
+                      "text": "* Corresponding author, e-mail: peter@mik.pte.hu",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    }
+                  ],
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph"
+                },
+                {
+                  "children": [
+                    {
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "styling": [],
+                      "text": "© [year] Akadémiai Kiadó, Budapest/The Author(s)",
+                      "type": "https://spec.nldoc.nl/Resource/Text"
+                    }
+                  ],
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph"
+                }
+              ],
+              "colspan": 1,
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "rowspan": 1,
+              "type": "https://spec.nldoc.nl/Resource/TableCell"
+            }
+          ],
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/TableRow"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Table"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Manuscripts are accepted on the basis of scientific significance and suitability for publication on the understanding that they have not been published, submitted, or accepted for publication elsewhere. Only original research papers are processed. No review papers or short communications are accepted. The submitted papers are checked for plagiarism by the iThenticate program package. The papers having high coincidence with published materials are rejected. Acceptance depends on the opinion of one or more referees and the decision of the Editorial Board. Papers accepted for publication are subject to editorial revision. A copy of the License Agreement will be sent to the authors of papers accepted for publication. Manuscripts will be published only after receiving the signed copy of the agreement.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "1. Important ethical rule for manuscript submission",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Submission of a manuscript implies: that the work described has not been published before; that it is not under consideration for publication anywhere else; that its publication has been approved by all co-authors, if any, as well as by the responsible authorities – tacitly or explicitly – at the institute where the work has been carried out. The publisher will not be held legally responsible should there be any claims for compensation.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "1.1. Permissions",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Plagiarism, or copying text or results from other sources is unethical behavior and is not tolerated.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Authors wishing to include figures, tables, or text passages that have already been published elsewhere are required to obtain permission from the copyright owner(s) for both the print and online format and to include evidence that the permission has been granted when submitting their papers. Material available under a creative commons license must be republished in accordance with the terms of that CC license. Any material received without the aforementioned evidence or a CC license will be assumed to originate from the authors.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "2. Manuscript submission",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "2.1. Manuscript style",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Authors should submit their manuscripts online, via ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "https://submit.akademiai.com/pollack",
+          "type": "https://spec.nldoc.nl/Resource/Link",
+          "uri": "https://submit.akademiai.com/pollack"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": ". To submit, first register on the website and then proceed with the upload.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "All further processing, reviewing, commenting on the paper will be evaluated via this website.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Manuscripts should be written in clear, concise, and grammatically correct US English (usage of UK English is not accepted, especially a mixture of the two).The text of the manuscript should be written in a MS Word file using Times New Roman font of 10 pt size. They should be typed single-spaced with wide margins in Microsoft Word, the total length of the paper should not exceed 30 000 characters including spaces, illustrations, figures, tables (should not exceed page numbers 10 in this template format).",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Divide the manuscript into clearly defined sections. Subsections may be used in the Materials and methods and Results sections. Each heading should appear in a separate line. Short communications will not be accepted. ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "3. Form of manuscript",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "3.1. Title",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "The title (with lower-case letters) should be a brief, clear and concise statement of the contents and it should not exceed 70 characters including spaces. Titles are important since they are often used in information-retrieval systems. Avoid abbreviations and formulae in the title.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "The title is followed by the authors’ full first name and surname and the name of the institution(s) along with the city and the country where the work was done. Corresponding author is marked with an ‘*’. The e-mail address of the corresponding author must also be given in the first page.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "3.2. Abstract",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "The abstract should not exceed 800 character including spaces and should state briefly the purpose of the research, the principal results and major conclusions. An abstract is often presented separately from the article, so it must be able to stand alone. For this reason, references and abbreviations should be avoided. Redundant phrases, generally known information and repetition should be avoided.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Authors should avoid the use of personal pronouns within the abstract and body of the paper (e.g. ‘this paper investigates...’ is correct; ‘I have investigated ...’ is incorrect).",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "3.3. Keywords",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "5–6 keywords should also be supplied. No abbreviations should be used in the abstract and keywords. The keywords will be used for indexing purposes.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "3.4. Introduction",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "This part should briefly state the nature and purpose of the work and cite recent important works by others. ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "3.5. Materials and methods",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Describe the applied methods, experiments and procedures in sufficient detail to allow other authors to reproduce the result. This part may have subheadings.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "3.6. Results and discussion",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "The theoretical and experimental data should be presented clearly and concisely. Avoid repeating information presented in tables and figures. ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "3.7. Conclusion ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Conclusion should be focused on the interpretation of the new scientific results. Do not repeat literary data presented in the Introduction or information given in the Results section. Summarize the new scientific results of the paper. In the conclusion citation of references, figures, and tables should be avoided.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "3.8. Acknowledgements",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Acknowledgements of grants and technical help are allowed and should clearly declare all support of organizations or people.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "3.9. References",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Cite only essential references, however, all references mentioned in the Reference list must be cited in the text, and vice versa. The format of referencing and the Reference List must follow the IEEE Reference Guide: https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "For example: references should be numbered in the order of their citation. When a reference is cited in the text, the number of the reference should appear in square brackets with or without the authors’ name e.g. Eden and Hansson [1], Frankel [2], Gelbart et al. [3] or simply [1], [2].",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "The reference list at the end of the paper should contain:",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [
+                    "italic"
+                  ],
+                  "text": "Citation of Internet page",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                },
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [],
+                  "text": ": Title of the page, [Online]. Available: web address, ‘(last accessed day Month year)’.",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                }
+              ],
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "https://spec.nldoc.nl/Resource/Paragraph"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/ListItem"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [
+                    "italic"
+                  ],
+                  "text": "Citation of patent",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                },
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [],
+                  "text": ": Patent number, Title of the patent, names and initials of all owners, year.",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                }
+              ],
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "https://spec.nldoc.nl/Resource/Paragraph"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/ListItem"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [
+                    "italic"
+                  ],
+                  "text": "Citation of standard",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                },
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [],
+                  "text": ": Standard number, Title of the standard, emitter, year.",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                }
+              ],
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "https://spec.nldoc.nl/Resource/Paragraph"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/ListItem"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [],
+                  "text": "C",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                },
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [
+                    "italic"
+                  ],
+                  "text": "itation of conference paper",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                },
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [],
+                  "text": ": names and initials of all authors, Title of the paper, Title of the Conference, City, Country, day-day Month year, page numbers and year of publication.",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                }
+              ],
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "https://spec.nldoc.nl/Resource/Paragraph"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/ListItem"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [
+                    "italic"
+                  ],
+                  "text": "Citation for book chapters",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                },
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [],
+                  "text": ": names and initials of all authors, Title of chapter in lower case letters, in: names and initials of all editors, Title of book, Publisher, place of publication, page numbers and year of publication.",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                }
+              ],
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "https://spec.nldoc.nl/Resource/Paragraph"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/ListItem"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [
+                    "italic"
+                  ],
+                  "text": "Citation for books",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                },
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [],
+                  "text": ": names and initials of all authors/editors, Title of the book in lower case letters, Publisher (place of publication), year of publication.",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                }
+              ],
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "https://spec.nldoc.nl/Resource/Paragraph"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/ListItem"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [
+                    "italic"
+                  ],
+                  "text": "Citation for journals:",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                },
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [],
+                  "text": " names and initials of all authors, Title of the article in lower case letters, Journal title, volume, number, page numbers and year.",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                }
+              ],
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "https://spec.nldoc.nl/Resource/Paragraph"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/ListItem"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "styleType": "disc",
+      "type": "https://spec.nldoc.nl/Resource/UnorderedList"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [
+            "italic"
+          ],
+          "text": "Examples:",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "E. Skoplaki J. A. Palyvos, “Operating temperature of photovoltaic modules: A survey of pertinent correlations,” ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [
+            "italic"
+          ],
+          "text": "Renewable Energy",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": ", vol. 34, no. 1, pp. 23–29, 2009.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "O. Dupré, R. Vaillon, and M. A. Green, ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [
+            "italic"
+          ],
+          "text": "Thermal Behavior of Photovoltaic Devices",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": ". (Location]: Springer, 2017.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "J. A. Menéndez-Díaz, I. Martín-Gullón, “Types of carbon adsorbents and their production”, in: ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [
+            "italic"
+          ],
+          "text": "Activated Carbon Surfaces in Environmental Remediation ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "(Ser. Interface Science and Technology, vol. 7), T. J. Bandosz, Ed, . (Location]: Elsevier, 2006, pp. 1‒47.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "B. Plesz, J. Mizsei, “Influence of the photoactive layer thickness on the device parameters and their temperature dependence in thin crystalline silicon photovoltaic devices,” in ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [
+            "italic"
+          ],
+          "text": "22nd International Workshop on Thermal Investigations of ICs and Systems",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": ", Budapest, Hungary, 21-23 September 2016, pp. 311‒314.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [
+            "italic"
+          ],
+          "text": "EN 1993-1-5, Eurocode 3",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": ", Design of steel structures, Part 1-5: Plated structural elements, CEN, Bruxelles, 2006.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [
+            "italic"
+          ],
+          "text": "Pesticide ingredients",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": ", National pesticide information center, 2019. [Online]. Available:  http://npic.orst.edu/ ingred (last accessed 1 December 2019).",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "4. Additional guide",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "4.1. Equations",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Equations should be written with the built in equation editor of Microsoft Word and numbered in parenthesis. Equations should be numbered in the order of their appearance and referred in the text as (xx).",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "4.2. Tables",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "They should be inserted in the text and should also be added on separate sheets at the end of the paper and have a concise heading. Tables should be submitted as an editable text not as images. Tables are to be numbered consecutively using Arabic numbers. All tables should be referred in the text, in consecutive order. ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "4.3. Illustrations",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Photographs should be submitted electronically in TIF, BMP or JPG format in separate files (at least 600 dpi). ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "4.4. Figures",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "It is important to send figures either in the original file format in which they were prepared (e.g. *.xlsx), or in image formats (BMP, TIFF or JPG; in at least 600 DPI). They should be inserted in the text and should also be added on separate sheets at the end of the paper and have a concise caption. This ensures that the figures are editable by the editorial staff. Statements on magnification are not acceptable. Histograms should be kept simple, be two-dimensional, have no background grid, and tones and colors should be avoided. Please submit images with the maximum size 8 cm width and ensure that all captions on the figures are easy to read. Color figures submitted by the authors will appear in color on the web; however, only black-and white version is printed. ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "The figures are to be numbered sequentially by Arabic numbers in the order of citation. The list of Figure captions should be provided on a separate sheet at the end of the manuscript file. All figures should be referred in the text.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "4.5. Abbreviations and symbols",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Quantities should be expressed in the metric system or in SI units. Units should be written in Roman, not italic. All abbreviations should be spelled out when first used in the text. Please avoid unusual symbols. Ensure consistency of abbreviations throughout the article.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "4.6. Proofs ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Corresponding authors will receive an email from ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "akjournals@tnq.co.in",
+          "type": "https://spec.nldoc.nl/Resource/Link",
+          "uri": "mailto:akjournals@tnq.co.in"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": " with a URL link to their proof in editable HTML format, with PDF view also available to check for formatting. Authors are requested to return the proof corrections within the specified period, indicating the necessary changes. Any queries by the editor should be answered in full",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "5. Review process",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "A paper is published if none of the double blind reviews recommends rejection. The two reviewers are selected from among those suggested by the authors, from the members of the Editorial Board and from the members of the International Scientific Community in the field of the paper. Officially the review process lasts four weeks, however, in cases it may take longer.  ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "6. Self-archiving, offprints and PDF files",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "The Author is entitled to self-archive the postprint version of their manuscript. The postprint version is the Author’s manuscript or the Author’s manuscript along with the corrections made in the course of the peer review process. The Author’s right to self-archive is irrespective of the format of the postprint (*.doc, *.pdf) version and self-archiving includes the free circulation of this file via e-mail or publication of this postprint on the Author’s webpage or on the Author’s institutional repository with open or restricted access. When self-archiving a paper the Author should clearly declare that the archived file is not the final published version of the paper, they should quote the correct citation and enclose a link to the published paper (https:// doi.org/[DOI of the Article without brackets]). ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "7. Open Access",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Akadémiai Kiadó provides a possibility to publish Open Access articles in its subscription based journals. It is an option for the author to pay the Article Processing Charge and have the final full text version of their article published as an Open Access one.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Beside new manuscripts, Optional Open Access can work with papers already published. Authors can ask for opening their archive article if they pay the article processing charge.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "The peer review process and the quality requirements are the same in the case of both traditional and Open Access manuscripts. ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "For the price list of Open Access journals please visit https://akjournals.com/fileasset/kiado/OA_%C3%A1rak/APC_EUR.pdf",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Akadémiai Kiadó offers discounts for Hungarian authors, institutions of low- and middle-income countries and Editorial Board members. Discounts may not be combined. By signing the Open Access License Agreement and paying the APC, the Author retains the ownership and further rights related to the Article while ensuring the wide accessibility of the Article in the written and electronic media controlled by Akadémiai Kiadó.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    }
+  ],
+  "descriptors": [
+    {
+      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+      "uri": "http://purl.org/dc/elements/1.1/creator",
+      "value": "ivanyi"
+    },
+    {
+      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+      "uri": "http://purl.org/dc/elements/1.1/title",
+      "value": "Instructions"
+    }
+  ],
+  "id": "00000000-0000-0000-0000-000000000000",
+  "type": "https://spec.nldoc.nl/Resource/Document"
+}

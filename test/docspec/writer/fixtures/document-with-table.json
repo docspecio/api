@@ -1,0 +1,153 @@
+{
+  "type": "https://spec.nldoc.nl/Resource/Document",
+  "id": "d34494bc-9988-4537-be3b-5a12b421f917",
+  "descriptors": [],
+  "children": [
+    {
+      "type": "https://spec.nldoc.nl/Resource/Table",
+      "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
+      "descriptors": [],
+      "caption": [],
+      "children": [
+        {
+          "type": "https://spec.nldoc.nl/Resource/TableRow",
+          "id": "a6724161-9c91-4bab-ab30-b79bed961a39",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/TableHeader",
+              "id": "85c70cc0-76a7-48d3-a860-f94e48e1b918",
+              "descriptors": [],
+              "rowspan": 5,
+              "colspan": 5,
+              "abbreviation": "Torikinosi",
+              "scope": "column",
+              "children": [
+                {
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph",
+                  "id": "61abbbe2-7b40-4b9f-be64-407f4a139125",
+                  "descriptors": [],
+                  "children": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/Text",
+                      "id": "6dacd553-d8ce-4eec-9383-001887cb3be8",
+                      "descriptors": [],
+                      "text": "500",
+                      "styling": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "https://spec.nldoc.nl/Resource/TableRow",
+          "id": "3c3d2122-699d-4448-9768-b894ec3d035b",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/TableHeader",
+              "id": "4d88e9e3-1294-439a-bb67-67a069d164a5",
+              "descriptors": [],
+              "rowspan": 3,
+              "colspan": 111,
+              "abbreviation": "     ",
+              "scope": "row",
+              "children": []
+            },
+            {
+              "type": "https://spec.nldoc.nl/Resource/TableCell",
+              "id": "c3f0fefd-eeb6-40f7-8b77-7aca00a2676a",
+              "descriptors": [],
+              "rowspan": 3,
+              "children": [
+                {
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph",
+                  "id": "9ba07dff-12e6-4ed3-8121-3232d33924bd",
+                  "descriptors": [],
+                  "children": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/Text",
+                      "id": "ce1836b3-db44-4a62-b94d-a2f207da3843",
+                      "descriptors": [],
+                      "text": "100",
+                      "styling": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "https://spec.nldoc.nl/Resource/TableCell",
+              "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
+              "descriptors": [],
+              "rowspan": 1,
+              "colspan": 1,
+              "children": [
+                {
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph",
+                  "id": "2b65835c-af7a-4f90-9042-7f391a4bfb7f",
+                  "descriptors": [],
+                  "children": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/Text",
+                      "id": "471e9382-a5cf-4378-907c-064750de6e78",
+                      "descriptors": [],
+                      "text": "400",
+                      "styling": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "https://spec.nldoc.nl/Resource/TableCell",
+              "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
+              "descriptors": [],
+              "children": [
+                {
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph",
+                  "id": "2b65835c-af7a-4f90-9042-7f391a4bfb7f",
+                  "descriptors": [],
+                  "children": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/Text",
+                      "id": "471e9382-a5cf-4378-907c-064750de6e78",
+                      "descriptors": [],
+                      "text": "400",
+                      "styling": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "https://spec.nldoc.nl/Resource/TableCell",
+              "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
+              "descriptors": [],
+              "rowspan": 9999,
+              "colspan": 999,
+              "children": [
+                {
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph",
+                  "id": "2b65835c-af7a-4f90-9042-7f391a4bfb7f",
+                  "descriptors": [],
+                  "children": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/Text",
+                      "id": "471e9382-a5cf-4378-907c-064750de6e78",
+                      "descriptors": [],
+                      "text": "400",
+                      "styling": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

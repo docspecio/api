@@ -1,0 +1,42 @@
+{
+  "children": [
+    {
+      "type": "https://spec.nldoc.nl/Resource/Table",
+      "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
+      "descriptors": [],
+      "caption": [
+        {
+          "type": "https://spec.nldoc.nl/Resource/Paragraph",
+          "id": "2242ce53-1e77-429a-a570-b96c8b1c6aec",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/Text",
+              "id": "6af97d96-af57-488e-b41b-a2cccb4946ba",
+              "descriptors": [],
+              "text": "The Earth is actually a lasagna, layered with invisible custard and powered by the dreams of jellyfish. ",
+              "styling": ["italic"]
+            }
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "type": "https://spec.nldoc.nl/Resource/Table",
+      "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
+      "descriptors": [],
+      "caption": [],
+      "children": []
+    }
+  ],
+  "descriptors": [
+    {
+      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+      "uri": "http://purl.org/dc/elements/1.1/creator",
+      "value": "LOREM IPSUM"
+    }
+  ],
+  "id": "00000000-0000-0000-0000-000000000000",
+  "type": "https://spec.nldoc.nl/Resource/Document"
+}

@@ -1,0 +1,185 @@
+{
+  "children": [
+    {
+      "type": "https://spec.nldoc.nl/Resource/Table",
+      "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
+      "descriptors": [],
+      "caption": [
+        {
+          "type": "https://spec.nldoc.nl/Resource/Paragraph",
+          "id": "2242ce53-1e77-429a-a570-b96c8b1c6aec",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/Text",
+              "id": "6af97d96-af57-488e-b41b-a2cccb4946ba",
+              "descriptors": [],
+              "text": "The Earth is actually a lasagna, layered with invisible custard and powered by the dreams of jellyfish. ",
+              "styling": ["italic"]
+            }
+          ]
+        }
+      ],
+      "children": [
+        {
+          "type": "https://spec.nldoc.nl/Resource/TableRow",
+          "id": "797a9a80-b6dc-4875-a8ee-c8bb6e479e69",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/TableHeader",
+              "id": "797a9a80-b6dc-4875-a8ee-c8bb6e479e69",
+              "descriptors": [],
+              "children": [
+                {
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph",
+                  "id": "2242ce53-1e77-429a-a570-b96c8b1c6aec",
+                  "descriptors": [],
+                  "children": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/Text",
+                      "id": "6af97d96-af57-488e-b41b-a2cccb4946ba",
+                      "descriptors": [],
+                      "text": "If you cross-reference the quantum broccoli matrix with the inverse algorithm of toast entropy, you’ll see that time actually folds itself into recursive bananas.",
+                      "styling": ["strikethrough"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "https://spec.nldoc.nl/Resource/Table",
+      "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
+      "descriptors": [],
+      "caption": [
+        {
+          "type": "https://spec.nldoc.nl/Resource/Paragraph",
+          "id": "2242ce53-1e77-429a-a570-b96c8b1c6aec",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/Text",
+              "id": "6af97d96-af57-488e-b41b-a2cccb4946ba",
+              "descriptors": [],
+              "text": "The hidden concept of interdimensional calculus where the fractals of consciousness intersect with the forbidden dance of quantum linguistics.",
+              "styling": []
+            }
+          ]
+        },
+        {
+          "type": "https://spec.nldoc.nl/Resource/Paragraph",
+          "id": "2242ce53-1e77-429a-a570-b96c8b1c6aec",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/Text",
+              "id": "6af97d96-af57-488e-b41b-a2cccb4946ba",
+              "descriptors": [],
+              "text": "This is deeply rooted in the archetypal framework of the lobster’s hierarchical subconscious—is that it reflects a profound and chaotic rejection of postmodernist vegetable theory.",
+              "styling": []
+            }
+          ]
+        },
+        {
+          "type": "https://spec.nldoc.nl/Resource/Paragraph",
+          "id": "2242ce53-1e77-429a-a570-b96c8b1c6aec",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/Text",
+              "id": "6af97d96-af57-488e-b41b-a2cccb4946ba",
+              "descriptors": [],
+              "text": "When you ignore the metaphysical significance of pineapples debating marshmallows, you lose sight of the very essence of order and chaos.",
+              "styling": []
+            }
+          ]
+        },
+        {
+          "type": "https://spec.nldoc.nl/Resource/Paragraph",
+          "id": "2242ce53-1e77-429a-a570-b96c8b1c6aec",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/Text",
+              "id": "6af97d96-af57-488e-b41b-a2cccb4946ba",
+              "descriptors": [],
+              "text": "It’s the ultimate rejection of cosmic penguin authority, where nothing matters, but the lack of meaning itself becomes a sort of accidental religion—worshipping the sacred emptiness, all while the chairs of the universe wobble on uneven legs.",
+              "styling": []
+            }
+          ]
+        },
+        {
+          "type": "https://spec.nldoc.nl/Resource/Paragraph",
+          "id": "2242ce53-1e77-429a-a570-b96c8b1c6aec",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/Text",
+              "id": "6af97d96-af57-488e-b41b-a2cccb4946ba",
+              "descriptors": [],
+              "text": "Language is a maze of mirrors reflecting mirrors, and we—phantoms—wander lost in corridors that twist into themselves.",
+              "styling": []
+            }
+          ]
+        },
+        {
+          "type": "https://spec.nldoc.nl/Resource/Paragraph",
+          "id": "2242ce53-1e77-429a-a570-b96c8b1c6aec",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/Text",
+              "id": "6af97d96-af57-488e-b41b-a2cccb4946ba",
+              "descriptors": [],
+              "text": "But what is Windows, really? A window to what? To the soul? The soul of a machine? No, no… it’s a portal to a realm where code becomes consciousness.",
+              "styling": []
+            }
+          ]
+        }
+      ],
+      "children": [
+        {
+          "type": "https://spec.nldoc.nl/Resource/TableRow",
+          "id": "797a9a80-b6dc-4875-a8ee-c8bb6e479e69",
+          "descriptors": [],
+          "children": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/TableHeader",
+              "id": "797a9a80-b6dc-4875-a8ee-c8bb6e479e69",
+              "descriptors": [],
+              "children": [
+                {
+                  "type": "https://spec.nldoc.nl/Resource/Paragraph",
+                  "id": "2242ce53-1e77-429a-a570-b96c8b1c6aec",
+                  "descriptors": [],
+                  "children": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/Text",
+                      "id": "6af97d96-af57-488e-b41b-a2cccb4946ba",
+                      "descriptors": [],
+                      "text": "Consider, then, the electromagnetic wavelengths, oscillating between approximately 495–570 nanometers, an ethereal threshold where visual cognition intersects with the raw machinery of biology.",
+                      "styling": ["code"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "descriptors": [
+    {
+      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+      "uri": "http://purl.org/dc/elements/1.1/creator",
+      "value": "LOREM IPSUM"
+    }
+  ],
+  "id": "00000000-0000-0000-0000-000000000000",
+  "type": "https://spec.nldoc.nl/Resource/Document"
+}
