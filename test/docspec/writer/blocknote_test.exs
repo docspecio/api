@@ -35,7 +35,7 @@ defmodule DocSpec.Writer.BlockNoteTest do
         |> Document.new!()
         |> BlockNote.write()
 
-      json = blocknote |> Recase.to_camel()
+      json = blocknote |> Recase.to_camel() |> Jason.encode!() |> Jason.decode!()
 
       # TODO: figure out if we can validate that the result is indeed a valid BlockNote JSON object.
 

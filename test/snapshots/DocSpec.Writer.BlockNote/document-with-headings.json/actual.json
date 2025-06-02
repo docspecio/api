@@ -1,116 +1,118 @@
 [
   {
-    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
-    "type": "heading",
     "content": [
       {
-        "type": "text",
-        "text": "In this liminal space of reflection and refraction, the very definition of identity spirals into chaos.",
         "styles": {
           "italic": true
-        }
+        },
+        "text": "In this liminal space of reflection and refraction, the very definition of identity spirals into chaos.",
+        "type": "text"
       }
     ],
+    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
       "level": 1
-    }
+    },
+    "type": "heading"
   },
   {
-    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
-    "type": "heading",
     "content": [
       {
-        "type": "text",
+        "styles": {
+          "underline": true
+        },
         "text": "And yet, within this sacred struggle, is there not a beauty? An unyielding defiance against the cages of proprietary code, a clarion call for transparency, for community, for the very soul of collaboration?",
-        "styles": {}
+        "type": "text"
       }
     ],
+    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
       "level": 2
-    }
+    },
+    "type": "heading"
   },
   {
-    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
-    "type": "heading",
     "content": [
       {
-        "type": "text",
-        "text": "!",
         "styles": {
-          "italic": true,
-          "bold": true
-        }
+          "bold": true,
+          "italic": true
+        },
+        "text": "!",
+        "type": "text"
       },
       {
-        "type": "text",
+        "styles": {
+          "italic": true
+        },
         "text": "The fundamental, indivisible quanta of the digital realm, dancing in binary symphony—zeroes and ones",
-        "styles": {
-          "italic": true
-        }
+        "type": "text"
       }
     ],
+    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
       "level": 3
-    }
+    },
+    "type": "heading"
   },
   {
-    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
-    "type": "heading",
     "content": [
       {
-        "type": "text",
+        "styles": {},
         "text": "A veritable orchestrator of complexity, a conductor presiding over the chaotic symphony of containers, each itself an encapsulated microcosm of processes, dependencies, and services.",
-        "styles": {}
+        "type": "text"
       }
     ],
+    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
       "level": 3
-    }
+    },
+    "type": "heading"
   },
   {
-    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
-    "type": "heading",
     "content": [
       {
-        "type": "text",
+        "styles": {
+          "italic": true
+        },
         "text": "Ah, the question spirals, and we find ourselves again, phantoms, wandering corridors of complexity that seem to twist into infinity",
-        "styles": {
-          "italic": true
-        }
+        "type": "text"
       }
     ],
+    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
       "level": 3
-    }
+    },
+    "type": "heading"
   },
   {
-    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
-    "type": "heading",
     "content": [
       {
-        "type": "text",
+        "styles": {},
         "text": "A grand cathedral of order amidst the swirling chaos of information, a structure built with purpose yet cloaked in the veils of arcane logic!",
-        "styles": {}
+        "type": "text"
       }
     ],
+    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
       "level": 3
-    }
+    },
+    "type": "heading"
   },
   {
-    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
-    "type": "heading",
     "content": [
       {
-        "type": "text",
-        "text": "A portal into the very fabric of the machine itself, where device files link the abstract commands of the user to the tangible reality of hardware.",
         "styles": {
           "italic": true
-        }
+        },
+        "text": "A portal into the very fabric of the machine itself, where device files link the abstract commands of the user to the tangible reality of hardware.",
+        "type": "text"
       }
     ],
+    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
       "level": 3
-    }
+    },
+    "type": "heading"
   }
 ]

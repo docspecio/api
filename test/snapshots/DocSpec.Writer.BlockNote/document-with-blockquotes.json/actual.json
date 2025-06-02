@@ -1,27 +1,27 @@
 [
   {
-    "id": "00000000-0000-0000-0000-000000000000",
-    "type": "heading",
     "content": [
       {
-        "type": "text",
+        "styles": {},
         "text": "Blorpy zibber wocka flember snorp!",
-        "styles": {}
+        "type": "text"
       }
     ],
+    "id": "00000000-0000-0000-0000-000000000000",
     "props": {
       "level": 2
-    }
+    },
+    "type": "heading"
   },
   {
-    "id": "00000000-0000-0000-0000-000000000000",
-    "type": "paragraph",
     "content": [
       {
-        "type": "text",
+        "styles": {},
         "text": "Zonky tonky borkle snorkle!",
-        "styles": {}
+        "type": "text"
       }
-    ]
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "paragraph"
   }
 ]

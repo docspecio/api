@@ -87,11 +87,11 @@ defmodule DocSpec.Writer.BlockNote do
       styles,
       %{},
       fn
-        :bold, styling = %{} ->
-          Map.put(styling, :bold, true)
+        style, styling = %{} when style in [:italic, :bold, :underline] ->
+          Map.put(styling, style, true)
 
-        :italic, styling = %{} ->
-          Map.put(styling, :italic, true)
+        :strikethrough, styling = %{} ->
+          Map.put(styling, :strike, true)
 
         _, styling = %{} ->
           styling
