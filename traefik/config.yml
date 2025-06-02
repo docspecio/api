@@ -1,0 +1,30 @@
+# traefik.yml
+api:
+  dashboard: false
+
+log:
+  level: INFO
+
+entryPoints:
+  web:
+    address: ":80"
+    http:
+      redirections:
+        entryPoint:
+          to: websecure    # name of the HTTPS entrypoint
+          scheme: https
+          permanent: true  # sends 301 redirects
+  websecure:
+    address: ":443"
+
+providers:
+  docker:
+    exposedByDefault: false
+
+certificatesResolvers:
+  le:
+    acme:
+      email: me@stephanmeijer.com
+      storage: /letsencrypt/acme.json
+      httpChallenge:
+        entryPoint: web

@@ -1,0 +1,35 @@
+services:
+
+  traefik:
+    restart: always
+    image: traefik
+    volumes:
+      - ./traefik/config.yml:/etc/traefik/traefik.yml:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik/letsencrypt:/letsencrypt
+    ports:
+      - "80:80"
+      - "443:443"
+
+  api:
+    restart: always
+    build: .
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app.rule=Host(`api.docspec.dev`)"
+      - "traefik.http.routers.app.entrypoints=websecure"
+      - "traefik.http.routers.app.tls.certresolver=le"
+      - "traefik.http.services.app.loadbalancer.server.port=4000"
+
+  blocknote-api:
+    restart: always
+    build: ./blocknote-api
+    environment:
+      PORT: 8080
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.blocknote-api.rule=Host(`blocknote-api.docspec.dev`)"
+      - "traefik.http.routers.blocknote-api.entrypoints=websecure"
+      - "traefik.http.routers.blocknote-api.tls.certresolver=le"
+      - "traefik.http.services.blocknote-api.loadbalancer.server.port=8080"
+

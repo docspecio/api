@@ -1,0 +1,16 @@
+*.md
+coverage
+node_modules
+.editorconfig
+.gitignore
+.prettierignore
+dist/
+node_modules/
+public/
+*.iml
+.DS_Store
+/coverage
+.eslintcache
+LICENSE
+/.idea
+/CODEOWNERS
