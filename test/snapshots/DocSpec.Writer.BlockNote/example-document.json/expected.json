@@ -1,0 +1,372 @@
+{
+  "content": [
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Example Document",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "props": {
+        "level": 1
+      },
+      "type": "heading"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "This is an example document that contains headings, unordered lists, ordered lists, and sample text. This document is designed to showcase different formatting options within a document. Here is some ",
+          "type": "text"
+        },
+        {
+          "styles": {
+            "bold": true
+          },
+          "text": "bold text",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": ", ",
+          "type": "text"
+        },
+        {
+          "styles": {
+            "strike": true
+          },
+          "text": "striked text",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": ", ",
+          "type": "text"
+        },
+        {
+          "styles": {
+            "italic": true
+          },
+          "text": "italic text",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": " and ",
+          "type": "text"
+        },
+        {
+          "styles": {
+            "underline": true
+          },
+          "text": "underlined text",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": ".",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "paragraph"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Tables",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "props": {
+        "level": 2
+      },
+      "type": "heading"
+    },
+    {
+      "content": {
+        "rows": [
+          {
+            "cells": [
+              [
+                {
+                  "styles": {
+                    "italic": true
+                  },
+                  "text": "Row 1,",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": " column 1",
+                  "type": "text"
+                }
+              ],
+              [
+                {
+                  "styles": {
+                    "italic": true
+                  },
+                  "text": "Row 1,",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": " column 2",
+                  "type": "text"
+                }
+              ],
+              [
+                {
+                  "styles": {
+                    "italic": true
+                  },
+                  "text": "Row 1,",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": " column 3",
+                  "type": "text"
+                }
+              ]
+            ]
+          },
+          {
+            "cells": [
+              [
+                {
+                  "styles": {
+                    "italic": true
+                  },
+                  "text": "Row 2,",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": " column 1",
+                  "type": "text"
+                }
+              ],
+              [
+                {
+                  "styles": {
+                    "italic": true
+                  },
+                  "text": "Row 2,",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": " column 2",
+                  "type": "text"
+                }
+              ],
+              [
+                {
+                  "styles": {
+                    "italic": true
+                  },
+                  "text": "Row 2,",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": " column 3",
+                  "type": "text"
+                }
+              ]
+            ]
+          },
+          {
+            "cells": [
+              [
+                {
+                  "styles": {
+                    "italic": true
+                  },
+                  "text": "Row 3,",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": " column 1",
+                  "type": "text"
+                }
+              ],
+              [
+                {
+                  "styles": {
+                    "italic": true
+                  },
+                  "text": "Row 3,",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": " column 2",
+                  "type": "text"
+                }
+              ],
+              [
+                {
+                  "styles": {
+                    "italic": true
+                  },
+                  "text": "Row 3,",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": " column 3",
+                  "type": "text"
+                }
+              ]
+            ]
+          }
+        ],
+        "type": "tableContent"
+      },
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "table"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Unordered Lists",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "props": {
+        "level": 2
+      },
+      "type": "heading"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Unordered lists are useful for listing items where the order does not matter.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "paragraph"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Here is an example of an unordered list:",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "paragraph"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Ordered Lists",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "props": {
+        "level": 2
+      },
+      "type": "heading"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Ordered lists are useful for listing items where the order does matter.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "paragraph"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Here is an example of an ordered list:",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "paragraph"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Sample Text",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "props": {
+        "level": 2
+      },
+      "type": "heading"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "This is some sample text. It can be used to fill in space and demonstrate the formatting of regular paragraphs in a document.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "paragraph"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "More sample text continues here. This paragraph will elaborate on what sample text can be. It's essentially filler content so someone can see what the document would generally look like.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "paragraph"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Sample Sub Heading 3",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "props": {
+        "level": 3
+      },
+      "type": "heading"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Here is another sub heading. This one shows the subheading 3 level. Additional text can be added under this heading.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "paragraph"
+    }
+  ],
+  "id": "00000000-0000-0000-0000-000000000000"
+}

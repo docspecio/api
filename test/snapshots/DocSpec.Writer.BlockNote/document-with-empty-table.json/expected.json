@@ -1,18 +1,21 @@
-[
-  {
-    "content": {
-      "rows": [],
-      "type": "tableContent"
+{
+  "content": [
+    {
+      "content": {
+        "rows": [],
+        "type": "tableContent"
+      },
+      "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
+      "type": "table"
     },
-    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
-    "type": "table"
-  },
-  {
-    "content": {
-      "rows": [],
-      "type": "tableContent"
-    },
-    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
-    "type": "table"
-  }
-]
+    {
+      "content": {
+        "rows": [],
+        "type": "tableContent"
+      },
+      "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
+      "type": "table"
+    }
+  ],
+  "id": "00000000-0000-0000-0000-000000000000"
+}
