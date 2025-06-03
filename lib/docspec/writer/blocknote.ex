@@ -76,6 +76,72 @@ defmodule DocSpec.Writer.BlockNote do
       ], state}}
   end
 
+  @spec write_resource({resource :: NLdoc.Spec.Table.t(), State.t()}) ::
+          {:ok, {[Blocknote.Spec.Table.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.Table{}, state = %State{}}) do
+    with {:ok, {rows, state}} <- write_children({resource.children, state}, &write_resource/1) do
+      {:ok,
+       {[
+          %BlockNote.Spec.Table{
+            id: resource.id,
+            content: %BlockNote.Spec.Table.Content{rows: rows}
+          }
+        ], state}}
+    end
+  end
+
+  @spec write_resource({resource :: NLdoc.Spec.TableRow.t(), State.t()}) ::
+          {:ok, {[Blocknote.Spec.Table.Content.row()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.TableRow{}, state = %State{}}) do
+    with {:ok, {cells, state}} <- write_children({resource.children, state}, &write_resource/1) do
+      {:ok, {[%{cells: cells}], state}}
+    end
+  end
+
+  @spec write_resource({resource :: NLdoc.Spec.TableHeader.t(), State.t()}) ::
+          {:ok, {[BlockNote.Spec.Text.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.TableHeader{}, state = %State{}}) do
+    texts =
+      resource.children
+      |> Enum.map(&NLdoc.Spec.Content.text/1)
+
+    Enum.reduce(
+      texts,
+      {:ok, {[], state}},
+      fn
+        text, {:ok, {contents, state}} ->
+          with {:ok, {bn_texts, state}} <- write_children({text, state}, &write_resource/1) do
+            {:ok, {[bn_texts | contents], state}}
+          end
+
+        _, error = {:error, _} ->
+          error
+      end
+    )
+  end
+
+    @spec write_resource({resource :: NLdoc.Spec.TableCell.t(), State.t()}) ::
+          {:ok, {[BlockNote.Spec.Text.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.TableCell{}, state = %State{}}) do
+    texts =
+      resource.children
+      |> Enum.map(&NLdoc.Spec.Content.text/1)
+
+    Enum.reduce(
+      texts,
+      {:ok, {[], state}},
+      fn
+        text, {:ok, {contents, state}} ->
+          with {:ok, {bn_texts, state}} <- write_children({text, state}, &write_resource/1) do
+            {:ok, {[bn_texts | contents], state}}
+          end
+
+        _, error = {:error, _} ->
+          error
+      end
+    )
+  end
+
   # Fallback for unsupported stuff.
   defp write_resource({_, state}) do
     {:ok, {[], state}}

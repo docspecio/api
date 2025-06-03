@@ -64,7 +64,7 @@ defmodule DocSpec.MixProject do
 
   defp deps do
     [
-      {:nldoc_spec, "~> 3.0"},
+      {:nldoc_spec, "~> 3.1"},
       {:nldoc_util, "~> 1.0"},
       {:nldoc_conversion_reader_docx, "~> 1.0"},
 

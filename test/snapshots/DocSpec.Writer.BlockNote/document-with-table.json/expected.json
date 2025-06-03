@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "content": {
+      "rows": [
+        {
+          "cells": [
+            [
+              {
+                "styles": {},
+                "text": "400",
+                "type": "text"
+              }
+            ],
+            [
+              {
+                "styles": {},
+                "text": "400",
+                "type": "text"
+              }
+            ],
+            [
+              {
+                "styles": {},
+                "text": "400",
+                "type": "text"
+              }
+            ],
+            [
+              {
+                "styles": {},
+                "text": "100",
+                "type": "text"
+              }
+            ]
+          ]
+        },
+        {
+          "cells": [
+            [
+              {
+                "styles": {},
+                "text": "500",
+                "type": "text"
+              }
+            ]
+          ]
+        }
+      ],
+      "type": "tableContent"
+    },
+    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
+    "type": "table"
+  }
+]
