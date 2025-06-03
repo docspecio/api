@@ -6,13 +6,14 @@ defmodule DocSpec.Writer.BlockNote do
   use TypedStruct
 
   typedstruct module: State, enforce: true do
+    field :assets, [NLdoc.Spec.Asset.t()], default: []
   end
 
   @type error() :: {:error, term()}
 
   @spec write(document :: NLdoc.Spec.Document.t()) :: {:ok, BlockNote.Spec.Document.t()} | error()
   def write(document = %NLdoc.Spec.Document{}) do
-    with {:ok, {[blocknote_document], _state}} <- write_resource({document, %State{}}),
+    with {:ok, {[blocknote_document], _state}} <- write_resource({document, %State{assets: document.assets}}),
          do: {:ok, reverse(blocknote_document)}
   end
 
@@ -43,6 +44,19 @@ defmodule DocSpec.Writer.BlockNote do
           }
         ], state}}
     end
+  end
+
+    @spec write_resource({resource :: NLdoc.Spec.Image.t(), State.t()}) ::
+          {:ok, {[Blocknote.Spec.Image.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.Image{}, state = %State{}}) do
+    asset = Enum.find(state.assets, fn %NLdoc.Spec.Asset{id: id} -> ("#" <> id) == resource.source end)
+
+    {:ok, {[
+      %BlockNote.Spec.Image{
+        id: resource.id,
+        props: %{url: NLdoc.Spec.Asset.to_base64(asset)}
+      }
+    ], state}}
   end
 
   @spec write_resource({resource :: NLdoc.Spec.Heading.t(), State.t()}) ::
