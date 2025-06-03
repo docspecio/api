@@ -7,6 +7,7 @@ defmodule DocSpec.Writer.BlockNote do
 
   typedstruct module: State, enforce: true do
     field :assets, [NLdoc.Spec.Asset.t()], default: []
+    field :parent_list_type, :bullet | :numbered | nil, default: nil
   end
 
   @type error() :: {:error, term()}
@@ -49,13 +50,21 @@ defmodule DocSpec.Writer.BlockNote do
   @spec write_resource({resource :: NLdoc.Spec.UnorderedList.t(), State.t()}) ::
           {:ok, {[Blocknote.Spec.BulletListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.UnorderedList{}, state = %State{}}) do
-    with {:ok, {items, state}} <- write_children({resource.children, state}, &write_resource/1) do
+    with {:ok, {items, state}} <- write_children({resource.children, %State{state | parent_list_type: :bullet}}, &write_resource/1) do
+      {:ok, {items, state}}
+    end
+  end
+
+    @spec write_resource({resource :: NLdoc.Spec.OrderedList.t(), State.t()}) ::
+          {:ok, {[Blocknote.Spec.NumberedListItem.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.OrderedList{}, state = %State{}}) do
+    with {:ok, {items, state}} <- write_children({resource.children, %State{state | parent_list_type: :numbered}}, &write_resource/1) do
       {:ok, {items, state}}
     end
   end
 
   @spec write_resource({resource :: NLdoc.Spec.ListItem.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.BulletListItem.t()], State.t()}} | error()
+          {:ok, {[Blocknote.Spec.BulletListItem.t() | Blocknote.Spec.NumberedListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.ListItem{}, state = %State{}}) do
     texts =
       resource.children
@@ -63,18 +72,27 @@ defmodule DocSpec.Writer.BlockNote do
       |> NLdoc.Spec.Content.text()
 
     lists = resource.children
-      |> Enum.filter(fn %{type: type} -> type == NLdoc.Spec.UnorderedList.resource_type() end)
+      |> Enum.filter(fn %{type: type} -> type in [NLdoc.Spec.OrderedList.resource_type(), NLdoc.Spec.UnorderedList.resource_type()] end)
 
     with {:ok, {bn_texts, state}} <- write_children({texts, state}, &write_resource/1),
       {:ok, {nested_items, state}} <- write_children({lists, state}, &write_resource/1) do
-      {:ok,
-       {[
+
+      item =
+        if state.parent_list_type == :bullet do
           %BlockNote.Spec.BulletListItem{
             id: resource.id,
             content: bn_texts,
             children: nested_items
           }
-        ], state}}
+        else
+          %BlockNote.Spec.NumberedListItem{
+            id: resource.id,
+            content: bn_texts,
+            children: nested_items
+          }
+        end
+
+      {:ok, {[item], state}}
     end
   end
 

@@ -3854,6 +3854,30 @@
       "type": "heading"
     },
     {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "One, with a very long line to demonstrate that the hanging indent for the list is working correctly",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "numberedListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "Two",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "numberedListItem"
+    },
+    {
       "content": [
         {
           "styles": {},
@@ -3866,6 +3890,80 @@
         "level": 3
       },
       "type": "heading"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "content": [
+                {
+                  "styles": {},
+                  "text": "Five",
+                  "type": "text"
+                }
+              ],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "numberedListItem"
+            },
+            {
+              "children": [],
+              "content": [
+                {
+                  "styles": {},
+                  "text": "Four with a very long line to demonstrate that the hanging indent for the list is working correctly.",
+                  "type": "text"
+                }
+              ],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "numberedListItem"
+            },
+            {
+              "children": [],
+              "content": [
+                {
+                  "styles": {},
+                  "text": "Three",
+                  "type": "text"
+                }
+              ],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "numberedListItem"
+            }
+          ],
+          "content": [
+            {
+              "styles": {},
+              "text": "Two",
+              "type": "text"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "numberedListItem"
+        }
+      ],
+      "content": [
+        {
+          "styles": {},
+          "text": "One",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "numberedListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "Six",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "numberedListItem"
     },
     {
       "content": [
@@ -3956,6 +4054,30 @@
       "type": "heading"
     },
     {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "One",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "numberedListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "Two",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "numberedListItem"
+    },
+    {
       "content": [
         {
           "styles": {},
@@ -3965,6 +4087,30 @@
       ],
       "id": "00000000-0000-0000-0000-000000000000",
       "type": "paragraph"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "We now resume our normal programming",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "numberedListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "Four",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "numberedListItem"
     }
   ],
   "id": "00000000-0000-0000-0000-000000000000"

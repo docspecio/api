@@ -391,7 +391,7 @@
           "content": [
             {
               "styles": {},
-              "text": "SubItem",
+              "text": "Subitem",
               "type": "text"
             }
           ],
@@ -432,6 +432,92 @@
       ],
       "id": "00000000-0000-0000-0000-000000000000",
       "type": "bulletListItem"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Ordered Lists",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "props": {
+        "level": 2
+      },
+      "type": "heading"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "And ordered lists are used when order ",
+          "type": "text"
+        },
+        {
+          "styles": {
+            "bold": true
+          },
+          "text": "does",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": " matter.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "paragraph"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "Item 1",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "numberedListItem"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "content": [
+            {
+              "styles": {},
+              "text": "Subitem",
+              "type": "text"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "numberedListItem"
+        }
+      ],
+      "content": [
+        {
+          "styles": {},
+          "text": "Item 2",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "numberedListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "Item 3",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "numberedListItem"
     },
     {
       "content": [

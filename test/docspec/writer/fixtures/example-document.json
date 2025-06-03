@@ -561,7 +561,7 @@
                           "descriptors": [],
                           "id": "00000000-0000-0000-0000-000000000000",
                           "styling": [],
-                          "text": "SubItem",
+                          "text": "Subitem",
                           "type": "https://spec.nldoc.nl/Resource/Text"
                         }
                       ],
@@ -628,6 +628,151 @@
       "id": "00000000-0000-0000-0000-000000000000",
       "styleType": "disc",
       "type": "https://spec.nldoc.nl/Resource/UnorderedList"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "Ordered Lists",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "level": 2,
+      "type": "https://spec.nldoc.nl/Resource/Heading"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "And ordered lists are used when order ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [
+            "bold"
+          ],
+          "text": "does",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": " matter.",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [],
+                  "text": "Item 1",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                }
+              ],
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "https://spec.nldoc.nl/Resource/Paragraph"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/ListItem"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [],
+                  "text": "Item 2",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                }
+              ],
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "https://spec.nldoc.nl/Resource/Paragraph"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "descriptors": [],
+                          "id": "00000000-0000-0000-0000-000000000000",
+                          "styling": [],
+                          "text": "Subitem",
+                          "type": "https://spec.nldoc.nl/Resource/Text"
+                        }
+                      ],
+                      "descriptors": [],
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+                    }
+                  ],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "type": "https://spec.nldoc.nl/Resource/ListItem"
+                }
+              ],
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "reversed": false,
+              "start": 1,
+              "styleType": "lower-alpha",
+              "type": "https://spec.nldoc.nl/Resource/OrderedList"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/ListItem"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "descriptors": [],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "styling": [],
+                  "text": "Item 3",
+                  "type": "https://spec.nldoc.nl/Resource/Text"
+                }
+              ],
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "https://spec.nldoc.nl/Resource/Paragraph"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/ListItem"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "reversed": false,
+      "start": 1,
+      "styleType": "decimal",
+      "type": "https://spec.nldoc.nl/Resource/OrderedList"
     },
     {
       "children": [
