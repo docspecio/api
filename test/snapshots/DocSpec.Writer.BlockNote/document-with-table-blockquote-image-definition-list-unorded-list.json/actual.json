@@ -414,6 +414,59 @@
       "type": "paragraph"
     },
     {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "just ",
+          "type": "text"
+        }
+      ],
+      "id": "81948ae5-e224-47d3-b974-0e5754cd1a5b",
+      "type": "bulletListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "a",
+          "type": "text"
+        }
+      ],
+      "id": "0b441402-658b-4506-94d8-60307cc7e575",
+      "type": "bulletListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "simple",
+          "type": "text"
+        }
+      ],
+      "id": "f16233e8-3950-4f9e-b4af-b5fb13149b04",
+      "type": "bulletListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "list",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": "ending on a list item with two paragraphs.",
+          "type": "text"
+        }
+      ],
+      "id": "98829269-c343-4cf9-bf42-b4f0fca73f97",
+      "type": "bulletListItem"
+    },
+    {
       "content": [
         {
           "styles": {},

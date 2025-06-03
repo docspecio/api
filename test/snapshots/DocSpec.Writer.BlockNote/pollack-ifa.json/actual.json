@@ -521,6 +521,144 @@
       "type": "paragraph"
     },
     {
+      "children": [],
+      "content": [
+        {
+          "styles": {
+            "italic": true
+          },
+          "text": "Citation of Internet page",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": ": Title of the page, [Online]. Available: web address, ‘(last accessed day Month year)’.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "bulletListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {
+            "italic": true
+          },
+          "text": "Citation of patent",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": ": Patent number, Title of the patent, names and initials of all owners, year.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "bulletListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {
+            "italic": true
+          },
+          "text": "Citation of standard",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": ": Standard number, Title of the standard, emitter, year.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "bulletListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "C",
+          "type": "text"
+        },
+        {
+          "styles": {
+            "italic": true
+          },
+          "text": "itation of conference paper",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": ": names and initials of all authors, Title of the paper, Title of the Conference, City, Country, day-day Month year, page numbers and year of publication.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "bulletListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {
+            "italic": true
+          },
+          "text": "Citation for book chapters",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": ": names and initials of all authors, Title of chapter in lower case letters, in: names and initials of all editors, Title of book, Publisher, place of publication, page numbers and year of publication.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "bulletListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {
+            "italic": true
+          },
+          "text": "Citation for books",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": ": names and initials of all authors/editors, Title of the book in lower case letters, Publisher (place of publication), year of publication.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "bulletListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {
+            "italic": true
+          },
+          "text": "Citation for journals:",
+          "type": "text"
+        },
+        {
+          "styles": {},
+          "text": " names and initials of all authors, Title of the article in lower case letters, Journal title, volume, number, page numbers and year.",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "bulletListItem"
+    },
+    {
       "content": [
         {
           "styles": {

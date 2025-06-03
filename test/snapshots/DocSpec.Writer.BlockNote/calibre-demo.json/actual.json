@@ -3816,6 +3816,30 @@
       "type": "heading"
     },
     {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "One",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "bulletListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "Two",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "bulletListItem"
+    },
+    {
       "content": [
         {
           "styles": {},
@@ -3853,6 +3877,30 @@
       ],
       "id": "00000000-0000-0000-0000-000000000000",
       "type": "paragraph"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "One",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "bulletListItem"
+    },
+    {
+      "children": [],
+      "content": [
+        {
+          "styles": {},
+          "text": "Five",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "bulletListItem"
     },
     {
       "content": [

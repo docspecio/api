@@ -46,8 +46,36 @@ defmodule DocSpec.Writer.BlockNote do
     end
   end
 
-    @spec write_resource({resource :: NLdoc.Spec.Image.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.Image.t()], State.t()}} | error()
+  @spec write_resource({resource :: NLdoc.Spec.UnorderedList.t(), State.t()}) ::
+          {:ok, {[Blocknote.Spec.BulletListItem.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.UnorderedList{}, state = %State{}}) do
+    with {:ok, {items, state}} <- write_children({resource.children, state}, &write_resource/1) do
+      {:ok, {items, state}}
+    end
+  end
+
+  @spec write_resource({resource :: NLdoc.Spec.ListItem.t(), State.t()}) ::
+          {:ok, {[Blocknote.Spec.BulletListItem.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.ListItem{}, state = %State{}}) do
+    texts =
+      resource.children
+      |> Enum.filter(fn %{type: type} -> type == NLdoc.Spec.Paragraph.resource_type() end)
+      |> NLdoc.Spec.Content.text()
+
+    with {:ok, {bn_texts, state}} <- write_children({texts, state}, &write_resource/1) do
+      {:ok,
+       {[
+          %BlockNote.Spec.BulletListItem{
+            id: resource.id,
+            content: bn_texts,
+            children: []
+          }
+        ], state}}
+    end
+  end
+
+  @spec write_resource({resource :: NLdoc.Spec.Image.t(), State.t()}) ::
+        {:ok, {[Blocknote.Spec.Image.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.Image{}, state = %State{}}) do
     asset = Enum.find(state.assets, fn %NLdoc.Spec.Asset{id: id} -> ("#" <> id) == resource.source end)
 
