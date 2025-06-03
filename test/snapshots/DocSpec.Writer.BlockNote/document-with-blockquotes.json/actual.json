@@ -1,27 +1,30 @@
-[
-  {
-    "content": [
-      {
-        "styles": {},
-        "text": "Blorpy zibber wocka flember snorp!",
-        "type": "text"
-      }
-    ],
-    "id": "00000000-0000-0000-0000-000000000000",
-    "props": {
-      "level": 2
+{
+  "content": [
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Blorpy zibber wocka flember snorp!",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "props": {
+        "level": 2
+      },
+      "type": "heading"
     },
-    "type": "heading"
-  },
-  {
-    "content": [
-      {
-        "styles": {},
-        "text": "Zonky tonky borkle snorkle!",
-        "type": "text"
-      }
-    ],
-    "id": "00000000-0000-0000-0000-000000000000",
-    "type": "paragraph"
-  }
-]
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": "Zonky tonky borkle snorkle!",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "paragraph"
+    }
+  ],
+  "id": "00000000-0000-0000-0000-000000000000"
+}

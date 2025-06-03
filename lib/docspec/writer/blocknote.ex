@@ -183,15 +183,26 @@ defmodule DocSpec.Writer.BlockNote do
     )
   end
 
-  defp reverse(%{content: content}) when is_list(content) do
-    Enum.reduce(
-      content,
-      [],
-      fn
-        item, reversed ->
-          [item | reversed]
-      end
-    )
+  defp reverse(content) when is_list(content) do
+    content
+    |> Enum.map(&reverse/1)
+    |> Enum.reverse()
+  end
+
+  defp reverse(resource = %{content: content}) when is_list(content) do
+    Map.put(resource, :content, reverse(content))
+  end
+
+  defp reverse(resource = %{content: content}) when is_map(content) do
+    Map.put(resource, :content, reverse(content))
+  end
+
+  defp reverse(resource = %{rows: rows}) when is_list(rows) do
+    Map.put(resource, :rows, reverse(rows))
+  end
+
+  defp reverse(resource = %{cells: cells}) when is_list(cells) do
+    Map.put(resource, :cells, reverse(cells))
   end
 
   defp reverse(other),

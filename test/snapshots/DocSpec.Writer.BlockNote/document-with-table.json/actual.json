@@ -1,54 +1,57 @@
-[
-  {
-    "content": {
-      "rows": [
-        {
-          "cells": [
-            [
-              {
-                "styles": {},
-                "text": "400",
-                "type": "text"
-              }
-            ],
-            [
-              {
-                "styles": {},
-                "text": "400",
-                "type": "text"
-              }
-            ],
-            [
-              {
-                "styles": {},
-                "text": "400",
-                "type": "text"
-              }
-            ],
-            [
-              {
-                "styles": {},
-                "text": "100",
-                "type": "text"
-              }
+{
+  "content": [
+    {
+      "content": {
+        "rows": [
+          {
+            "cells": [
+              [
+                {
+                  "styles": {},
+                  "text": "500",
+                  "type": "text"
+                }
+              ]
             ]
-          ]
-        },
-        {
-          "cells": [
-            [
-              {
-                "styles": {},
-                "text": "500",
-                "type": "text"
-              }
+          },
+          {
+            "cells": [
+              [
+                {
+                  "styles": {},
+                  "text": "100",
+                  "type": "text"
+                }
+              ],
+              [
+                {
+                  "styles": {},
+                  "text": "400",
+                  "type": "text"
+                }
+              ],
+              [
+                {
+                  "styles": {},
+                  "text": "400",
+                  "type": "text"
+                }
+              ],
+              [
+                {
+                  "styles": {},
+                  "text": "400",
+                  "type": "text"
+                }
+              ]
             ]
-          ]
-        }
-      ],
-      "type": "tableContent"
-    },
-    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
-    "type": "table"
-  }
-]
+          }
+        ],
+        "type": "tableContent"
+      },
+      "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
+      "type": "table"
+    }
+  ],
+  "id": "d34494bc-9988-4537-be3b-5a12b421f917"
+}
