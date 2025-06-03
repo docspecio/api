@@ -109,7 +109,11 @@ defmodule DocSpec.Writer.BlockNote do
        {[
           %BlockNote.Spec.Table.Cell{
             id: resource.id,
-            content: bn_texts
+            content: bn_texts,
+            props: %{
+              colspan: resource.colspan,
+              rowspan: resource.rowspan
+            }
           }
         ], state}}
     end
@@ -126,7 +130,11 @@ defmodule DocSpec.Writer.BlockNote do
        {[
           %BlockNote.Spec.Table.Cell{
             id: resource.id,
-            content: bn_texts
+            content: bn_texts,
+            props: %{
+              colspan: resource.colspan,
+              rowspan: resource.rowspan
+            }
           }
         ], state}}
     end

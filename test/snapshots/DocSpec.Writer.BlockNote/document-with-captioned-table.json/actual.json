@@ -16,6 +16,10 @@
                   }
                 ],
                 "id": "797a9a80-b6dc-4875-a8ee-c8bb6e479e69",
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1
+                },
                 "type": "tableCell"
               }
             ]
@@ -40,6 +44,10 @@
                   }
                 ],
                 "id": "797a9a80-b6dc-4875-a8ee-c8bb6e479e69",
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1
+                },
                 "type": "tableCell"
               }
             ]
