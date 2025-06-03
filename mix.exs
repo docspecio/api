@@ -66,7 +66,7 @@ defmodule DocSpec.MixProject do
     [
       {:nldoc_spec, "~> 3.1"},
       {:nldoc_util, "~> 1.0"},
-      {:nldoc_conversion_reader_docx, "~> 1.0"},
+      {:nldoc_conversion_reader_docx, "~> 1.1"},
 
       # Defining data structures
       {:typed_struct, "~> 0.3.0"},
