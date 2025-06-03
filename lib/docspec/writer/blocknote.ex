@@ -99,47 +99,37 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @spec write_resource({resource :: NLdoc.Spec.TableHeader.t(), State.t()}) ::
-          {:ok, {[BlockNote.Spec.Text.t()], State.t()}} | error()
+          {:ok, {[BlockNote.Spec.Table.Cell.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.TableHeader{}, state = %State{}}) do
     texts =
-      resource.children
-      |> Enum.map(&NLdoc.Spec.Content.text/1)
+      NLdoc.Spec.Content.text(resource.children)
 
-    Enum.reduce(
-      texts,
-      {:ok, {[], state}},
-      fn
-        text, {:ok, {contents, state}} ->
-          with {:ok, {bn_texts, state}} <- write_children({text, state}, &write_resource/1) do
-            {:ok, {[bn_texts | contents], state}}
-          end
-
-        _, error = {:error, _} ->
-          error
-      end
-    )
+    with {:ok, {bn_texts, state}} <- write_children({texts, state}, &write_resource/1) do
+      {:ok,
+       {[
+          %BlockNote.Spec.Table.Cell{
+            id: resource.id,
+            content: bn_texts
+          }
+        ], state}}
+    end
   end
 
     @spec write_resource({resource :: NLdoc.Spec.TableCell.t(), State.t()}) ::
-          {:ok, {[BlockNote.Spec.Text.t()], State.t()}} | error()
+          {:ok, {[BlockNote.Spec.Table.Cell.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.TableCell{}, state = %State{}}) do
     texts =
-      resource.children
-      |> Enum.map(&NLdoc.Spec.Content.text/1)
+      NLdoc.Spec.Content.text(resource.children)
 
-    Enum.reduce(
-      texts,
-      {:ok, {[], state}},
-      fn
-        text, {:ok, {contents, state}} ->
-          with {:ok, {bn_texts, state}} <- write_children({text, state}, &write_resource/1) do
-            {:ok, {[bn_texts | contents], state}}
-          end
-
-        _, error = {:error, _} ->
-          error
-      end
-    )
+    with {:ok, {bn_texts, state}} <- write_children({texts, state}, &write_resource/1) do
+      {:ok,
+       {[
+          %BlockNote.Spec.Table.Cell{
+            id: resource.id,
+            content: bn_texts
+          }
+        ], state}}
+    end
   end
 
   # Fallback for unsupported stuff.

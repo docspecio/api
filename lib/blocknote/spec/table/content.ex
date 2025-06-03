@@ -5,7 +5,7 @@ defmodule BlockNote.Spec.Table.Content do
 
   use TypedStruct
 
-  @type row() :: %{cells: [[BlockNote.Spec.Text.t()]]}
+  @type row() :: %{cells: [BlockNote.Spec.Table.Cell.t()]}
 
   typedstruct enforce: true do
     field :type, :tableContent, default: :tableContent

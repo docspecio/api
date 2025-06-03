@@ -5,131 +5,119 @@
         "rows": [
           {
             "cells": [
-              [
-                {
-                  "styles": {},
-                  "text": "Instruction for preparation of papers for Pollack Periodica",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {
-                    "bold": true
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "Instruction for preparation of papers for Pollack Periodica",
+                    "type": "text"
                   },
-                  "text": "1 ",
-                  "type": "text"
-                },
-                {
-                  "styles": {
-                    "bold": true
+                  {
+                    "styles": {
+                      "bold": true
+                    },
+                    "text": "1 ",
+                    "type": "text"
                   },
-                  "text": "Peter Ivanyi*, ",
-                  "type": "text"
-                },
-                {
-                  "styles": {
-                    "bold": true
+                  {
+                    "styles": {
+                      "bold": true
+                    },
+                    "text": "Peter Ivanyi*, ",
+                    "type": "text"
                   },
-                  "text": "2 ",
-                  "type": "text"
-                },
-                {
-                  "styles": {
-                    "bold": true
+                  {
+                    "styles": {
+                      "bold": true
+                    },
+                    "text": "2 ",
+                    "type": "text"
                   },
-                  "text": "Amalia Ivanyi",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "1 ",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Department of Systems and Software Technologies, Faculty of Engineering and Information Technology, University of Pécs, Boszorkány u. 2, H-7624 Pécs, Hungary",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "2 ",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Department of Technical Informatics, Faculty of Engineering and Information Technology, University of Pécs, Rókus u. 2, H-7624 Pécs, Hungary ",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "Received day Month year; revised day Month year; accepted day Month year",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "Article type (Original Research Paper)",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "Open Access type (CC-BY-NC 4.0, CC-BY 4.0_SID_1, CC-BY 4.0)",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "Copyright: ",
-                  "type": "text"
-                },
-                {
-                  "styles": {
-                    "bold": true
+                  {
+                    "styles": {
+                      "bold": true
+                    },
+                    "text": "Amalia Ivanyi",
+                    "type": "text"
                   },
-                  "text": "Publisher",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": " or ",
-                  "type": "text"
-                },
-                {
-                  "styles": {
-                    "bold": true
+                  {
+                    "styles": {},
+                    "text": "1 ",
+                    "type": "text"
                   },
-                  "text": "Open Access",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": " (type CC-BY-NC 4.0, CC-BY 4.0_SID_1, CC-BY 4.0)",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "* Corresponding author, e-mail: peter@mik.pte.hu",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "© [year] Akadémiai Kiadó, Budapest/The Author(s)",
-                  "type": "text"
-                }
-              ]
+                  {
+                    "styles": {},
+                    "text": "Department of Systems and Software Technologies, Faculty of Engineering and Information Technology, University of Pécs, Boszorkány u. 2, H-7624 Pécs, Hungary",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "2 ",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "Department of Technical Informatics, Faculty of Engineering and Information Technology, University of Pécs, Rókus u. 2, H-7624 Pécs, Hungary ",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "Received day Month year; revised day Month year; accepted day Month year",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "Article type (Original Research Paper)",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "Open Access type (CC-BY-NC 4.0, CC-BY 4.0_SID_1, CC-BY 4.0)",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "Copyright: ",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {
+                      "bold": true
+                    },
+                    "text": "Publisher",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": " or ",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {
+                      "bold": true
+                    },
+                    "text": "Open Access",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": " (type CC-BY-NC 4.0, CC-BY 4.0_SID_1, CC-BY 4.0)",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "* Corresponding author, e-mail: peter@mik.pte.hu",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "© [year] Akadémiai Kiadó, Budapest/The Author(s)",
+                    "type": "text"
+                  }
+                ],
+                "id": "00000000-0000-0000-0000-000000000000",
+                "type": "tableCell"
+              }
             ]
           }
         ],

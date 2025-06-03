@@ -5,45 +5,70 @@
         "rows": [
           {
             "cells": [
-              [
-                {
-                  "styles": {},
-                  "text": "500",
-                  "type": "text"
-                }
-              ]
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "500",
+                    "type": "text"
+                  }
+                ],
+                "id": "85c70cc0-76a7-48d3-a860-f94e48e1b918",
+                "type": "tableCell"
+              }
             ]
           },
           {
             "cells": [
-              [
-                {
-                  "styles": {},
-                  "text": "100",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "400",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "400",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "400",
-                  "type": "text"
-                }
-              ]
+              {
+                "content": [],
+                "id": "4d88e9e3-1294-439a-bb67-67a069d164a5",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "100",
+                    "type": "text"
+                  }
+                ],
+                "id": "c3f0fefd-eeb6-40f7-8b77-7aca00a2676a",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "400",
+                    "type": "text"
+                  }
+                ],
+                "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "400",
+                    "type": "text"
+                  }
+                ],
+                "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "400",
+                    "type": "text"
+                  }
+                ],
+                "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
+                "type": "tableCell"
+              }
             ]
           }
         ],

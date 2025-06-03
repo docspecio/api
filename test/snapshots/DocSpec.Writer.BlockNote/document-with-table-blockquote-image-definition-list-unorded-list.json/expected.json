@@ -37,165 +37,209 @@
         "rows": [
           {
             "cells": [
-              [
-                {
-                  "styles": {},
-                  "text": "Lorem",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "Ipsum",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "Dolor",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "Amet",
-                  "type": "text"
-                }
-              ]
-            ]
-          },
-          {
-            "cells": [
-              [
-                {
-                  "styles": {},
-                  "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. ",
-                  "type": "text"
-                },
-                {
-                  "styles": {
-                    "underline": true
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "Lorem",
+                    "type": "text"
+                  }
+                ],
+                "id": "bd3197b3-bd30-4e78-a50f-e212f10a5d94",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "Ipsum",
+                    "type": "text"
+                  }
+                ],
+                "id": "c9a2dce4-def1-4c03-9bac-e6e6895a2eab",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "Dolor",
+                    "type": "text"
                   },
-                  "text": "Suspendisse molestie viverra purus ut eleifend",
-                  "type": "text"
-                },
-                {
-                  "styles": {
-                    "bold": true
+                  {
+                    "styles": {},
+                    "text": "Amet",
+                    "type": "text"
+                  }
+                ],
+                "id": "b854d5cf-cc4d-45c3-95f0-d279bd438585",
+                "type": "tableCell"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. ",
+                    "type": "text"
                   },
-                  "text": "Suspendisse molestie viverra purus ut eleifend",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": ". Nunc id facilisis erat, ut blandit tellus.",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "We're no strangers to love. You know the rules and so do I. A full commitment's what I'm thinking of. You wouldn't get this from any other guy.",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "x",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "2",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "CO",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "2",
-                  "type": "text"
-                }
-              ]
+                  {
+                    "styles": {
+                      "underline": true
+                    },
+                    "text": "Suspendisse molestie viverra purus ut eleifend",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {
+                      "bold": true
+                    },
+                    "text": "Suspendisse molestie viverra purus ut eleifend",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": ". Nunc id facilisis erat, ut blandit tellus.",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "We're no strangers to love. You know the rules and so do I. A full commitment's what I'm thinking of. You wouldn't get this from any other guy.",
+                    "type": "text"
+                  }
+                ],
+                "id": "e4cfa435-ed09-40d9-840a-96b9156f6566",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "x",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "2",
+                    "type": "text"
+                  }
+                ],
+                "id": "5cff621c-7fad-4167-9a89-025601fdb3ef",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "CO",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "2",
+                    "type": "text"
+                  }
+                ],
+                "id": "5099b21b-4a39-436c-9a96-6deb8262200e",
+                "type": "tableCell"
+              }
             ]
           },
           {
             "cells": [
-              [
-                {
-                  "styles": {},
-                  "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. Suspendisse molestie viverra purus ut eleifend. Nunc id facilisis erat, ut blandit tellus.",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "100",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "500",
-                  "type": "text"
-                }
-              ]
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. Suspendisse molestie viverra purus ut eleifend. Nunc id facilisis erat, ut blandit tellus.",
+                    "type": "text"
+                  }
+                ],
+                "id": "68de476a-bb0d-4919-87e2-b3c57cc39634",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "100",
+                    "type": "text"
+                  }
+                ],
+                "id": "6b93ce32-d5db-44af-a329-ddba243fe1fc",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "500",
+                    "type": "text"
+                  }
+                ],
+                "id": "85c70cc0-76a7-48d3-a860-f94e48e1b918",
+                "type": "tableCell"
+              }
             ]
           },
           {
             "cells": [
-              [
-                {
-                  "styles": {},
-                  "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. Suspendisse molestie viverra purus ut eleifend. Nunc id facilisis erat, ut blandit tellus.",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. ",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Suspendisse molestie viverra purus ut eleifend. ",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Nunc id facilisis erat, ut blandit tellus.",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. Suspendisse molestie viverra purus ut eleifend. Nunc id facilisis erat, ut blandit tellus.",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "100",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {},
-                  "text": "400",
-                  "type": "text"
-                }
-              ]
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. Suspendisse molestie viverra purus ut eleifend. Nunc id facilisis erat, ut blandit tellus.",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. ",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "Suspendisse molestie viverra purus ut eleifend. ",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "Nunc id facilisis erat, ut blandit tellus.",
+                    "type": "text"
+                  },
+                  {
+                    "styles": {},
+                    "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. Suspendisse molestie viverra purus ut eleifend. Nunc id facilisis erat, ut blandit tellus.",
+                    "type": "text"
+                  }
+                ],
+                "id": "4d88e9e3-1294-439a-bb67-67a069d164a5",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "100",
+                    "type": "text"
+                  }
+                ],
+                "id": "c3f0fefd-eeb6-40f7-8b77-7aca00a2676a",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {},
+                    "text": "400",
+                    "type": "text"
+                  }
+                ],
+                "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
+                "type": "tableCell"
+              }
             ]
           }
         ],

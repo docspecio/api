@@ -92,140 +92,176 @@
         "rows": [
           {
             "cells": [
-              [
-                {
-                  "styles": {
-                    "italic": true
+              {
+                "content": [
+                  {
+                    "styles": {
+                      "italic": true
+                    },
+                    "text": "Row 1,",
+                    "type": "text"
                   },
-                  "text": "Row 1,",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": " column 1",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {
-                    "italic": true
+                  {
+                    "styles": {},
+                    "text": " column 1",
+                    "type": "text"
+                  }
+                ],
+                "id": "00000000-0000-0000-0000-000000000000",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {
+                      "italic": true
+                    },
+                    "text": "Row 1,",
+                    "type": "text"
                   },
-                  "text": "Row 1,",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": " column 2",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {
-                    "italic": true
+                  {
+                    "styles": {},
+                    "text": " column 2",
+                    "type": "text"
+                  }
+                ],
+                "id": "00000000-0000-0000-0000-000000000000",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {
+                      "italic": true
+                    },
+                    "text": "Row 1,",
+                    "type": "text"
                   },
-                  "text": "Row 1,",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": " column 3",
-                  "type": "text"
-                }
-              ]
+                  {
+                    "styles": {},
+                    "text": " column 3",
+                    "type": "text"
+                  }
+                ],
+                "id": "00000000-0000-0000-0000-000000000000",
+                "type": "tableCell"
+              }
             ]
           },
           {
             "cells": [
-              [
-                {
-                  "styles": {
-                    "italic": true
+              {
+                "content": [
+                  {
+                    "styles": {
+                      "italic": true
+                    },
+                    "text": "Row 2,",
+                    "type": "text"
                   },
-                  "text": "Row 2,",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": " column 1",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {
-                    "italic": true
+                  {
+                    "styles": {},
+                    "text": " column 1",
+                    "type": "text"
+                  }
+                ],
+                "id": "00000000-0000-0000-0000-000000000000",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {
+                      "italic": true
+                    },
+                    "text": "Row 2,",
+                    "type": "text"
                   },
-                  "text": "Row 2,",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": " column 2",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {
-                    "italic": true
+                  {
+                    "styles": {},
+                    "text": " column 2",
+                    "type": "text"
+                  }
+                ],
+                "id": "00000000-0000-0000-0000-000000000000",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {
+                      "italic": true
+                    },
+                    "text": "Row 2,",
+                    "type": "text"
                   },
-                  "text": "Row 2,",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": " column 3",
-                  "type": "text"
-                }
-              ]
+                  {
+                    "styles": {},
+                    "text": " column 3",
+                    "type": "text"
+                  }
+                ],
+                "id": "00000000-0000-0000-0000-000000000000",
+                "type": "tableCell"
+              }
             ]
           },
           {
             "cells": [
-              [
-                {
-                  "styles": {
-                    "italic": true
+              {
+                "content": [
+                  {
+                    "styles": {
+                      "italic": true
+                    },
+                    "text": "Row 3,",
+                    "type": "text"
                   },
-                  "text": "Row 3,",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": " column 1",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {
-                    "italic": true
+                  {
+                    "styles": {},
+                    "text": " column 1",
+                    "type": "text"
+                  }
+                ],
+                "id": "00000000-0000-0000-0000-000000000000",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {
+                      "italic": true
+                    },
+                    "text": "Row 3,",
+                    "type": "text"
                   },
-                  "text": "Row 3,",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": " column 2",
-                  "type": "text"
-                }
-              ],
-              [
-                {
-                  "styles": {
-                    "italic": true
+                  {
+                    "styles": {},
+                    "text": " column 2",
+                    "type": "text"
+                  }
+                ],
+                "id": "00000000-0000-0000-0000-000000000000",
+                "type": "tableCell"
+              },
+              {
+                "content": [
+                  {
+                    "styles": {
+                      "italic": true
+                    },
+                    "text": "Row 3,",
+                    "type": "text"
                   },
-                  "text": "Row 3,",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": " column 3",
-                  "type": "text"
-                }
-              ]
+                  {
+                    "styles": {},
+                    "text": " column 3",
+                    "type": "text"
+                  }
+                ],
+                "id": "00000000-0000-0000-0000-000000000000",
+                "type": "tableCell"
+              }
             ]
           }
         ],
