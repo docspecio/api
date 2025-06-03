@@ -62,13 +62,17 @@ defmodule DocSpec.Writer.BlockNote do
       |> Enum.filter(fn %{type: type} -> type == NLdoc.Spec.Paragraph.resource_type() end)
       |> NLdoc.Spec.Content.text()
 
-    with {:ok, {bn_texts, state}} <- write_children({texts, state}, &write_resource/1) do
+    lists = resource.children
+      |> Enum.filter(fn %{type: type} -> type == NLdoc.Spec.UnorderedList.resource_type() end)
+
+    with {:ok, {bn_texts, state}} <- write_children({texts, state}, &write_resource/1),
+      {:ok, {nested_items, state}} <- write_children({lists, state}, &write_resource/1) do
       {:ok,
        {[
           %BlockNote.Spec.BulletListItem{
             id: resource.id,
             content: bn_texts,
-            children: []
+            children: nested_items
           }
         ], state}}
     end

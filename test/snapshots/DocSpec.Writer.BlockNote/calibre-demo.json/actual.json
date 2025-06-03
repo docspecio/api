@@ -3879,7 +3879,46 @@
       "type": "paragraph"
     },
     {
-      "children": [],
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "content": [
+                    {
+                      "styles": {},
+                      "text": "Four",
+                      "type": "text"
+                    }
+                  ],
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "type": "bulletListItem"
+                }
+              ],
+              "content": [
+                {
+                  "styles": {},
+                  "text": "This bullet uses an image as the bullet item",
+                  "type": "text"
+                }
+              ],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "bulletListItem"
+            }
+          ],
+          "content": [
+            {
+              "styles": {},
+              "text": "Two",
+              "type": "text"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "bulletListItem"
+        }
+      ],
       "content": [
         {
           "styles": {},
