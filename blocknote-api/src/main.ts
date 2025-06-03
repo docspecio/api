@@ -15,7 +15,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type','X-Requested-With','Accept'],
 }));
 
-app.use(express.json());
+app.use(express.json({ limit: '100mb' }));
 
 app.post('/', async (req: Request, res: Response) => {
   const ydoc = await server.blocksToYDoc(req.body, 'document-store')
