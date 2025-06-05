@@ -5,8 +5,7 @@ defmodule BlockNote.Spec.Table.Cell do
 
   use TypedStruct
 
-  @type props() :: %{optional(:colspan) => integer(),
-                    optional(:rowspan) => integer()}
+  @type props() :: %{optional(:colspan) => integer(), optional(:rowspan) => integer()}
 
   typedstruct enforce: true do
     field :id, String.t()
