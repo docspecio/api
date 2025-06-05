@@ -14,7 +14,8 @@ defmodule DocSpec.Writer.BlockNote do
 
   @spec write(document :: NLdoc.Spec.Document.t()) :: {:ok, BlockNote.Spec.Document.t()} | error()
   def write(document = %NLdoc.Spec.Document{}) do
-    with {:ok, {[blocknote_document], _state}} <- write_resource({document, %State{assets: document.assets}}),
+    with {:ok, {[blocknote_document], _state}} <-
+           write_resource({document, %State{assets: document.assets}}),
          do: {:ok, reverse(blocknote_document)}
   end
 
@@ -50,33 +51,45 @@ defmodule DocSpec.Writer.BlockNote do
   @spec write_resource({resource :: NLdoc.Spec.UnorderedList.t(), State.t()}) ::
           {:ok, {[Blocknote.Spec.BulletListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.UnorderedList{}, state = %State{}}) do
-    with {:ok, {items, state}} <- write_children({resource.children, %State{state | parent_list_type: :bullet}}, &write_resource/1) do
+    with {:ok, {items, state}} <-
+           write_children(
+             {resource.children, %State{state | parent_list_type: :bullet}},
+             &write_resource/1
+           ) do
       {:ok, {items, state}}
     end
   end
 
-    @spec write_resource({resource :: NLdoc.Spec.OrderedList.t(), State.t()}) ::
+  @spec write_resource({resource :: NLdoc.Spec.OrderedList.t(), State.t()}) ::
           {:ok, {[Blocknote.Spec.NumberedListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.OrderedList{}, state = %State{}}) do
-    with {:ok, {items, state}} <- write_children({resource.children, %State{state | parent_list_type: :numbered}}, &write_resource/1) do
+    with {:ok, {items, state}} <-
+           write_children(
+             {resource.children, %State{state | parent_list_type: :numbered}},
+             &write_resource/1
+           ) do
       {:ok, {items, state}}
     end
   end
 
   @spec write_resource({resource :: NLdoc.Spec.ListItem.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.BulletListItem.t() | Blocknote.Spec.NumberedListItem.t()], State.t()}} | error()
+          {:ok,
+           {[Blocknote.Spec.BulletListItem.t() | Blocknote.Spec.NumberedListItem.t()], State.t()}}
+          | error()
   defp write_resource({resource = %NLdoc.Spec.ListItem{}, state = %State{}}) do
     texts =
       resource.children
       |> Enum.filter(fn %{type: type} -> type == NLdoc.Spec.Paragraph.resource_type() end)
       |> NLdoc.Spec.Content.text()
 
-    lists = resource.children
-      |> Enum.filter(fn %{type: type} -> type in [NLdoc.Spec.OrderedList.resource_type(), NLdoc.Spec.UnorderedList.resource_type()] end)
+    lists =
+      resource.children
+      |> Enum.filter(fn %{type: type} ->
+        type in [NLdoc.Spec.OrderedList.resource_type(), NLdoc.Spec.UnorderedList.resource_type()]
+      end)
 
     with {:ok, {bn_texts, state}} <- write_children({texts, state}, &write_resource/1),
-      {:ok, {nested_items, state}} <- write_children({lists, state}, &write_resource/1) do
-
+         {:ok, {nested_items, state}} <- write_children({lists, state}, &write_resource/1) do
       item =
         if state.parent_list_type == :bullet do
           %BlockNote.Spec.BulletListItem{
@@ -97,16 +110,18 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @spec write_resource({resource :: NLdoc.Spec.Image.t(), State.t()}) ::
-        {:ok, {[Blocknote.Spec.Image.t()], State.t()}} | error()
+          {:ok, {[Blocknote.Spec.Image.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.Image{}, state = %State{}}) do
-    asset = Enum.find(state.assets, fn %NLdoc.Spec.Asset{id: id} -> ("#" <> id) == resource.source end)
+    asset =
+      Enum.find(state.assets, fn %NLdoc.Spec.Asset{id: id} -> "#" <> id == resource.source end)
 
-    {:ok, {[
-      %BlockNote.Spec.Image{
-        id: resource.id,
-        props: %{url: NLdoc.Spec.Asset.to_base64(asset)}
-      }
-    ], state}}
+    {:ok,
+     {[
+        %BlockNote.Spec.Image{
+          id: resource.id,
+          props: %{url: NLdoc.Spec.Asset.to_base64(asset)}
+        }
+      ], state}}
   end
 
   @spec write_resource({resource :: NLdoc.Spec.Heading.t(), State.t()}) ::
@@ -165,8 +180,7 @@ defmodule DocSpec.Writer.BlockNote do
   @spec write_resource({resource :: NLdoc.Spec.TableHeader.t(), State.t()}) ::
           {:ok, {[BlockNote.Spec.Table.Cell.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.TableHeader{}, state = %State{}}) do
-    texts =
-      NLdoc.Spec.Content.text(resource.children)
+    texts = NLdoc.Spec.Content.text(resource.children)
 
     with {:ok, {bn_texts, state}} <- write_children({texts, state}, &write_resource/1) do
       {:ok,
@@ -183,11 +197,10 @@ defmodule DocSpec.Writer.BlockNote do
     end
   end
 
-    @spec write_resource({resource :: NLdoc.Spec.TableCell.t(), State.t()}) ::
+  @spec write_resource({resource :: NLdoc.Spec.TableCell.t(), State.t()}) ::
           {:ok, {[BlockNote.Spec.Table.Cell.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.TableCell{}, state = %State{}}) do
-    texts =
-      NLdoc.Spec.Content.text(resource.children)
+    texts = NLdoc.Spec.Content.text(resource.children)
 
     with {:ok, {bn_texts, state}} <- write_children({texts, state}, &write_resource/1) do
       {:ok,

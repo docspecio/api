@@ -3,6 +3,5 @@ defmodule BlockNote.Spec.Text.Styles do
   Proof of concept
   """
 
-  @type t :: %{optional(:bold) => boolean(),
-           optional(:italic) => boolean()}
+  @type t :: %{optional(:bold) => boolean(), optional(:italic) => boolean()}
 end
