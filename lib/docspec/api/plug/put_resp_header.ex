@@ -1,6 +1,6 @@
 defmodule DocSpec.API.Plug.PutRespHeader do
   @moduledoc """
-  This module provides a Plug that puts a specific header on all respones.
+  This module provides a Plug that puts a specific header on all responses.
   """
   @behaviour Plug
 
