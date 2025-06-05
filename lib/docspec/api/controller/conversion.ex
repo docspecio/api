@@ -1,6 +1,6 @@
 defmodule DocSpec.API.Controller.Conversion do
   @moduledoc """
-  Router for validation API.
+  Router for conversion API.
   """
 
   use Plug.Builder
