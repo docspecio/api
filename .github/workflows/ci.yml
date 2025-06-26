@@ -41,7 +41,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Cosign
-        if: startsWith(github.ref, 'refs/tags/')
         uses: sigstore/cosign-installer@v3
         with:
           cosign-release: "v2.4.0"
@@ -77,11 +76,24 @@ jobs:
           DIGEST: ${{ steps.build-and-push.outputs.digest }}
           TAGS: ${{ steps.meta.outputs.tags }}
         run: |
+          set -euo pipefail
+
+          if [ -z "${TAGS:-}" ]; then
+            echo "No image tags found; skipping cosign signing."
+            exit 0
+          fi
+
           images=""
-          for tag in ${TAGS}; do
+          for tag in $TAGS; do
             images+="${tag}@${DIGEST} "
           done
-          cosign sign --yes ${images}
+
+          if [ -z "$images" ]; then
+            echo "No images found"
+          else
+            echo "Signing these images: $images"
+            cosign sign --yes $images
+          fi
 
       - name: Attest
         uses: actions/attest-build-provenance@v1
