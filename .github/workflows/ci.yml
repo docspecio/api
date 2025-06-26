@@ -90,6 +90,7 @@ jobs:
       - name: Attest
         uses: actions/attest-build-provenance@v1
         id: attest
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           subject-name: ghcr.io/${{ env.IMAGE_NAME }}
           subject-digest: ${{ steps.build-and-push.outputs.digest }}
