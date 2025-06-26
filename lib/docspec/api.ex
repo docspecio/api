@@ -4,15 +4,12 @@ defmodule DocSpec.API do
   """
 
   @not_found_text """
-  Hey! Welcome to my API.
+  To use the Conversion API, upload a file.
+  You can do this, for example by using the following command (replace HOSTNAME by the actual hostname):
 
-  To test this API, just curl a DOCX Document to me!
+      curl -X POST https://HOSTNAME/conversion -F "file=@<path on your filesystem to your docx>"
 
-  You can do this, for example by using the following command:
-
-      curl -X POST https://api.docspec.dev/conversion -F "file=@<path on your filesystem to your docx>"
-
-  Let me know what you think! Bye!
+  The source code for this API can be found at https://github.com/docspecio/api.
   """
 
   require Logger
