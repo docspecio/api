@@ -40,12 +40,6 @@ Elixir tests can be run with:
 mix test
 ```
 
-Node tests (if any) can be executed with:
-
-```bash
-npm test --prefix blocknote-api
-```
-
 ## License
 
-See [`LICENSE`](LICENSE) for license information (EUPL v1.2).
+See [`LICENSE`](LICENSE) for license information (MIT).
