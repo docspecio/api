@@ -20,7 +20,7 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @spec write_resource({document :: NLdoc.Spec.Document.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.Document.t()], State.t()}} | error()
+          {:ok, {[BlockNote.Spec.Document.t()], State.t()}} | error()
   defp write_resource({document = %NLdoc.Spec.Document{}, state = %State{}}) do
     with {:ok, {contents, state}} <- write_children({document.children, state}, &write_resource/1) do
       {:ok,
@@ -34,7 +34,7 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @spec write_resource({paragraph :: NLdoc.Spec.Paragraph.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.Paragraph.t()], State.t()}} | error()
+          {:ok, {[BlockNote.Spec.Paragraph.t()], State.t()}} | error()
   defp write_resource({paragraph = %NLdoc.Spec.Paragraph{}, state = %State{}}) do
     with {:ok, {contents, state}} <-
            write_children({paragraph.children, state}, &write_resource/1) do
@@ -49,7 +49,7 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @spec write_resource({resource :: NLdoc.Spec.UnorderedList.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.BulletListItem.t()], State.t()}} | error()
+          {:ok, {[BlockNote.Spec.BulletListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.UnorderedList{}, state = %State{}}) do
     with {:ok, {items, state}} <-
            write_children(
@@ -61,7 +61,7 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @spec write_resource({resource :: NLdoc.Spec.OrderedList.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.NumberedListItem.t()], State.t()}} | error()
+          {:ok, {[BlockNote.Spec.NumberedListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.OrderedList{}, state = %State{}}) do
     with {:ok, {items, state}} <-
            write_children(
@@ -74,7 +74,7 @@ defmodule DocSpec.Writer.BlockNote do
 
   @spec write_resource({resource :: NLdoc.Spec.ListItem.t(), State.t()}) ::
           {:ok,
-           {[Blocknote.Spec.BulletListItem.t() | Blocknote.Spec.NumberedListItem.t()], State.t()}}
+           {[BlockNote.Spec.BulletListItem.t() | BlockNote.Spec.NumberedListItem.t()], State.t()}}
           | error()
   defp write_resource({resource = %NLdoc.Spec.ListItem{}, state = %State{}}) do
     texts =
@@ -110,7 +110,7 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @spec write_resource({resource :: NLdoc.Spec.Image.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.Image.t()], State.t()}} | error()
+          {:ok, {[BlockNote.Spec.Image.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.Image{}, state = %State{}}) do
     asset =
       Enum.find(state.assets, fn %NLdoc.Spec.Asset{id: id} -> "#" <> id == resource.source end)
@@ -125,7 +125,7 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @spec write_resource({resource :: NLdoc.Spec.Heading.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.Heading.t()], State.t()}} | error()
+          {:ok, {[BlockNote.Spec.Heading.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.Heading{}, state = %State{}}) do
     with {:ok, {contents, state}} <-
            write_children({resource.children, state}, &write_resource/1) do
@@ -144,7 +144,7 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @spec write_resource({text :: NLdoc.Spec.Text.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.Text.t()], State.t()}} | error()
+          {:ok, {[BlockNote.Spec.Text.t()], State.t()}} | error()
   defp write_resource({text = %NLdoc.Spec.Text{}, state = %State{}}) do
     {:ok,
      {[
@@ -156,7 +156,7 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @spec write_resource({resource :: NLdoc.Spec.Table.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.Table.t()], State.t()}} | error()
+          {:ok, {[BlockNote.Spec.Table.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.Table{}, state = %State{}}) do
     with {:ok, {rows, state}} <- write_children({resource.children, state}, &write_resource/1) do
       {:ok,
@@ -170,7 +170,7 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @spec write_resource({resource :: NLdoc.Spec.TableRow.t(), State.t()}) ::
-          {:ok, {[Blocknote.Spec.Table.Content.row()], State.t()}} | error()
+          {:ok, {[BlockNote.Spec.Table.Content.row()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.TableRow{}, state = %State{}}) do
     with {:ok, {cells, state}} <- write_children({resource.children, state}, &write_resource/1) do
       {:ok, {[%{cells: cells}], state}}
@@ -242,7 +242,7 @@ defmodule DocSpec.Writer.BlockNote do
 
   @spec write_children(
           {children :: [child], State.t()},
-          (child, State.t() -> {:ok, {[result], State.t()}} | {:error, term})
+          ({child, State.t()} -> {:ok, {[result], State.t()}} | error())
         ) ::
           {:ok, {[result], State.t()}} | error()
         when child: var, result: var
