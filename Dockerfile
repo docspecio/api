@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 
 ENV MIX_ENV=prod
 
-RUN apk add -y --no-install-recommends --no-cache git
+RUN apk add --no-cache git
 RUN mix local.hex --force && mix local.rebar --force
 
 COPY . .
