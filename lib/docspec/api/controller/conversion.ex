@@ -25,7 +25,7 @@ defmodule DocSpec.API.Controller.Conversion do
       Respond.json(conn, 200, blocknote |> NLdoc.Util.Recase.to_camel())
     else
       {:error, :no_upload} ->
-        Respond.error(conn, 400, "No file uploaded.")
+        Respond.error(conn, 400, "No DOCX file uploaded.")
     end
   end
 
@@ -43,8 +43,14 @@ defmodule DocSpec.API.Controller.Conversion do
       |> Enum.find(
         nil,
         fn
-          %Plug.Upload{} -> true
-          _ -> false
+          %Plug.Upload{
+            content_type:
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          } ->
+            true
+
+          _ ->
+            false
         end
       )
 

@@ -10,7 +10,7 @@ defmodule DocSpec.Writer.BlockNoteTest do
   alias NLdoc.Spec.Document
   alias NLdoc.Util.Recase
 
-  @fixtures_dir Path.join([__DIR__, "fixtures"])
+  @fixtures_dir Path.join([__DIR__, "../../fixtures"])
   @fixtures @fixtures_dir
             |> Path.join("**/*.json")
             |> Path.wildcard()

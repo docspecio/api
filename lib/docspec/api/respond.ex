@@ -52,15 +52,6 @@ defmodule DocSpec.API.Respond do
   def error(conn, status, message, opts \\ []),
     do: json(conn, status, %{"code" => status, "message" => message}, opts)
 
-  @spec not_found(conn :: Plug.Conn.t(), opts :: [expose_headers_opt()]) :: Plug.Conn.t()
-  def not_found(conn = %Plug.Conn{}, opts \\ []),
-    do: error(conn, 404, "Not Found", opts)
-
-  @spec head(conn :: Plug.Conn.t(), status :: Plug.Conn.status(), opts :: [expose_headers_opt()]) ::
-          Plug.Conn.t() | no_return()
-  def head(conn = %Plug.Conn{}, status \\ 200, opts \\ []),
-    do: respond(conn, status, [], opts)
-
   @spec method_not_allowed(conn :: Plug.Conn.t(), supported_methods :: [supported_method()]) ::
           Plug.Conn.t() | no_return()
   def method_not_allowed(conn = %Plug.Conn{}, supported_methods) do
