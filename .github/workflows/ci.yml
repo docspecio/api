@@ -87,15 +87,6 @@ jobs:
           echo "Signing these images: $images"
           cosign sign --yes $images
 
-      - name: Attest
-        uses: actions/attest-build-provenance@v1
-        id: attest
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          subject-name: ghcr.io/${{ env.IMAGE_NAME }}
-          subject-digest: ${{ steps.build-and-push.outputs.digest }}
-          push-to-registry: ${{ startsWith(github.ref, 'refs/tags/') }}
-
       - name: Create GitHub Release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
