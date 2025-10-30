@@ -1,5 +1,5 @@
 defmodule BlockNote.Spec.Paragraph do
-  @doc """
+  @moduledoc """
   Proof of concept
   """
 

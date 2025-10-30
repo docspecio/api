@@ -51,25 +51,19 @@ defmodule DocSpec.Writer.BlockNote do
   @spec write_resource({resource :: NLdoc.Spec.UnorderedList.t(), State.t()}) ::
           {:ok, {[BlockNote.Spec.BulletListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.UnorderedList{}, state = %State{}}) do
-    with {:ok, {items, state}} <-
-           write_children(
-             {resource.children, %State{state | parent_list_type: :bullet}},
-             &write_resource/1
-           ) do
-      {:ok, {items, state}}
-    end
+    write_children(
+      {resource.children, %State{state | parent_list_type: :bullet}},
+      &write_resource/1
+    )
   end
 
   @spec write_resource({resource :: NLdoc.Spec.OrderedList.t(), State.t()}) ::
           {:ok, {[BlockNote.Spec.NumberedListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.OrderedList{}, state = %State{}}) do
-    with {:ok, {items, state}} <-
-           write_children(
-             {resource.children, %State{state | parent_list_type: :numbered}},
-             &write_resource/1
-           ) do
-      {:ok, {items, state}}
-    end
+    write_children(
+      {resource.children, %State{state | parent_list_type: :numbered}},
+      &write_resource/1
+    )
   end
 
   @spec write_resource({resource :: NLdoc.Spec.ListItem.t(), State.t()}) ::
