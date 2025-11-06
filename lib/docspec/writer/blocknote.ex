@@ -111,16 +111,20 @@ defmodule DocSpec.Writer.BlockNote do
     asset =
       Enum.find(state.assets, fn %NLdoc.Spec.Asset{id: id} -> "#" <> id == resource.source end)
 
-    {:ok,
-     {[
-        %BlockNote.Spec.Image{
-          id: resource.id,
-          props: %{
-            url: NLdoc.Spec.Asset.to_base64(asset),
-            caption: resource.alternative_text || ""
+    if is_nil(asset) do
+      {:ok, {[], state}}
+    else
+      {:ok,
+       {[
+          %BlockNote.Spec.Image{
+            id: resource.id,
+            props: %{
+              url: NLdoc.Spec.Asset.to_base64(asset),
+              caption: resource.alternative_text || ""
+            }
           }
-        }
-      ], state}}
+        ], state}}
+    end
   end
 
   @spec write_resource({resource :: NLdoc.Spec.Heading.t(), State.t()}) ::
