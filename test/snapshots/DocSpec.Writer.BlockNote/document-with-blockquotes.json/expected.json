@@ -15,6 +15,40 @@
       "type": "heading"
     },
     {
+      "children": [
+        {
+          "content": [
+            {
+              "styles": {},
+              "text": "Life’s a long road, but if you bray loud enough, even the quietest fields will hear you.",
+              "type": "text"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "paragraph"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "quote"
+    },
+    {
+      "children": [
+        {
+          "content": [
+            {
+              "styles": {},
+              "text": "As the sun sets on the horizon of opportunity, always remember: bananas are best peeled with patience.",
+              "type": "text"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "paragraph"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "quote"
+    },
+    {
       "content": [
         {
           "styles": {},

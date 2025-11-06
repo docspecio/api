@@ -154,6 +154,21 @@ defmodule DocSpec.Writer.BlockNote do
     end
   end
 
+  @spec write_resource({resource :: NLdoc.Spec.BlockQuotation.t(), State.t()}) ::
+          {:ok, {[BlockNote.Spec.Quote.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.BlockQuotation{}, state = %State{}}) do
+    with {:ok, {contents, state}} <-
+           write_children({resource.children, state}, &write_resource/1) do
+      {:ok,
+       {[
+          %BlockNote.Spec.Quote{
+            id: resource.id,
+            children: contents
+          }
+        ], state}}
+    end
+  end
+
   @spec write_resource({text :: NLdoc.Spec.Text.t(), State.t()}) ::
           {:ok, {[BlockNote.Spec.Text.t()], State.t()}} | error()
   defp write_resource({text = %NLdoc.Spec.Text{}, state = %State{}}) do

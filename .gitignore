@@ -35,3 +35,5 @@ traefik/letsencrypt/*
 
 node_modules/
 dist
+
+test/**/actual.json
