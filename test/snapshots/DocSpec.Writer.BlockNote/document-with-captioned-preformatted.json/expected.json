@@ -1,4 +1,16 @@
 {
-  "content": [],
+  "content": [
+    {
+      "children": [
+        {
+          "styles": {},
+          "text": "const fun = (a: string) => {\n    console.log(`Hello ${a}`)\n}",
+          "type": "text"
+        }
+      ],
+      "id": "30e0f156-2005-4e4f-9463-eee306c1d06c",
+      "type": "codeBlock"
+    }
+  ],
   "id": "4fa3cbd8-247a-4a87-b160-e6644882c45e"
 }
