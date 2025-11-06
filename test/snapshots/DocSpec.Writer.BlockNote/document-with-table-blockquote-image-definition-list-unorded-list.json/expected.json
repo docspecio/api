@@ -398,6 +398,7 @@
     {
       "id": "f5421e53-44ea-431c-b24d-8c20029bc785",
       "props": {
+        "caption": "Placeholder image",
         "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
       },
       "type": "image"

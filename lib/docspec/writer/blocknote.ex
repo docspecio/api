@@ -115,7 +115,10 @@ defmodule DocSpec.Writer.BlockNote do
      {[
         %BlockNote.Spec.Image{
           id: resource.id,
-          props: %{url: NLdoc.Spec.Asset.to_base64(asset)}
+          props: %{
+            url: NLdoc.Spec.Asset.to_base64(asset),
+            caption: resource.alternative_text || ""
+          }
         }
       ], state}}
   end

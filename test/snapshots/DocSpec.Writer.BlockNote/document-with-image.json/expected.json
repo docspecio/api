@@ -21,6 +21,7 @@
         {
           "id": "00000000-0000-0000-0000-000000000000",
           "props": {
+            "caption": "Some non-decorative image.",
             "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
           },
           "type": "image"
@@ -32,6 +33,7 @@
     {
       "id": "00000000-0000-0000-0000-000000000000",
       "props": {
+        "caption": "This alt text should not be in output HTML since it is decorative.",
         "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
       },
       "type": "image"
@@ -39,6 +41,7 @@
     {
       "id": "00000000-0000-0000-0000-000000000000",
       "props": {
+        "caption": "Alt",
         "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
       },
       "type": "image"
