@@ -3438,6 +3438,16 @@
           "type": "text"
         },
         {
+          "content": {
+            "styles": {},
+            "text": "calibre download page",
+            "type": "text"
+          },
+          "href": "http://calibre-ebook.com/download",
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "link"
+        },
+        {
           "styles": {},
           "text": ". Then we have a link that points back to the section on paragraph level formatting in this document.",
           "type": "text"

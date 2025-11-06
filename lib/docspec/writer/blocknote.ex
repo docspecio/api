@@ -5,9 +5,15 @@ defmodule DocSpec.Writer.BlockNote do
 
   use TypedStruct
 
-  typedstruct module: State, enforce: true do
-    field :assets, [NLdoc.Spec.Asset.t()], default: []
-    field :parent_list_type, :bullet | :numbered | nil, default: nil
+  defmodule State do
+    @moduledoc """
+    Format of state modified during converting.
+    """
+
+    typedstruct enforce: true do
+      field :assets, [NLdoc.Spec.Asset.t()], default: []
+      field :parent_list_type, :bullet | :numbered | nil, default: nil
+    end
   end
 
   @type error() :: {:error, term()}
@@ -51,19 +57,15 @@ defmodule DocSpec.Writer.BlockNote do
   @spec write_resource({resource :: NLdoc.Spec.UnorderedList.t(), State.t()}) ::
           {:ok, {[BlockNote.Spec.BulletListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.UnorderedList{}, state = %State{}}) do
-    write_children(
-      {resource.children, %State{state | parent_list_type: :bullet}},
-      &write_resource/1
-    )
+    {resource.children, %State{state | parent_list_type: :bullet}}
+    |> write_children(&write_resource/1)
   end
 
   @spec write_resource({resource :: NLdoc.Spec.OrderedList.t(), State.t()}) ::
           {:ok, {[BlockNote.Spec.NumberedListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.OrderedList{}, state = %State{}}) do
-    write_children(
-      {resource.children, %State{state | parent_list_type: :numbered}},
-      &write_resource/1
-    )
+    {resource.children, %State{state | parent_list_type: :numbered}}
+    |> write_children(&write_resource/1)
   end
 
   @spec write_resource({resource :: NLdoc.Spec.ListItem.t(), State.t()}) ::
@@ -145,6 +147,21 @@ defmodule DocSpec.Writer.BlockNote do
         %BlockNote.Spec.Text{
           text: text.text,
           styles: convert_styling(text.styling)
+        }
+      ], state}}
+  end
+
+  @spec write_resource({resource :: NLdoc.Spec.Link.t(), State.t()}) ::
+          {:ok, {[BlockNote.Spec.Link.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.Link{}, state = %State{}}) do
+    {:ok,
+     {[
+        %BlockNote.Spec.Link{
+          id: resource.id,
+          content: %BlockNote.Spec.Text{
+            text: resource.text
+          },
+          href: resource.uri
         }
       ], state}}
   end
