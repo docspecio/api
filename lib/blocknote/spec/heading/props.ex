@@ -1,5 +1,5 @@
 defmodule BlockNote.Spec.Heading.Props do
-  @doc """
+  @moduledoc """
   Proof of concept
   """
 

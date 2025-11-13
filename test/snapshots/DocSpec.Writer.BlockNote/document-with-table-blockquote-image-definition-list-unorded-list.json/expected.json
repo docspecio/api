@@ -297,6 +297,23 @@
       "type": "table"
     },
     {
+      "children": [
+        {
+          "content": [
+            {
+              "styles": {},
+              "text": "Donec at risus elit. Nunc sed diam placerat, pharetra dolor nec, ullamcorper ipsum. Nunc cursus justo erat, ac porta urna bibendum in. Sed facilisis, nibh eu feugiat dictum, justo orci luctus orci, viverra tincidunt risus leo vel nisl. ",
+              "type": "text"
+            }
+          ],
+          "id": "81ff80de-1df5-493b-a9f6-1f7bf36ce026",
+          "type": "paragraph"
+        }
+      ],
+      "id": "64e2d8fe-4599-4618-849c-9b75f08fca3c",
+      "type": "quote"
+    },
+    {
       "content": [
         {
           "styles": {},
@@ -340,6 +357,36 @@
           "type": "text"
         },
         {
+          "content": {
+            "styles": {},
+            "text": "consectetur",
+            "type": "text"
+          },
+          "href": "https://www.nldoc.nl",
+          "id": "3110562f-e25a-4fb3-adae-38412a37bda8",
+          "type": "link"
+        },
+        {
+          "content": {
+            "styles": {},
+            "text": "consectetur",
+            "type": "text"
+          },
+          "href": "https://www.nldoc.nl",
+          "id": "3110562f-e25a-4fb3-adae-38412a37bda8",
+          "type": "link"
+        },
+        {
+          "content": {
+            "styles": {},
+            "text": "consectetur",
+            "type": "text"
+          },
+          "href": "https://www.nldoc.nl",
+          "id": "3110562f-e25a-4fb3-adae-38412a37bda8",
+          "type": "link"
+        },
+        {
           "styles": {},
           "text": " adipiscing elit. Morbi vitae viverra nisl. Suspendisse congue tempus velit, ut maximus leo facilisis nec. Nunc egestas vitae dolor eu malesuada. Nam condimentum scelerisque ipsum, nec rutrum purus gravida quis. In at nisi at metus lacinia porta. Pellentesque maximus ex nec est sollicitudin, ac volutpat magna ultricies. Donec at risus elit. Nunc sed diam placerat, pharetra dolor nec, ullamcorper ipsum. Nunc cursus justo erat, ac porta urna bibendum in. Sed facilisis, nibh eu feugiat dictum, justo orci luctus orci, viverra tincidunt risus leo vel nisl. Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. Suspendisse molestie viverra purus ut eleifend. Nunc id facilisis erat, ut blandit tellus.",
           "type": "text"
@@ -351,6 +398,7 @@
     {
       "id": "f5421e53-44ea-431c-b24d-8c20029bc785",
       "props": {
+        "caption": "Placeholder image",
         "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
       },
       "type": "image"

@@ -1,0 +1,84 @@
+{
+  "children": [
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "A few images:",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "children": [
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": " ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "alternativeText": "Some non-decorative image.",
+          "caption": [],
+          "source": "#3e85bae6-e63d-45e0-87dc-f6d237c560a3",
+          "decorative": false,
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/Image"
+        }
+      ],
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Paragraph"
+    },
+    {
+      "alternativeText": "This alt text should not be in output HTML since it is decorative.",
+      "caption": [],
+      "source": "#3e85bae6-e63d-45e0-87dc-f6d237c560a3",
+      "decorative": true,
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Image"
+    },
+    {
+      "alternativeText": "Alt",
+      "caption": [
+        {
+          "children": [
+            {
+              "descriptors": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "styling": [],
+              "text": "A caption.",
+              "type": "https://spec.nldoc.nl/Resource/Text"
+            }
+          ],
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "https://spec.nldoc.nl/Resource/Paragraph"
+        }
+      ],
+      "source": "#3e85bae6-e63d-45e0-87dc-f6d237c560a3",
+      "decorative": false,
+      "descriptors": [],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "https://spec.nldoc.nl/Resource/Image"
+    }
+  ],
+  "descriptors": [
+    {
+      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+      "uri": "http://purl.org/dc/elements/1.1/creator",
+      "value": "eng-dept"
+    }
+  ],
+  "assets": [],
+  "id": "00000000-0000-0000-0000-000000000000",
+  "type": "https://spec.nldoc.nl/Resource/Document"
+}

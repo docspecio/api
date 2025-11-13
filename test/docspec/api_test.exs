@@ -4,9 +4,9 @@ defmodule DocSpec.APITest do
   use Mimic
 
   alias DocSpec.API
+  alias DocSpec.Writer
   alias NLdoc.Conversion.Reader.Docx
   alias NLdoc.Spec.Document
-  alias DocSpec.Writer
 
   import Plug.Test
   import Plug.Conn

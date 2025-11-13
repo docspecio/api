@@ -5,7 +5,7 @@ defmodule BlockNote.Spec.Image do
 
   use TypedStruct
 
-  @type props() :: %{:url => String.t()}
+  @type props() :: %{:url => String.t(), :caption => String.t()}
 
   typedstruct enforce: true do
     field :id, String.t()

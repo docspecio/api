@@ -4,7 +4,18 @@
       "content": [
         {
           "styles": {},
-          "text": "Blorpy zibber wocka flember snorp!",
+          "text": "A few images:",
+          "type": "text"
+        }
+      ],
+      "id": "00000000-0000-0000-0000-000000000000",
+      "type": "paragraph"
+    },
+    {
+      "content": [
+        {
+          "styles": {},
+          "text": " ",
           "type": "text"
         }
       ],

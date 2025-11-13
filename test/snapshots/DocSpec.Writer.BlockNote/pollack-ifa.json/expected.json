@@ -226,6 +226,16 @@
           "type": "text"
         },
         {
+          "content": {
+            "styles": {},
+            "text": "https://submit.akademiai.com/pollack",
+            "type": "text"
+          },
+          "href": "https://submit.akademiai.com/pollack",
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "link"
+        },
+        {
           "styles": {},
           "text": ". To submit, first register on the website and then proceed with the upload.",
           "type": "text"
@@ -948,6 +958,16 @@
           "styles": {},
           "text": "Corresponding authors will receive an email from ",
           "type": "text"
+        },
+        {
+          "content": {
+            "styles": {},
+            "text": "akjournals@tnq.co.in",
+            "type": "text"
+          },
+          "href": "mailto:akjournals@tnq.co.in",
+          "id": "00000000-0000-0000-0000-000000000000",
+          "type": "link"
         },
         {
           "styles": {},

@@ -5,9 +5,15 @@ defmodule DocSpec.Writer.BlockNote do
 
   use TypedStruct
 
-  typedstruct module: State, enforce: true do
-    field :assets, [NLdoc.Spec.Asset.t()], default: []
-    field :parent_list_type, :bullet | :numbered | nil, default: nil
+  defmodule State do
+    @moduledoc """
+    Format of state modified during converting.
+    """
+
+    typedstruct enforce: true do
+      field :assets, [NLdoc.Spec.Asset.t()], default: []
+      field :parent_list_type, :bullet | :numbered | nil, default: nil
+    end
   end
 
   @type error() :: {:error, term()}
@@ -51,25 +57,15 @@ defmodule DocSpec.Writer.BlockNote do
   @spec write_resource({resource :: NLdoc.Spec.UnorderedList.t(), State.t()}) ::
           {:ok, {[BlockNote.Spec.BulletListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.UnorderedList{}, state = %State{}}) do
-    with {:ok, {items, state}} <-
-           write_children(
-             {resource.children, %State{state | parent_list_type: :bullet}},
-             &write_resource/1
-           ) do
-      {:ok, {items, state}}
-    end
+    {resource.children, %State{state | parent_list_type: :bullet}}
+    |> write_children(&write_resource/1)
   end
 
   @spec write_resource({resource :: NLdoc.Spec.OrderedList.t(), State.t()}) ::
           {:ok, {[BlockNote.Spec.NumberedListItem.t()], State.t()}} | error()
   defp write_resource({resource = %NLdoc.Spec.OrderedList{}, state = %State{}}) do
-    with {:ok, {items, state}} <-
-           write_children(
-             {resource.children, %State{state | parent_list_type: :numbered}},
-             &write_resource/1
-           ) do
-      {:ok, {items, state}}
-    end
+    {resource.children, %State{state | parent_list_type: :numbered}}
+    |> write_children(&write_resource/1)
   end
 
   @spec write_resource({resource :: NLdoc.Spec.ListItem.t(), State.t()}) ::
@@ -115,13 +111,20 @@ defmodule DocSpec.Writer.BlockNote do
     asset =
       Enum.find(state.assets, fn %NLdoc.Spec.Asset{id: id} -> "#" <> id == resource.source end)
 
-    {:ok,
-     {[
-        %BlockNote.Spec.Image{
-          id: resource.id,
-          props: %{url: NLdoc.Spec.Asset.to_base64(asset)}
-        }
-      ], state}}
+    if is_nil(asset) do
+      {:ok, {[], state}}
+    else
+      {:ok,
+       {[
+          %BlockNote.Spec.Image{
+            id: resource.id,
+            props: %{
+              url: NLdoc.Spec.Asset.to_base64(asset),
+              caption: resource.alternative_text || ""
+            }
+          }
+        ], state}}
+    end
   end
 
   @spec write_resource({resource :: NLdoc.Spec.Heading.t(), State.t()}) ::
@@ -143,6 +146,36 @@ defmodule DocSpec.Writer.BlockNote do
     end
   end
 
+  @spec write_resource({resource :: NLdoc.Spec.Preformatted.t(), State.t()}) ::
+          {:ok, {[BlockNote.Spec.CodeBlock.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.Preformatted{}, state = %State{}}) do
+    with {:ok, {contents, state}} <-
+           write_children({resource.children, state}, &write_resource/1) do
+      {:ok,
+       {[
+          %BlockNote.Spec.CodeBlock{
+            id: resource.id,
+            children: contents
+          }
+        ], state}}
+    end
+  end
+
+  @spec write_resource({resource :: NLdoc.Spec.BlockQuotation.t(), State.t()}) ::
+          {:ok, {[BlockNote.Spec.Quote.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.BlockQuotation{}, state = %State{}}) do
+    with {:ok, {contents, state}} <-
+           write_children({resource.children, state}, &write_resource/1) do
+      {:ok,
+       {[
+          %BlockNote.Spec.Quote{
+            id: resource.id,
+            children: contents
+          }
+        ], state}}
+    end
+  end
+
   @spec write_resource({text :: NLdoc.Spec.Text.t(), State.t()}) ::
           {:ok, {[BlockNote.Spec.Text.t()], State.t()}} | error()
   defp write_resource({text = %NLdoc.Spec.Text{}, state = %State{}}) do
@@ -151,6 +184,21 @@ defmodule DocSpec.Writer.BlockNote do
         %BlockNote.Spec.Text{
           text: text.text,
           styles: convert_styling(text.styling)
+        }
+      ], state}}
+  end
+
+  @spec write_resource({resource :: NLdoc.Spec.Link.t(), State.t()}) ::
+          {:ok, {[BlockNote.Spec.Link.t()], State.t()}} | error()
+  defp write_resource({resource = %NLdoc.Spec.Link{}, state = %State{}}) do
+    {:ok,
+     {[
+        %BlockNote.Spec.Link{
+          id: resource.id,
+          content: %BlockNote.Spec.Text{
+            text: resource.text
+          },
+          href: resource.uri
         }
       ], state}}
   end
