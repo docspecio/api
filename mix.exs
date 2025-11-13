@@ -84,7 +84,7 @@ defmodule DocSpec.MixProject do
       # Testing: coverage, JUnit-style test reports for CI, mocking and snapshot testing.
       {:nldoc_test, "~> 3.0", only: :test},
       {:excoveralls, "~> 0.18", only: :test},
-      {:mimic, "~> 1.10", only: :test},
+      {:mimic, "~> 2.1", only: :test},
 
       # Linting & do
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
