@@ -1,13 +1,13 @@
 defmodule DocSpec.MixProject do
   use Mix.Project
 
-  @name "DocSpec"
+  @name "DocSpec API"
   @description "DocSpec Conversion API"
 
   def project do
     [
-      app: :docspec,
-      version: "0.2.1",
+      app: :docspec_api,
+      version: "0.3.0",
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
