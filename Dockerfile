@@ -20,4 +20,4 @@ EXPOSE 4000
 
 WORKDIR /usr/src/app
 
-CMD ["_build/prod/rel/docspec/bin/docspec", "start"]
+CMD ["_build/prod/rel/docspec_api/bin/docspec_api", "start"]
