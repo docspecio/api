@@ -1,51 +1,48 @@
-{
-  "content": [
-    {
-      "content": [
-        {
-          "styles": {},
-          "text": "A few images:",
-          "type": "text"
-        }
-      ],
-      "id": "00000000-0000-0000-0000-000000000000",
-      "type": "paragraph"
-    },
-    {
-      "content": [
-        {
-          "styles": {},
-          "text": " ",
-          "type": "text"
+[
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "A few images:",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": " ",
+        "type": "text"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "props": {
+          "caption": "Some non-decorative image.",
+          "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
         },
-        {
-          "id": "00000000-0000-0000-0000-000000000000",
-          "props": {
-            "caption": "Some non-decorative image.",
-            "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
-          },
-          "type": "image"
-        }
-      ],
-      "id": "00000000-0000-0000-0000-000000000000",
-      "type": "paragraph"
+        "type": "image"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "paragraph"
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {
+      "caption": "This alt text should not be in output HTML since it is decorative.",
+      "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
     },
-    {
-      "id": "00000000-0000-0000-0000-000000000000",
-      "props": {
-        "caption": "This alt text should not be in output HTML since it is decorative.",
-        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
-      },
-      "type": "image"
+    "type": "image"
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {
+      "caption": "Alt",
+      "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
     },
-    {
-      "id": "00000000-0000-0000-0000-000000000000",
-      "props": {
-        "caption": "Alt",
-        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
-      },
-      "type": "image"
-    }
-  ],
-  "id": "00000000-0000-0000-0000-000000000000"
-}
+    "type": "image"
+  }
+]

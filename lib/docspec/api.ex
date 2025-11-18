@@ -24,7 +24,7 @@ defmodule DocSpec.API do
   plug DocSpec.API.Plug.Tracing, header: "x-request-id", key: "http.request.id"
   plug DocSpec.API.Plug.Tracing, header: "x-trace-id", key: "trace.id"
   plug DocSpec.API.Plug.PutRespHeader, key: "access-control-allow-origin", value: "*"
-  plug Plug.Telemetry, event_prefix: [:docspec, :plug]
+  plug Plug.Telemetry, event_prefix: [:docspec_api, :plug]
   plug :dispatch
 
   match "/conversion", to: Controller.Conversion

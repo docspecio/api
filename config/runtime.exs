@@ -4,7 +4,7 @@ Code.ensure_loaded!(LoggerJSON.Formatters.Elastic)
 
 config :logger, :default_handler, formatter: LoggerJSON.Formatters.Elastic.new(metadata: :all)
 
-config :docspec,
+config :docspec_api,
   port: System.get_env("PORT", "4000")
 
 config :logger, :default_handler, formatter: LoggerJSON.Formatters.Elastic.new(metadata: :all)

@@ -10,6 +10,8 @@ defmodule DocSpec.API.Controller.Conversion do
   alias DocSpec.API.Respond
   alias NLdoc.Conversion.Reader.Docx
 
+  @docx "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+
   plug Plug.Parsers,
     parsers: [{:multipart, validate_utf8: false, length: 256_000_000}],
     pass: ["*/*"]
@@ -43,10 +45,7 @@ defmodule DocSpec.API.Controller.Conversion do
       |> Enum.find(
         nil,
         fn
-          %Plug.Upload{
-            content_type:
-              "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-          } ->
+          %Plug.Upload{content_type: @docx} ->
             true
 
           _ ->
