@@ -394,7 +394,11 @@ defmodule DocSpec.Writer.BlockNote do
       end)
 
     # Find max colspan across all rows
-    max_colspan = Enum.max(row_colspans, fn -> 0 end)
+    max_colspan =
+      case row_colspans do
+        [] -> 0
+        list -> Enum.max(list)
+      end
 
     # Adjust each row to have max_colspan and set all rowspan to 1
     Enum.zip(rows, row_colspans)
