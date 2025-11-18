@@ -3,6 +3,19 @@
 
 name: Docker Build and Push
 
+# This workflow uses workflow_run triggers to run after CI and BlockNote validation complete.
+# 
+# IMPORTANT: GitHub triggers workflow_run once per workflow completion, not after all workflows complete.
+# This means if "CI" completes successfully, this workflow triggers immediately - it does NOT wait for
+# "Validate BlockNote Snapshots" to complete.
+#
+# To handle this robustly, we:
+# 1. Trigger on completion of either workflow
+# 2. Check that the triggering workflow succeeded
+# 3. Use the GitHub API to verify that BOTH required workflows have completed successfully
+#    for the same commit before proceeding with the Docker build
+#
+# This ensures we only build/push Docker images when all checks pass.
 on:
   workflow_run:
     workflows: ["CI", "Validate BlockNote Snapshots"]
@@ -10,16 +23,88 @@ on:
       - completed
 
 permissions:
-  contents: write
+  contents: read
   packages: write
   id-token: write
   attestations: write
 
 jobs:
-  docker:
+  # First job: Check if all required workflows have succeeded
+  check-prerequisites:
     runs-on: ubuntu-latest
-    # Only run if both workflows succeeded
-    if: github.event.workflow_run.conclusion == 'success'
+    outputs:
+      all-success: ${{ steps.check.outputs.all-success }}
+    steps:
+      - name: Check if triggering workflow succeeded
+        if: github.event.workflow_run.conclusion != 'success'
+        run: |
+          echo "Triggering workflow '${{ github.event.workflow_run.name }}' did not succeed (conclusion: ${{ github.event.workflow_run.conclusion }})"
+          exit 1
+
+      - name: Check all required workflows
+        id: check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const requiredWorkflows = ['CI', 'Validate BlockNote Snapshots'];
+            const ref = context.payload.workflow_run.head_sha;
+            
+            console.log(`Checking workflows for commit: ${ref}`);
+            
+            // Get all workflow runs for this commit
+            const { data: runs } = await github.rest.actions.listWorkflowRunsForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head_sha: ref,
+              per_page: 100
+            });
+            
+            console.log(`Found ${runs.workflow_runs.length} workflow runs for this commit`);
+            
+            // Check each required workflow
+            const results = {};
+            for (const workflowName of requiredWorkflows) {
+              const workflowRuns = runs.workflow_runs.filter(run => run.name === workflowName);
+              
+              if (workflowRuns.length === 0) {
+                console.log(`❌ Workflow '${workflowName}' has not run yet`);
+                results[workflowName] = 'not_found';
+                continue;
+              }
+              
+              // Get the most recent run
+              const latestRun = workflowRuns.sort((a, b) => 
+                new Date(b.created_at) - new Date(a.created_at)
+              )[0];
+              
+              console.log(`Workflow '${workflowName}': status=${latestRun.status}, conclusion=${latestRun.conclusion}`);
+              
+              if (latestRun.status !== 'completed') {
+                console.log(`⏳ Workflow '${workflowName}' is still running`);
+                results[workflowName] = 'running';
+              } else if (latestRun.conclusion !== 'success') {
+                console.log(`❌ Workflow '${workflowName}' did not succeed (${latestRun.conclusion})`);
+                results[workflowName] = latestRun.conclusion;
+              } else {
+                console.log(`✅ Workflow '${workflowName}' succeeded`);
+                results[workflowName] = 'success';
+              }
+            }
+            
+            // Check if all workflows succeeded
+            const allSuccess = requiredWorkflows.every(name => results[name] === 'success');
+            
+            console.log(`All workflows succeeded: ${allSuccess}`);
+            core.setOutput('all-success', allSuccess.toString());
+            
+            if (!allSuccess) {
+              console.log('Not all required workflows have succeeded yet. Skipping Docker build.');
+            }
+
+  docker:
+    needs: check-prerequisites
+    if: needs.check-prerequisites.outputs.all-success == 'true'
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
