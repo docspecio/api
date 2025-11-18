@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.1](https://github.com/docspecio/api/compare/2.0.0...2.0.1) (2025-11-18)
+
+
+### Bug Fixes
+
+* use content instead of children and normalize inline to Text/Link ([37bf962](https://github.com/docspecio/api/commit/37bf962742403148f4b68f755a8271fe3bf0fdbd))
+* use content instead of children and normalize inline to Text/Link ([ef4aaa3](https://github.com/docspecio/api/commit/ef4aaa3f14889bd26c1b28edc2d7f032ebd05314))
+
 ## [2.0.0](https://github.com/docspecio/api/compare/1.0.1...2.0.0) (2025-11-18)
 
 
