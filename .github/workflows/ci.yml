@@ -33,6 +33,18 @@ jobs:
       - name: Run Dialyzer
         run: mix dialyzer --format github
 
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: "~2.5"
+
+      - name: Install Deno dependencies
+        run: deno install --frozen
+        working-directory: .ci
+
+      - name: Validate BlockNote snapshots
+        run: deno run --allow-env --allow-read .ci/main.ts ./test/snapshots/DocSpec.Writer.BlockNote/*/expected.json
+
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:

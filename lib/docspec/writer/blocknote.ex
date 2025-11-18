@@ -58,6 +58,27 @@ defmodule DocSpec.Writer.BlockNote do
     end
   end
 
+  defp write_resource({%NLdoc.Spec.Table{children: []}, state = %State{}, _context}),
+    do: {:ok, {[], state}}
+
+  defp write_resource({%NLdoc.Spec.Heading{children: []}, state = %State{}, _context}),
+    do: {:ok, {[], state}}
+
+  defp write_resource({%NLdoc.Spec.Paragraph{children: []}, state = %State{}, _context}),
+    do: {:ok, {[], state}}
+
+  defp write_resource({%NLdoc.Spec.UnorderedList{children: []}, state = %State{}, _context}),
+    do: {:ok, {[], state}}
+
+  defp write_resource({%NLdoc.Spec.OrderedList{children: []}, state = %State{}, _context}),
+    do: {:ok, {[], state}}
+
+  defp write_resource({%NLdoc.Spec.Preformatted{children: []}, state = %State{}, _context}),
+    do: {:ok, {[], state}}
+
+  defp write_resource({%NLdoc.Spec.BlockQuotation{children: []}, state = %State{}, _context}),
+    do: {:ok, {[], state}}
+
   @spec write_resource({paragraph :: NLdoc.Spec.Paragraph.t(), State.t(), Context.t()}) ::
           {:ok, {[BlockNote.Spec.Paragraph.t()], State.t()}} | error()
   defp write_resource(
@@ -238,15 +259,23 @@ defmodule DocSpec.Writer.BlockNote do
          {resource = %NLdoc.Spec.Table{}, state = %State{},
           context = %Context{inline_mode?: false}}
        ) do
-    with {:ok, {rows, state}} <-
-           write_children({resource.children, state, context}, &write_resource/1) do
-      {:ok,
-       {[
-          %BlockNote.Spec.Table{
-            id: resource.id,
-            content: %BlockNote.Spec.Table.Content{rows: rows}
-          }
-        ], state}}
+    # Skip empty tables - BlockNote requires at least one row
+    if resource.children == [] do
+      {:ok, {[], state}}
+    else
+      with {:ok, {rows, state}} <-
+             write_children({resource.children, state, context}, &write_resource/1) do
+        # Normalize table structure to handle rowspan/colspan correctly
+        normalized_rows = normalize_table_rows(rows)
+
+        {:ok,
+         {[
+            %BlockNote.Spec.Table{
+              id: resource.id,
+              content: %BlockNote.Spec.Table.Content{rows: normalized_rows}
+            }
+          ], state}}
+      end
     end
   end
 
@@ -331,9 +360,11 @@ defmodule DocSpec.Writer.BlockNote do
      {[
         %BlockNote.Spec.Link{
           id: resource.id,
-          content: %BlockNote.Spec.Text{
-            text: resource.text
-          },
+          content: [
+            %BlockNote.Spec.Text{
+              text: resource.text
+            }
+          ],
           href: resource.uri
         }
       ], state}}
@@ -347,6 +378,52 @@ defmodule DocSpec.Writer.BlockNote do
   # Fallback for unsupported stuff.
   defp write_resource({_, state, _context}) do
     {:ok, {[], state}}
+  end
+
+  # Normalizes table rows by ensuring all rows have equal total colspan
+  # and setting all rowspan values to 1 to avoid BlockNote occupancy grid issues
+  @spec normalize_table_rows([BlockNote.Spec.Table.Content.row()]) :: [
+          BlockNote.Spec.Table.Content.row()
+        ]
+  defp normalize_table_rows(rows) do
+    # Calculate total colspan for each row
+    row_colspans =
+      Enum.map(rows, fn row ->
+        Enum.reduce(row.cells, 0, fn cell, acc ->
+          acc + (cell.props[:colspan] || 1)
+        end)
+      end)
+
+    # Find max colspan across all rows
+    max_colspan = Enum.max(row_colspans, fn -> 0 end)
+
+    # Adjust each row to have max_colspan and set all rowspan to 1
+    Enum.zip(rows, row_colspans)
+    |> Enum.map(fn {row, current_colspan} ->
+      colspan_diff = max_colspan - current_colspan
+
+      # Normalize cells: fix colspan on last cell and set rowspan to 1
+      normalized_cells =
+        if colspan_diff > 0 and row.cells != [] do
+          [last_cell | rest_cells] = Enum.reverse(row.cells)
+          current_last_colspan = last_cell.props[:colspan] || 1
+
+          updated_last_cell =
+            put_in(last_cell.props[:colspan], current_last_colspan + colspan_diff)
+
+          Enum.reverse([updated_last_cell | rest_cells])
+        else
+          row.cells
+        end
+
+      # Set all rowspan values to 1 to avoid occupancy grid conflicts
+      normalized_rowspan_cells =
+        Enum.map(normalized_cells, fn cell ->
+          put_in(cell.props[:rowspan], 1)
+        end)
+
+      %{cells: normalized_rowspan_cells}
+    end)
   end
 
   @spec convert_styling([NLdoc.Spec.text_style()]) :: BlockNote.Spec.Text.Styles.t()

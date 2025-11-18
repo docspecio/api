@@ -1636,7 +1636,7 @@
               ],
               "id": "00000000-0000-0000-0000-000000000000",
               "props": {
-                "colspan": 1,
+                "colspan": 13,
                 "rowspan": 1
               },
               "type": "tableCell"
@@ -3437,11 +3437,13 @@
         "type": "text"
       },
       {
-        "content": {
-          "styles": {},
-          "text": "calibre download page",
-          "type": "text"
-        },
+        "content": [
+          {
+            "styles": {},
+            "text": "calibre download page",
+            "type": "text"
+          }
+        ],
         "href": "http://calibre-ebook.com/download",
         "id": "00000000-0000-0000-0000-000000000000",
         "type": "link"

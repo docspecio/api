@@ -14,8 +14,8 @@
               ],
               "id": "85c70cc0-76a7-48d3-a860-f94e48e1b918",
               "props": {
-                "colspan": 5,
-                "rowspan": 5
+                "colspan": 1113,
+                "rowspan": 1
               },
               "type": "tableCell"
             }
@@ -28,7 +28,7 @@
               "id": "4d88e9e3-1294-439a-bb67-67a069d164a5",
               "props": {
                 "colspan": 111,
-                "rowspan": 3
+                "rowspan": 1
               },
               "type": "tableCell"
             },
@@ -43,7 +43,7 @@
               "id": "c3f0fefd-eeb6-40f7-8b77-7aca00a2676a",
               "props": {
                 "colspan": 1,
-                "rowspan": 3
+                "rowspan": 1
               },
               "type": "tableCell"
             },
@@ -88,7 +88,7 @@
               "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
               "props": {
                 "colspan": 999,
-                "rowspan": 9999
+                "rowspan": 1
               },
               "type": "tableCell"
             }
