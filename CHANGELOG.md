@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/docspecio/api/compare/1.0.0...1.0.1) (2025-11-18)
+
+
+### Bug Fixes
+
+* do not include component in version ([280d2eb](https://github.com/docspecio/api/commit/280d2eb9e5d045d20b726a3bec22b5041d9d5363))
+* do not include component in version ([a5fa909](https://github.com/docspecio/api/commit/a5fa9091563a020b1f07ec4c8468ca667130e8fa))
+
 ## [1.0.0](https://github.com/docspecio/api/compare/docspec_api-0.3.1...docspec_api-1.0.0) (2025-11-15)
 
 
