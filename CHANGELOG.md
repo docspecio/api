@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/docspecio/api/compare/1.0.1...2.0.0) (2025-11-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* API result changes
+
+### Features
+
+* return PartialBlock[] instead of document wrapper ([dd59ea3](https://github.com/docspecio/api/commit/dd59ea39e2f4e9a46fdc170087694ef0b334b602))
+
 ## [1.0.1](https://github.com/docspecio/api/compare/1.0.0...1.0.1) (2025-11-18)
 
 
