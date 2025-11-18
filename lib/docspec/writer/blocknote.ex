@@ -259,23 +259,18 @@ defmodule DocSpec.Writer.BlockNote do
          {resource = %NLdoc.Spec.Table{}, state = %State{},
           context = %Context{inline_mode?: false}}
        ) do
-    # Skip empty tables - BlockNote requires at least one row
-    if resource.children == [] do
-      {:ok, {[], state}}
-    else
-      with {:ok, {rows, state}} <-
-             write_children({resource.children, state, context}, &write_resource/1) do
-        # Normalize table structure to handle rowspan/colspan correctly
-        normalized_rows = normalize_table_rows(rows)
+    with {:ok, {rows, state}} <-
+           write_children({resource.children, state, context}, &write_resource/1) do
+      # Normalize table structure to handle rowspan/colspan correctly
+      normalized_rows = normalize_table_rows(rows)
 
-        {:ok,
-         {[
-            %BlockNote.Spec.Table{
-              id: resource.id,
-              content: %BlockNote.Spec.Table.Content{rows: normalized_rows}
-            }
-          ], state}}
-      end
+      {:ok,
+       {[
+          %BlockNote.Spec.Table{
+            id: resource.id,
+            content: %BlockNote.Spec.Table.Content{rows: normalized_rows}
+          }
+        ], state}}
     end
   end
 
