@@ -6,10 +6,7 @@ name: CI
 on: [push, pull_request]
 
 permissions:
-  contents: write
-  packages: write
-  id-token: write
-  attestations: write
+  contents: read
 
 jobs:
   build:
@@ -32,75 +29,3 @@ jobs:
 
       - name: Run Dialyzer
         run: mix dialyzer --format github
-
-      - name: Setup Deno
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: "~2.5"
-
-      - name: Install Deno dependencies
-        run: deno install --frozen
-        working-directory: .ci
-
-      - name: Validate BlockNote snapshots
-        run: deno run --allow-env --allow-read .ci/main.ts ./test/snapshots/DocSpec.Writer.BlockNote/*/expected.json
-
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Install Cosign
-        uses: sigstore/cosign-installer@v3
-        with:
-          cosign-release: "v2.4.0"
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: ghcr.io/${{ github.repository }}
-          tags: |
-            type=ref,event=branch,filter=branch=main,format=latest
-            type=ref,event=tag
-
-      - name: Build (always) and push (only on tags)
-        uses: docker/build-push-action@v6
-        id: build-and-push
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64
-          push: ${{ startsWith(github.ref, 'refs/tags/') }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Sign the images with GitHub OIDC Token
-        if: startsWith(github.ref, 'refs/tags/')
-        env:
-          DIGEST: ${{ steps.build-and-push.outputs.digest }}
-          TAGS: ${{ steps.meta.outputs.tags }}
-        run: |
-          set -euo pipefail
-
-          images=""
-          for tag in $TAGS; do
-            images+="${tag}@${DIGEST} "
-          done
-
-          echo "Signing these images: $images"
-          cosign sign --yes $images
-
-      - name: Create GitHub Release
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v1
-        with:
-          generate_release_notes: true
