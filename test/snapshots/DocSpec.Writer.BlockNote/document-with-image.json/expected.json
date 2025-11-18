@@ -16,14 +16,6 @@
         "styles": {},
         "text": " ",
         "type": "text"
-      },
-      {
-        "id": "00000000-0000-0000-0000-000000000000",
-        "props": {
-          "caption": "Some non-decorative image.",
-          "url": "data:image/gif;base64,R0lGODlhAQABAAAAACw="
-        },
-        "type": "image"
       }
     ],
     "id": "00000000-0000-0000-0000-000000000000",

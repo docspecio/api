@@ -7,7 +7,7 @@ defmodule BlockNote.Spec.Heading do
 
   alias BlockNote.Spec.Heading.Props
 
-  @type content() :: BlockNote.Spec.Text.t()
+  @type content() :: BlockNote.Spec.Paragraph.content()
 
   typedstruct enforce: true do
     field :id, String.t()

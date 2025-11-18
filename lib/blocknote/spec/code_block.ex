@@ -7,11 +7,11 @@ defmodule BlockNote.Spec.CodeBlock do
 
   use TypedStruct
 
-  @type content() :: BlockNote.Spec.Paragraph.t()
+  @type content() :: BlockNote.Spec.Paragraph.content()
 
   typedstruct enforce: true do
     field :id, String.t()
     field :type, :codeBlock, default: :codeBlock
-    field :children, content(), default: []
+    field :content, content(), default: []
   end
 end
