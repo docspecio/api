@@ -381,7 +381,11 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   # Normalizes table rows by ensuring all rows have equal total colspan
-  # and setting all rowspan values to 1 to avoid BlockNote occupancy grid issues
+  # and setting all rowspan values to 1. BlockNote's table implementation
+  # doesn't properly support rowspan (cells spanning multiple rows), which
+  # can cause rendering issues or validation errors. By setting all rowspan
+  # to 1, we ensure tables render correctly even if the source document
+  # specified rowspan values.
   @spec normalize_table_rows([BlockNote.Spec.Table.Content.row()]) :: [
           BlockNote.Spec.Table.Content.row()
         ]
