@@ -1,6 +1,6 @@
 [
   {
-    "children": [
+    "content": [
       {
         "styles": {},
         "text": "const fun = (a: string) => {\n    console.log(`Hello ${a}`)\n}",

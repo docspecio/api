@@ -7,11 +7,11 @@ defmodule BlockNote.Spec.Quote do
 
   use TypedStruct
 
-  @type content() :: BlockNote.Spec.Paragraph.t()
+  @type content() :: BlockNote.Spec.Paragraph.content()
 
   typedstruct enforce: true do
     field :id, String.t()
     field :type, :quote, default: :quote
-    field :children, content(), default: []
+    field :content, content(), default: []
   end
 end

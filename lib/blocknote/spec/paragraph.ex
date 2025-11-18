@@ -5,7 +5,7 @@ defmodule BlockNote.Spec.Paragraph do
 
   use TypedStruct
 
-  @type content() :: BlockNote.Spec.Text.t()
+  @type content() :: BlockNote.Spec.Text.t() | BlockNote.Spec.Link.t()
 
   typedstruct enforce: true do
     field :id, String.t()
