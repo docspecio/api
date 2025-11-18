@@ -5,7 +5,13 @@ defmodule BlockNote.Spec.Document do
 
   use TypedStruct
 
-  @type content() :: BlockNote.Spec.Paragraph.t() | BlockNote.Spec.Heading.t()
+  @type content() ::
+          BlockNote.Spec.CodeBlock.t()
+          | BlockNote.Spec.Heading.t()
+          | BlockNote.Spec.Image.t()
+          | BlockNote.Spec.Paragraph.t()
+          | BlockNote.Spec.Quote.t()
+          | BlockNote.Spec.Table.t()
 
   typedstruct enforce: true do
     field :id, String.t()

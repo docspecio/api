@@ -7,13 +7,13 @@ defmodule DocSpec.Application do
 
   @impl true
   def start(_type, _args) do
-    env = Application.get_env(:docspec, :env)
-    version = Application.get_env(:docspec, :version)
-    port = Application.get_env(:docspec, :port)
+    env = Application.get_env(:docspec_api, :env)
+    version = Application.get_env(:docspec_api, :version)
+    port = Application.get_env(:docspec_api, :port)
 
     Application.ensure_all_started(:logger_json)
 
-    initialize_logging("docspec", version, env)
+    initialize_logging("docspec_api", version, env)
 
     Logger.info("Starting DocSpec API server v#{version} (env: #{env})")
 
@@ -21,7 +21,7 @@ defmodule DocSpec.Application do
       {Bandit, plug: DocSpec.API, port: port, scheme: :http}
     ]
 
-    LoggerJSON.Plug.attach("logger-json-requests", [:docspec, :plug, :stop], :info)
+    LoggerJSON.Plug.attach("logger-json-requests", [:docspec_api, :plug, :stop], :info)
 
     opts = [strategy: :one_for_one, name: DocSpec.Supervisor]
     Supervisor.start_link(children, opts)

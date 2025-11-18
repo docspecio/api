@@ -1,106 +1,103 @@
-{
-  "content": [
-    {
-      "content": {
-        "rows": [
-          {
-            "cells": [
-              {
-                "content": [
-                  {
-                    "styles": {},
-                    "text": "500",
-                    "type": "text"
-                  }
-                ],
-                "id": "85c70cc0-76a7-48d3-a860-f94e48e1b918",
-                "props": {
-                  "colspan": 5,
-                  "rowspan": 5
-                },
-                "type": "tableCell"
-              }
-            ]
-          },
-          {
-            "cells": [
-              {
-                "content": [],
-                "id": "4d88e9e3-1294-439a-bb67-67a069d164a5",
-                "props": {
-                  "colspan": 111,
-                  "rowspan": 3
-                },
-                "type": "tableCell"
+[
+  {
+    "content": {
+      "rows": [
+        {
+          "cells": [
+            {
+              "content": [
+                {
+                  "styles": {},
+                  "text": "500",
+                  "type": "text"
+                }
+              ],
+              "id": "85c70cc0-76a7-48d3-a860-f94e48e1b918",
+              "props": {
+                "colspan": 5,
+                "rowspan": 5
               },
-              {
-                "content": [
-                  {
-                    "styles": {},
-                    "text": "100",
-                    "type": "text"
-                  }
-                ],
-                "id": "c3f0fefd-eeb6-40f7-8b77-7aca00a2676a",
-                "props": {
-                  "colspan": 1,
-                  "rowspan": 3
-                },
-                "type": "tableCell"
+              "type": "tableCell"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "content": [],
+              "id": "4d88e9e3-1294-439a-bb67-67a069d164a5",
+              "props": {
+                "colspan": 111,
+                "rowspan": 3
               },
-              {
-                "content": [
-                  {
-                    "styles": {},
-                    "text": "400",
-                    "type": "text"
-                  }
-                ],
-                "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
-                "props": {
-                  "colspan": 1,
-                  "rowspan": 1
-                },
-                "type": "tableCell"
+              "type": "tableCell"
+            },
+            {
+              "content": [
+                {
+                  "styles": {},
+                  "text": "100",
+                  "type": "text"
+                }
+              ],
+              "id": "c3f0fefd-eeb6-40f7-8b77-7aca00a2676a",
+              "props": {
+                "colspan": 1,
+                "rowspan": 3
               },
-              {
-                "content": [
-                  {
-                    "styles": {},
-                    "text": "400",
-                    "type": "text"
-                  }
-                ],
-                "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
-                "props": {
-                  "colspan": 1,
-                  "rowspan": 1
-                },
-                "type": "tableCell"
+              "type": "tableCell"
+            },
+            {
+              "content": [
+                {
+                  "styles": {},
+                  "text": "400",
+                  "type": "text"
+                }
+              ],
+              "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
+              "props": {
+                "colspan": 1,
+                "rowspan": 1
               },
-              {
-                "content": [
-                  {
-                    "styles": {},
-                    "text": "400",
-                    "type": "text"
-                  }
-                ],
-                "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
-                "props": {
-                  "colspan": 999,
-                  "rowspan": 9999
-                },
-                "type": "tableCell"
-              }
-            ]
-          }
-        ],
-        "type": "tableContent"
-      },
-      "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
-      "type": "table"
-    }
-  ],
-  "id": "d34494bc-9988-4537-be3b-5a12b421f917"
-}
+              "type": "tableCell"
+            },
+            {
+              "content": [
+                {
+                  "styles": {},
+                  "text": "400",
+                  "type": "text"
+                }
+              ],
+              "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
+              "props": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "type": "tableCell"
+            },
+            {
+              "content": [
+                {
+                  "styles": {},
+                  "text": "400",
+                  "type": "text"
+                }
+              ],
+              "id": "5df2c132-8246-4ac7-bd59-7c9c3e4f8545",
+              "props": {
+                "colspan": 999,
+                "rowspan": 9999
+              },
+              "type": "tableCell"
+            }
+          ]
+        }
+      ],
+      "type": "tableContent"
+    },
+    "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
+    "type": "table"
+  }
+]

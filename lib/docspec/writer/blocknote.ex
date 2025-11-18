@@ -18,11 +18,12 @@ defmodule DocSpec.Writer.BlockNote do
 
   @type error() :: {:error, term()}
 
-  @spec write(document :: NLdoc.Spec.Document.t()) :: {:ok, BlockNote.Spec.Document.t()} | error()
+  @spec write(document :: NLdoc.Spec.Document.t()) ::
+          {:ok, [BlockNote.Spec.Document.content()]} | error()
   def write(document = %NLdoc.Spec.Document{}) do
     with {:ok, {[blocknote_document], _state}} <-
            write_resource({document, %State{assets: document.assets}}),
-         do: {:ok, reverse(blocknote_document)}
+         do: {:ok, reverse(blocknote_document.content)}
   end
 
   @spec write_resource({document :: NLdoc.Spec.Document.t(), State.t()}) ::

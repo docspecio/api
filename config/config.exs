@@ -1,6 +1,6 @@
 import Config
 
-config :docspec,
+config :docspec_api,
   env: config_env(),
   start: Mix.env() != :test,
   version: Mix.Project.config()[:version]
@@ -8,7 +8,7 @@ config :docspec,
 config :logger, :console,
   metadata: [
     :crash_reason,
-    :"config.docspec",
+    :"config.docspec_api",
     :conn,
     :error,
     :"service.name",
