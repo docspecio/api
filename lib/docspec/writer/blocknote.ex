@@ -339,6 +339,9 @@ defmodule DocSpec.Writer.BlockNote do
       ], state}}
   end
 
+  # Generic handler for resources with children in inline mode.
+  # Flattens container elements (like Paragraph) when already in inline mode,
+  # extracting their inline content directly.
   defp write_resource(
          {%{children: children}, state = %State{}, context = %Context{inline_mode?: true}}
        ),
