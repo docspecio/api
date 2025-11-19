@@ -1,7 +1,7 @@
 # Combined workflow for CI, validation, Docker builds, and releases
 name: Main
 
-on: [push, pull_request]
+on: [push]
 
 permissions:
   contents: write
