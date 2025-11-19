@@ -1,18 +1,18 @@
-# Inspired by:
-# https://github.com/nperez0111/bookhive/blob/main/.github/workflows/docker-build.yml
-
-name: CI
+# Combined workflow for CI, validation, Docker builds, and releases
+name: Main
 
 on: [push, pull_request]
 
 permissions:
   contents: write
   packages: write
+  pull-requests: write
   id-token: write
   attestations: write
 
 jobs:
-  build:
+  test:
+    name: Elixir CI
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,11 +27,41 @@ jobs:
       - name: Check code format
         run: mix format --check-formatted
 
+      - name: Run Credo
+        run: mix credo --strict
+
       - name: Run tests
         run: mix test
 
       - name: Run Dialyzer
         run: mix dialyzer --format github
+
+  validate-blocknote:
+    name: Validate BlockNote Snapshots
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: "~2.5"
+
+      - name: Install Deno dependencies
+        run: deno install --frozen
+        working-directory: .ci
+
+      - name: Validate BlockNote snapshots
+        run: deno run --allow-env --allow-read .ci/main.ts ./test/snapshots/DocSpec.Writer.BlockNote/*/expected.json
+
+  docker:
+    name: Docker Build and Push
+    runs-on: ubuntu-latest
+    needs: [test, validate-blocknote]
+    # Only run on push (not PR) and only if both test jobs succeeded
+    if: github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v3
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
@@ -87,8 +117,14 @@ jobs:
           echo "Signing these images: $images"
           cosign sign --yes $images
 
-      - name: Create GitHub Release
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v1
+  release-please:
+    name: Release Please
+    runs-on: ubuntu-latest
+    needs: [test, validate-blocknote, docker]
+    # Only run on main branch pushes after all other jobs succeed
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - uses: googleapis/release-please-action@v4
         with:
-          generate_release_notes: true
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json

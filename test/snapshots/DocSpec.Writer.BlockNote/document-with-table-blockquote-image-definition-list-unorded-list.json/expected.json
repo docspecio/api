@@ -350,31 +350,37 @@
         "type": "text"
       },
       {
-        "content": {
-          "styles": {},
-          "text": "consectetur",
-          "type": "text"
-        },
+        "content": [
+          {
+            "styles": {},
+            "text": "consectetur",
+            "type": "text"
+          }
+        ],
         "href": "https://www.nldoc.nl",
         "id": "3110562f-e25a-4fb3-adae-38412a37bda8",
         "type": "link"
       },
       {
-        "content": {
-          "styles": {},
-          "text": "consectetur",
-          "type": "text"
-        },
+        "content": [
+          {
+            "styles": {},
+            "text": "consectetur",
+            "type": "text"
+          }
+        ],
         "href": "https://www.nldoc.nl",
         "id": "3110562f-e25a-4fb3-adae-38412a37bda8",
         "type": "link"
       },
       {
-        "content": {
-          "styles": {},
-          "text": "consectetur",
-          "type": "text"
-        },
+        "content": [
+          {
+            "styles": {},
+            "text": "consectetur",
+            "type": "text"
+          }
+        ],
         "href": "https://www.nldoc.nl",
         "id": "3110562f-e25a-4fb3-adae-38412a37bda8",
         "type": "link"

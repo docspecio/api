@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@blocknote/core": "npm:@blocknote/core@^0.42.1",
+    "@blocknote/server-util": "npm:@blocknote/server-util@^0.42.1"
+  }
+}
