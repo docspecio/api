@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.2](https://github.com/docspecio/api/compare/2.0.1...v2.0.2) (2025-11-19)
+
+
+### Bug Fixes
+
+* failure on empty row_colspans ([97c46e1](https://github.com/docspecio/api/commit/97c46e1be8796cb420e2f4eeb3cbcf8ad10e475c))
+* table normalization, testing of spec, link content ([e353c8c](https://github.com/docspecio/api/commit/e353c8cd390c1af5f3dc661d53a5b1989986f6ab))
+* table normalization, testing of spec, link content ([e27d4c6](https://github.com/docspecio/api/commit/e27d4c62e16055c41f52589772541cca8367be78))
+
 ## [2.0.1](https://github.com/docspecio/api/compare/2.0.0...2.0.1) (2025-11-18)
 
 
