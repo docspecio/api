@@ -17,10 +17,11 @@ jobs:
     strategy:
       matrix:
         elixir: ['1.17', '1.18', '1.19']
-        otp: ['25', '26', '27']
+        otp: ['25', '26', '27', '28']
         exclude:
-          # Elixir 1.17 doesn't support OTP 27
-          - {elixir: '1.17', otp: '27'}
+          - { elixir: '1.17', otp: '28' }
+          - { elixir: '1.18', otp: '28' }
+          - { elixir: '1.19', otp: '25' }
     steps:
       - uses: actions/checkout@v3
       - uses: erlef/setup-beam@v1
