@@ -14,12 +14,15 @@ jobs:
   test:
     name: Elixir CI
     runs-on: ubuntu-latest
+    env:
+      ELIXIR_VERSION: '1.18'
+      OTP_VERSION: '26'
     steps:
       - uses: actions/checkout@v3
       - uses: erlef/setup-beam@v1
         with:
-          elixir-version: '1.18'
-          otp-version: '26'
+          elixir-version: ${{ env.ELIXIR_VERSION }}
+          otp-version: ${{ env.OTP_VERSION }}
 
       - name: Cache Mix dependencies
         uses: actions/cache@v4
@@ -27,9 +30,9 @@ jobs:
           path: |
             deps
             _build
-          key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+          key: ${{ runner.os }}-mix-${{ env.ELIXIR_VERSION }}-${{ env.OTP_VERSION }}-${{ hashFiles('**/mix.lock') }}
           restore-keys: |
-            ${{ runner.os }}-mix-
+            ${{ runner.os }}-mix-${{ env.ELIXIR_VERSION }}-${{ env.OTP_VERSION }}-
 
       - name: Install dependencies
         run: mix deps.get
@@ -49,21 +52,23 @@ jobs:
   validate-blocknote:
     name: Validate BlockNote Snapshots
     runs-on: ubuntu-latest
+    env:
+      DENO_VERSION: "~2.5"
     steps:
       - uses: actions/checkout@v3
 
       - name: Setup Deno
         uses: denoland/setup-deno@v1
         with:
-          deno-version: "~2.5"
+          deno-version: ${{ env.DENO_VERSION }}
 
       - name: Cache Deno dependencies
         uses: actions/cache@v4
         with:
           path: ~/.cache/deno
-          key: ${{ runner.os }}-deno-${{ hashFiles('.ci/deno.lock') }}
+          key: ${{ runner.os }}-deno-${{ env.DENO_VERSION }}-${{ hashFiles('.ci/deno.lock') }}
           restore-keys: |
-            ${{ runner.os }}-deno-
+            ${{ runner.os }}-deno-${{ env.DENO_VERSION }}-
 
       - name: Install Deno dependencies
         run: deno install --frozen
