@@ -211,4 +211,39 @@ defmodule DocSpec.APITest do
              ] == headers
     end
   end
+
+  describe "error handling" do
+    test "handles UnsupportedMediaTypeError with 415" do
+      conn =
+        conn(:post, "/conversion")
+        |> put_req_header("content-type", "text/plain")
+
+      error = %Plug.Parsers.UnsupportedMediaTypeError{media_type: "text/plain"}
+
+      result_conn =
+        conn
+        |> API.handle_errors(%{}, error, [])
+
+      assert {status, _headers, body} = sent_resp(result_conn)
+      assert 415 == status
+
+      assert %{"code" => 415, "message" => "Unsupported Media Type: text/plain"} ==
+               Jason.decode!(body)
+    end
+
+    test "handles unexpected errors with 500" do
+      conn = conn(:get, "/conversion")
+
+      error = %RuntimeError{message: "Something went wrong"}
+      stack = [{SomeModule, :some_function, 1, [file: ~c"lib/some_file.ex", line: 42]}]
+
+      result_conn =
+        conn
+        |> API.handle_errors(:error, error, stack)
+
+      assert {status, _headers, body} = sent_resp(result_conn)
+      assert 500 == status
+      assert %{"code" => 500, "message" => "Internal Server Error"} == Jason.decode!(body)
+    end
+  end
 end
