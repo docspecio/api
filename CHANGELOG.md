@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.0](https://github.com/docspecio/api/compare/2.0.2...v2.1.0) (2025-11-20)
+
+
+### Features
+
+* health endpoint ([6ac9ba7](https://github.com/docspecio/api/commit/6ac9ba737bc74f3f62770f296cc2256ef034754a))
+* health endpoint ([70fb751](https://github.com/docspecio/api/commit/70fb751bb3b32fb281b231dca1d3e0b0ba76760b))
+
 ## [2.0.2](https://github.com/docspecio/api/compare/2.0.1...v2.0.2) (2025-11-19)
 
 
