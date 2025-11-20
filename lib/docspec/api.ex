@@ -28,6 +28,7 @@ defmodule DocSpec.API do
   plug :dispatch
 
   match "/conversion", to: Controller.Conversion
+  match "/health", to: Controller.Health
 
   match _ do
     conn
