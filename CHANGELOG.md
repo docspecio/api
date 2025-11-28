@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/docspecio/api/compare/2.2.0...v2.2.1) (2025-11-28)
+
+
+### Bug Fixes
+
+* **deps:** update Elixir in build from 1.18 to 1.19 ([2a44446](https://github.com/docspecio/api/commit/2a444460410998db93cf7d3e5a5404da18e73e5d))
+
 ## [2.2.0](https://github.com/docspecio/api/compare/2.1.0...v2.2.0) (2025-11-28)
 
 
