@@ -2,7 +2,9 @@
   {
     "content": [
       {
-        "styles": {},
+        "styles": {
+          "textColor": "red"
+        },
         "text": "This is a manually colored text. The text is red.",
         "type": "text"
       }
@@ -13,7 +15,9 @@
   {
     "content": [
       {
-        "styles": {},
+        "styles": {
+          "textColor": "gray"
+        },
         "text": "This is a manually colored text. The text is blue.",
         "type": "text"
       }
@@ -35,7 +39,10 @@
   {
     "content": [
       {
-        "styles": {},
+        "styles": {
+          "backgroundColor": "yellow",
+          "textColor": "gray"
+        },
         "text": "This is a manually colored text. Text is blue with yellow background.",
         "type": "text"
       }
@@ -46,7 +53,10 @@
   {
     "content": [
       {
-        "styles": {},
+        "styles": {
+          "backgroundColor": "pink",
+          "textColor": "orange"
+        },
         "text": "The text color is #bb5c2d and the highlight is #c01795.",
         "type": "text"
       }

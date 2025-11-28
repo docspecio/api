@@ -1,9 +1,12 @@
 defmodule DocSpec.Writer.BlockNote do
   @moduledoc """
-  Proof of concept
+  Writer for BlockNote structure.
   """
 
   use TypedStruct
+
+  alias DocSpec.Util.Color.RGB
+  alias DocSpec.Writer.BlockNote.Color
 
   defmodule State do
     @moduledoc """
@@ -32,6 +35,9 @@ defmodule DocSpec.Writer.BlockNote do
   end
 
   @type error() :: {:error, term()}
+
+  @uri_color "https://docspec.org/ns/style#color"
+  @uri_highlight_color "https://docspec.org/ns/style#highlightColor"
 
   @spec write(document :: NLdoc.Spec.Document.t()) ::
           {:ok, [BlockNote.Spec.Document.content()]} | error()
@@ -352,7 +358,7 @@ defmodule DocSpec.Writer.BlockNote do
      {[
         %BlockNote.Spec.Text{
           text: text.text,
-          styles: convert_styling(text.styling)
+          styles: convert_styling(text.styling, text.descriptors)
         }
       ], state}}
   end
@@ -438,10 +444,13 @@ defmodule DocSpec.Writer.BlockNote do
     end)
   end
 
-  @spec convert_styling([NLdoc.Spec.text_style()]) :: BlockNote.Spec.Text.Styles.t()
-  defp convert_styling(styles) do
+  @spec convert_styling(
+          styles :: [NLdoc.Spec.text_style()],
+          descriptors :: [NLdoc.Spec.descriptor()]
+        ) :: BlockNote.Spec.Text.Styles.t()
+  defp convert_styling(styles, descriptors) do
     Enum.reduce(
-      styles,
+      styles ++ descriptors,
       %{},
       fn
         style, styling = %{} when style in [:italic, :bold, :underline] ->
@@ -450,11 +459,55 @@ defmodule DocSpec.Writer.BlockNote do
         :strikethrough, styling = %{} ->
           Map.put(styling, :strike, true)
 
+        %NLdoc.Spec.StringDescriptor{
+          uri: @uri_color,
+          value: color
+        },
+        styling = %{} ->
+          color_name = nearest_color(color)
+
+          if is_nil(color_name) do
+            styling
+          else
+            Map.put(styling, :text_color, color_name)
+          end
+
+        %NLdoc.Spec.StringDescriptor{
+          uri: @uri_highlight_color,
+          value: color
+        },
+        styling = %{} ->
+          color_name = nearest_color(color)
+
+          if is_nil(color_name) do
+            styling
+          else
+            Map.put(styling, :background_color, color_name)
+          end
+
         _, styling = %{} ->
           styling
       end
     )
   end
+
+  @spec nearest_color(color :: String.t()) :: Color.name() | nil
+  defp nearest_color(color) when is_binary(color) do
+    with {:ok, rgb} <- RGB.Hex.to_rgb(color),
+         false <- black?(rgb),
+         {:ok, name} <- Color.nearest(rgb) do
+      name
+    else
+      _ -> nil
+    end
+  end
+
+  @spec black?(color :: RGB.t() | RGB.Hex.t()) :: boolean()
+  defp black?({0, 0, 0}),
+    do: true
+
+  defp black?(_),
+    do: false
 
   @spec write_children(
           {children :: [child], State.t(), Context.t()},
