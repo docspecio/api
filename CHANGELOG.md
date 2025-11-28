@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/docspecio/api/compare/2.3.0...v2.4.0) (2025-11-28)
+
+
+### Features
+
+* text alignment ([271cb26](https://github.com/docspecio/api/commit/271cb2641399e4e0f1c2a4808d9f79c24781fae5))
+
 ## [2.3.0](https://github.com/docspecio/api/compare/2.2.1...v2.3.0) (2025-11-28)
 
 
