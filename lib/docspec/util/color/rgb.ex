@@ -96,22 +96,19 @@ defmodule DocSpec.Util.Color.RGB do
 
   ## Examples
 
-      iex> c1 = {42, 100, 200}
-      iex> c2 = {45, 104, 212}
-      iex> DocSpec.Util.Color.RGB.distance_sq(c1, c2)
-      169.0
+      iex> DocSpec.Util.Color.RGB.distance_sq({42, 100, 200}, {45, 104, 212})
+      169
 
       iex> DocSpec.Util.Color.RGB.distance_sq({123, 99, 211}, {123, 99, 211})
-      0.0
+      0
   """
-  @spec distance_sq(t(), t()) :: float()
+  @spec distance_sq(t(), t()) :: non_neg_integer()
   def distance_sq({r1, g1, b1}, {r2, g2, b2}) when is_rgb(r1, g1, b1) and is_rgb(r2, g2, b2) do
     dr = r1 - r2
     dg = g1 - g2
     db = b1 - b2
 
-    total = dr * dr + dg * dg + db * db
-    total * 1.0
+    dr * dr + dg * dg + db * db
   end
 
   @doc """
@@ -131,5 +128,5 @@ defmodule DocSpec.Util.Color.RGB do
   """
   @spec distance(t(), t()) :: float()
   def distance(c1, c2) when is_rgb(c1) and is_rgb(c2),
-    do: :math.sqrt(distance_sq(c1, c2))
+    do: distance_sq(c1, c2) |> :math.sqrt()
 end
