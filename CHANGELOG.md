@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.0](https://github.com/docspecio/api/compare/2.1.0...v2.2.0) (2025-11-28)
+
+
+### Features
+
+* list continuation ([9643e0c](https://github.com/docspecio/api/commit/9643e0cb5a64a5a49db2debae93ba46b5b2ad2fd))
+* list continuation ([049de54](https://github.com/docspecio/api/commit/049de54249058e4bf1e1c1a5f6bb3c3c9bf4999b))
+
 ## [2.1.0](https://github.com/docspecio/api/compare/2.0.2...v2.1.0) (2025-11-20)
 
 
