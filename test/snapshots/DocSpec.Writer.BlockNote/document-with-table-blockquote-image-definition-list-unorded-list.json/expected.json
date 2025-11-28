@@ -9,7 +9,8 @@
     ],
     "id": "ade5ee53-4af8-4928-81e8-481b8a98b69a",
     "props": {
-      "level": 3
+      "level": 3,
+      "textAlignment": "left"
     },
     "type": "heading"
   },
@@ -29,6 +30,7 @@
       }
     ],
     "id": "8fe5133c-f8e5-4a96-979b-844620ab243d",
+    "props": {},
     "type": "paragraph"
   },
   {
@@ -304,6 +306,7 @@
       }
     ],
     "id": "64e2d8fe-4599-4618-849c-9b75f08fca3c",
+    "props": {},
     "type": "quote"
   },
   {
@@ -315,6 +318,7 @@
       }
     ],
     "id": "29ff80d6-f53b-4c7b-b23a-c9a52af83734",
+    "props": {},
     "type": "paragraph"
   },
   {
@@ -326,6 +330,7 @@
       }
     ],
     "id": "eb147116-7859-465a-a5c3-ce2b59481155",
+    "props": {},
     "type": "paragraph"
   },
   {
@@ -338,7 +343,8 @@
     ],
     "id": "bc942a69-673d-4804-a771-b9b70c132062",
     "props": {
-      "level": 3
+      "level": 3,
+      "textAlignment": "left"
     },
     "type": "heading"
   },
@@ -392,6 +398,7 @@
       }
     ],
     "id": "27379792-a65e-49c0-a3b7-5f2fac52a3ad",
+    "props": {},
     "type": "paragraph"
   },
   {
@@ -411,6 +418,7 @@
       }
     ],
     "id": "03afbf10-ab06-4f16-a138-6094c49ef798",
+    "props": {},
     "type": "paragraph"
   },
   {
@@ -423,7 +431,8 @@
     ],
     "id": "53846914-60cc-451b-916f-79ecc91debc8",
     "props": {
-      "level": 2
+      "level": 2,
+      "textAlignment": "left"
     },
     "type": "heading"
   },
@@ -436,6 +445,7 @@
       }
     ],
     "id": "9b37ffc4-f153-4eb8-abfb-ca574b8c5e2a",
+    "props": {},
     "type": "paragraph"
   },
   {
@@ -447,6 +457,7 @@
       }
     ],
     "id": "e04b42e0-e1a8-46e4-948f-c4566d25124e",
+    "props": {},
     "type": "paragraph"
   },
   {
@@ -458,6 +469,7 @@
       }
     ],
     "id": "c4623192-c8ed-4f3a-ab52-09ce9985eb08",
+    "props": {},
     "type": "paragraph"
   },
   {
@@ -522,6 +534,7 @@
       }
     ],
     "id": "f982395e-88dc-4773-a3ef-a6d4bf2ba742",
+    "props": {},
     "type": "paragraph"
   }
 ]

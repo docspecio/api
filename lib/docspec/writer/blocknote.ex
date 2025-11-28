@@ -38,6 +38,7 @@ defmodule DocSpec.Writer.BlockNote do
 
   @uri_color "https://docspec.org/ns/style#color"
   @uri_highlight_color "https://docspec.org/ns/style#highlightColor"
+  @uri_text_alignment "https://docspec.org/ns/style#textAlignment"
 
   @spec write(document :: NLdoc.Spec.Document.t()) ::
           {:ok, [BlockNote.Spec.Document.content()]} | error()
@@ -86,22 +87,23 @@ defmodule DocSpec.Writer.BlockNote do
   defp write_resource({%NLdoc.Spec.BlockQuotation{children: []}, state = %State{}, _context}),
     do: {:ok, {[], state}}
 
-  @spec write_resource({paragraph :: NLdoc.Spec.Paragraph.t(), State.t(), Context.t()}) ::
+  @spec write_resource({resource :: NLdoc.Spec.Paragraph.t(), State.t(), Context.t()}) ::
           {:ok, {[BlockNote.Spec.Paragraph.t()], State.t()}} | error()
   defp write_resource(
-         {paragraph = %NLdoc.Spec.Paragraph{}, state = %State{},
+         {resource = %NLdoc.Spec.Paragraph{}, state = %State{},
           context = %Context{inline_mode?: false}}
        ) do
     with {:ok, {contents, state}} <-
            write_children(
-             {paragraph.children, state, Context.enable_inline_mode(context)},
+             {resource.children, state, Context.enable_inline_mode(context)},
              &write_resource/1
            ) do
       {:ok,
        {[
           %BlockNote.Spec.Paragraph{
-            id: paragraph.id,
-            content: contents
+            id: resource.id,
+            content: contents,
+            props: set_text_alignment(%{}, resource.descriptors)
           }
         ], state}}
     end
@@ -217,10 +219,13 @@ defmodule DocSpec.Writer.BlockNote do
           %BlockNote.Spec.Heading{
             id: resource.id,
             content: contents,
-            props: %BlockNote.Spec.Heading.Props{
-              # BlockNote heading levels max out at 3
-              level: min(resource.level, 3)
-            }
+            props:
+              %BlockNote.Spec.Heading.Props{
+                # BlockNote heading levels max out at 3
+                level: min(resource.level, 3),
+                text_alignment: "left"
+              }
+              |> set_text_alignment(resource.descriptors)
           }
         ], state}}
     end
@@ -241,7 +246,8 @@ defmodule DocSpec.Writer.BlockNote do
        {[
           %BlockNote.Spec.CodeBlock{
             id: resource.id,
-            content: contents
+            content: contents,
+            props: set_text_alignment(%{}, resource.descriptors)
           }
         ], state}}
     end
@@ -262,7 +268,8 @@ defmodule DocSpec.Writer.BlockNote do
        {[
           %BlockNote.Spec.Quote{
             id: resource.id,
-            content: contents
+            content: contents,
+            props: set_text_alignment(%{}, resource.descriptors)
           }
         ], state}}
     end
@@ -386,8 +393,24 @@ defmodule DocSpec.Writer.BlockNote do
        do: write_children({children, state, context}, &write_resource/1)
 
   # Fallback for unsupported stuff.
-  defp write_resource({_, state, _context}) do
-    {:ok, {[], state}}
+  defp write_resource({_, state, _context}), do: {:ok, {[], state}}
+
+  @spec set_text_alignment(props, [NLdoc.Spec.descriptor()]) :: props
+        when props: map()
+  defp set_text_alignment(props, descriptors) when is_map(props) and is_list(descriptors) do
+    descriptor =
+      descriptors
+      |> Enum.find(fn
+        %NLdoc.Spec.StringDescriptor{uri: @uri_text_alignment} -> true
+        _ -> false
+      end)
+
+    if is_nil(descriptor) do
+      props
+    else
+      %NLdoc.Spec.StringDescriptor{value: alignment} = descriptor
+      Map.put(props, :text_alignment, alignment)
+    end
   end
 
   # Normalizes table rows by ensuring all rows have equal total colspan
@@ -502,7 +525,7 @@ defmodule DocSpec.Writer.BlockNote do
     end
   end
 
-  @spec black?(color :: RGB.t() | RGB.Hex.t()) :: boolean()
+  @spec black?(color :: RGB.t()) :: boolean()
   defp black?({0, 0, 0}),
     do: true
 

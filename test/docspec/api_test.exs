@@ -195,7 +195,8 @@ defmodule DocSpec.APITest do
                  %{
                    "content" => [%{"styles" => %{}, "text" => "Example", "type" => "text"}],
                    "id" => "xyz",
-                   "type" => "paragraph"
+                   "type" => "paragraph",
+                   "props" => %{}
                  }
                ],
                "id" => "abc"

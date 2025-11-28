@@ -8,6 +8,7 @@
       }
     ],
     "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
     "type": "paragraph"
   },
   {
@@ -19,6 +20,9 @@
       }
     ],
     "id": "00000000-0000-0000-0000-000000000000",
+    "props": {
+      "textAlignment": "center"
+    },
     "type": "paragraph"
   },
   {
@@ -30,6 +34,9 @@
       }
     ],
     "id": "00000000-0000-0000-0000-000000000000",
+    "props": {
+      "textAlignment": "right"
+    },
     "type": "paragraph"
   },
   {
@@ -41,6 +48,9 @@
       }
     ],
     "id": "00000000-0000-0000-0000-000000000000",
+    "props": {
+      "textAlignment": "justified"
+    },
     "type": "paragraph"
   }
 ]

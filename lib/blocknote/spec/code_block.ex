@@ -8,10 +8,12 @@ defmodule BlockNote.Spec.CodeBlock do
   use TypedStruct
 
   @type content() :: BlockNote.Spec.Paragraph.content()
+  @type props() :: %{optional(:text_alignment) => String.t()}
 
   typedstruct enforce: true do
     field :id, String.t()
     field :type, :codeBlock, default: :codeBlock
     field :content, content(), default: []
+    field :props, props(), default: %{}
   end
 end
