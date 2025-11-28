@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/docspecio/api/compare/2.2.1...v2.3.0) (2025-11-28)
+
+
+### Features
+
+* text background color ([9cac149](https://github.com/docspecio/api/commit/9cac149ca1ace4cb2e8cdbd7b9cbd6de35cb6341))
+
 ## [2.2.1](https://github.com/docspecio/api/compare/2.2.0...v2.2.1) (2025-11-28)
 
 
