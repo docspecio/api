@@ -7,5 +7,6 @@ defmodule BlockNote.Spec.Heading.Props do
 
   typedstruct enforce: true do
     field :level, integer()
+    field :text_alignment, String.t()
   end
 end

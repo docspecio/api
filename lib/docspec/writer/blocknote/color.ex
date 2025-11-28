@@ -105,10 +105,10 @@ defmodule DocSpec.Writer.BlockNote.Color do
         @rgb_palette,
         nil,
         fn
-          {name, rgb_candidate}, acc = {_name, currrent_distance} ->
+          {name, rgb_candidate}, acc = {_name, current_distance} ->
             distance = RGB.distance_sq(rgb, rgb_candidate)
 
-            if distance < currrent_distance do
+            if distance < current_distance do
               {name, distance}
             else
               acc

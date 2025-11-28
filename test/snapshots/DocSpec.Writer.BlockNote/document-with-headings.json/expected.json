@@ -11,7 +11,8 @@
     ],
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
-      "level": 1
+      "level": 1,
+      "textAlignment": "left"
     },
     "type": "heading"
   },
@@ -27,7 +28,8 @@
     ],
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
-      "level": 2
+      "level": 2,
+      "textAlignment": "left"
     },
     "type": "heading"
   },
@@ -51,7 +53,8 @@
     ],
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
-      "level": 3
+      "level": 3,
+      "textAlignment": "left"
     },
     "type": "heading"
   },
@@ -65,7 +68,8 @@
     ],
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
-      "level": 3
+      "level": 3,
+      "textAlignment": "left"
     },
     "type": "heading"
   },
@@ -81,7 +85,8 @@
     ],
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
-      "level": 3
+      "level": 3,
+      "textAlignment": "left"
     },
     "type": "heading"
   },
@@ -95,7 +100,8 @@
     ],
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
-      "level": 3
+      "level": 3,
+      "textAlignment": "left"
     },
     "type": "heading"
   },
@@ -111,7 +117,8 @@
     ],
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
-      "level": 3
+      "level": 3,
+      "textAlignment": "left"
     },
     "type": "heading"
   }
