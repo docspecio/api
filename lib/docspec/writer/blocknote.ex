@@ -40,6 +40,8 @@ defmodule DocSpec.Writer.BlockNote do
   @uri_highlight_color "https://docspec.org/ns/style#highlightColor"
   @uri_text_alignment "https://docspec.org/ns/style#textAlignment"
 
+  @max_heading_level 6
+
   @spec write(document :: NLdoc.Spec.Document.t()) ::
           {:ok, [BlockNote.Spec.Document.content()]} | error()
   def write(document = %NLdoc.Spec.Document{}) do
@@ -221,8 +223,7 @@ defmodule DocSpec.Writer.BlockNote do
             content: contents,
             props:
               %BlockNote.Spec.Heading.Props{
-                # BlockNote heading levels max out at 3
-                level: min(resource.level, 3),
+                level: min(resource.level, @max_heading_level),
                 text_alignment: "left"
               }
               |> set_text_alignment(resource.descriptors)
@@ -517,20 +518,13 @@ defmodule DocSpec.Writer.BlockNote do
   @spec nearest_color(color :: String.t()) :: Color.name() | nil
   defp nearest_color(color) when is_binary(color) do
     with {:ok, rgb} <- RGB.Hex.to_rgb(color),
-         false <- black?(rgb),
+         false <- rgb == {0, 0, 0},
          {:ok, name} <- Color.nearest(rgb) do
       name
     else
       _ -> nil
     end
   end
-
-  @spec black?(color :: RGB.t()) :: boolean()
-  defp black?({0, 0, 0}),
-    do: true
-
-  defp black?(_),
-    do: false
 
   @spec write_children(
           {children :: [child], State.t(), Context.t()},

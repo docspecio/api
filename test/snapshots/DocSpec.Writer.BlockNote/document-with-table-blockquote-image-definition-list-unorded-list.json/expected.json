@@ -9,7 +9,7 @@
     ],
     "id": "ade5ee53-4af8-4928-81e8-481b8a98b69a",
     "props": {
-      "level": 3,
+      "level": 6,
       "textAlignment": "left"
     },
     "type": "heading"
@@ -343,7 +343,7 @@
     ],
     "id": "bc942a69-673d-4804-a771-b9b70c132062",
     "props": {
-      "level": 3,
+      "level": 6,
       "textAlignment": "left"
     },
     "type": "heading"

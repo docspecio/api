@@ -68,7 +68,7 @@
     ],
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
-      "level": 3,
+      "level": 4,
       "textAlignment": "left"
     },
     "type": "heading"
@@ -85,7 +85,7 @@
     ],
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
-      "level": 3,
+      "level": 5,
       "textAlignment": "left"
     },
     "type": "heading"
@@ -100,7 +100,7 @@
     ],
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
-      "level": 3,
+      "level": 6,
       "textAlignment": "left"
     },
     "type": "heading"
@@ -117,7 +117,7 @@
     ],
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "props": {
-      "level": 3,
+      "level": 6,
       "textAlignment": "left"
     },
     "type": "heading"
