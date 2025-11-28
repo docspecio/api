@@ -1,4 +1,4 @@
-FROM elixir:1.18-alpine AS build
+FROM elixir:1.19-alpine AS build
 WORKDIR /usr/src/app
 
 ENV MIX_ENV=prod
@@ -10,7 +10,7 @@ COPY . .
 
 RUN mix deps.get && mix release
 
-FROM elixir:1.18-alpine
+FROM elixir:1.19-alpine
 
 ENV MIX_ENV=prod
 
