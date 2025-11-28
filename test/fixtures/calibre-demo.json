@@ -351,7 +351,13 @@
           "type": "https://spec.nldoc.nl/Resource/Text"
         }
       ],
-      "descriptors": [],
+      "descriptors": [
+        {
+          "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+          "uri": "https://docspec.org/ns/style#textAlignment",
+          "value": "right"
+        }
+      ],
       "id": "00000000-0000-0000-0000-000000000000",
       "type": "https://spec.nldoc.nl/Resource/Paragraph"
     },
@@ -778,7 +784,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -801,7 +813,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -824,7 +842,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -847,7 +871,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -870,7 +900,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -923,7 +959,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1008,7 +1050,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1031,7 +1079,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1108,7 +1162,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1131,7 +1191,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1154,7 +1220,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1223,7 +1295,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1246,7 +1324,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1269,7 +1353,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1292,7 +1382,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1353,7 +1449,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1376,7 +1478,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1399,7 +1507,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1422,7 +1536,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -1445,7 +1565,13 @@
                       "type": "https://spec.nldoc.nl/Resource/Text"
                     }
                   ],
-                  "descriptors": [],
+                  "descriptors": [
+                    {
+                      "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+                      "uri": "https://docspec.org/ns/style#textAlignment",
+                      "value": "center"
+                    }
+                  ],
                   "id": "00000000-0000-0000-0000-000000000000",
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
@@ -2414,7 +2540,7 @@
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
               ],
-              "colspan": 1,
+              "colspan": 13,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -2630,7 +2756,7 @@
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
               ],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -2756,7 +2882,7 @@
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
               ],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -2867,7 +2993,7 @@
             },
             {
               "children": [],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -3083,7 +3209,7 @@
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
               ],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -3194,7 +3320,7 @@
             },
             {
               "children": [],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -3410,7 +3536,7 @@
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
               ],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -3521,7 +3647,7 @@
             },
             {
               "children": [],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -3737,7 +3863,7 @@
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
               ],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -3848,7 +3974,7 @@
             },
             {
               "children": [],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -4064,7 +4190,7 @@
                   "type": "https://spec.nldoc.nl/Resource/Paragraph"
                 }
               ],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -4175,7 +4301,7 @@
             },
             {
               "children": [],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -4316,7 +4442,7 @@
             },
             {
               "children": [],
-              "colspan": 1,
+              "colspan": 2,
               "descriptors": [],
               "id": "00000000-0000-0000-0000-000000000000",
               "rowspan": 1,
@@ -5486,7 +5612,7 @@
       "descriptors": [],
       "id": "00000000-0000-0000-0000-000000000000",
       "reversed": false,
-      "start": 1,
+      "start": 3,
       "styleType": "lower-roman",
       "type": "https://spec.nldoc.nl/Resource/OrderedList"
     }

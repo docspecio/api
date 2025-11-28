@@ -13,6 +13,7 @@ defmodule DocSpec.Writer.BlockNote do
     typedstruct enforce: true do
       field :assets, [NLdoc.Spec.Asset.t()], default: []
       field :parent_list_type, :bullet | :numbered | nil, default: nil
+      field :parent_list_start, number() | nil, default: nil
     end
   end
 
@@ -116,7 +117,8 @@ defmodule DocSpec.Writer.BlockNote do
          {resource = %NLdoc.Spec.OrderedList{}, state = %State{},
           context = %Context{inline_mode?: false}}
        ) do
-    {resource.children, %State{state | parent_list_type: :numbered}, context}
+    {resource.children,
+     %State{state | parent_list_type: :numbered, parent_list_start: resource.start}, context}
     |> write_children(&write_resource/1)
   end
 
@@ -139,8 +141,9 @@ defmodule DocSpec.Writer.BlockNote do
         type in [NLdoc.Spec.OrderedList.resource_type(), NLdoc.Spec.UnorderedList.resource_type()]
       end)
 
-    with {:ok, {bn_texts, state}} <- write_children({texts, state, context}, &write_resource/1),
-         {:ok, {nested_items, state}} <-
+    with {:ok, {bn_texts, state = %State{}}} <-
+           write_children({texts, state, context}, &write_resource/1),
+         {:ok, {nested_items, state = %State{}}} <-
            write_children({lists, state, context}, &write_resource/1) do
       item =
         if state.parent_list_type == :bullet do
@@ -153,11 +156,17 @@ defmodule DocSpec.Writer.BlockNote do
           %BlockNote.Spec.NumberedListItem{
             id: resource.id,
             content: bn_texts,
-            children: nested_items
+            children: nested_items,
+            props:
+              if is_nil(state.parent_list_start) do
+                %{}
+              else
+                %{start: state.parent_list_start}
+              end
           }
         end
 
-      {:ok, {[item], state}}
+      {:ok, {[item], %State{state | parent_list_start: nil}}}
     end
   end
 
