@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.1](https://github.com/docspecio/api/compare/2.4.0...v2.4.1) (2025-11-28)
+
+
+### Bug Fixes
+
+* increase max heading level ([aac1300](https://github.com/docspecio/api/commit/aac1300c2e38ce3c1f6797ea71450fe472f74cc8))
+* increase max heading level ([dd93c16](https://github.com/docspecio/api/commit/dd93c16c94bcf6d7d7ef9a2482c2a340313c086d))
+
 ## [2.4.0](https://github.com/docspecio/api/compare/2.3.0...v2.4.0) (2025-11-28)
 
 
