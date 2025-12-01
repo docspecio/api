@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.2](https://github.com/docspecio/api/compare/2.4.1...v2.4.2) (2025-12-01)
+
+
+### Bug Fixes
+
+* **deps:** update reader to enable alignment ([368bbf7](https://github.com/docspecio/api/commit/368bbf76d33c948f042724d415c32ecae07cc4e9))
+* **deps:** update reader to enable alignment ([2e3572e](https://github.com/docspecio/api/commit/2e3572e0bcf25ed5f336db80e31f7925b409da1c))
+
 ## [2.4.1](https://github.com/docspecio/api/compare/2.4.0...v2.4.1) (2025-11-28)
 
 
