@@ -273,7 +273,112 @@
           "descriptors": [],
           "id": "00000000-0000-0000-0000-000000000000",
           "styling": [],
-          "text": ". Now we see some red, green and blue text. Some text with a yellow highlight. Some text in a box. Some text in inverse video.",
+          "text": ". Now we see some ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+              "uri": "https://docspec.org/ns/style#color",
+              "value": "#FF0000"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "red",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": ", ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+              "uri": "https://docspec.org/ns/style#color",
+              "value": "#92D050"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "green",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": " and ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+              "uri": "https://docspec.org/ns/style#color",
+              "value": "#0070C0"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "blue",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": " text. Some text with a ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+              "uri": "https://docspec.org/ns/style#highlightColor",
+              "value": "#ffff00"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "yellow highlight",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": ". Some text in a box. Some text in ",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+              "uri": "https://docspec.org/ns/style#highlightColor",
+              "value": "#000000"
+            },
+            {
+              "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+              "uri": "https://docspec.org/ns/style#color",
+              "value": "#FFFFFF"
+            }
+          ],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": "inverse video",
+          "type": "https://spec.nldoc.nl/Resource/Text"
+        },
+        {
+          "descriptors": [],
+          "id": "00000000-0000-0000-0000-000000000000",
+          "styling": [],
+          "text": ".",
           "type": "https://spec.nldoc.nl/Resource/Text"
         }
       ],
