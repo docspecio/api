@@ -198,7 +198,67 @@
       },
       {
         "styles": {},
-        "text": ". Now we see some red, green and blue text. Some text with a yellow highlight. Some text in a box. Some text in inverse video.",
+        "text": ". Now we see some ",
+        "type": "text"
+      },
+      {
+        "styles": {
+          "textColor": "red"
+        },
+        "text": "red",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ", ",
+        "type": "text"
+      },
+      {
+        "styles": {
+          "textColor": "gray"
+        },
+        "text": "green",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": " and ",
+        "type": "text"
+      },
+      {
+        "styles": {
+          "textColor": "blue"
+        },
+        "text": "blue",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": " text. Some text with a ",
+        "type": "text"
+      },
+      {
+        "styles": {
+          "backgroundColor": "yellow"
+        },
+        "text": "yellow highlight",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ". Some text in a box. Some text in ",
+        "type": "text"
+      },
+      {
+        "styles": {
+          "textColor": "gray"
+        },
+        "text": "inverse video",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ".",
         "type": "text"
       }
     ],
