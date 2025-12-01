@@ -69,7 +69,7 @@
         {
           "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
           "uri": "https://docspec.org/ns/style#textAlignment",
-          "value": "justified"
+          "value": "justify"
         }
       ],
       "id": "00000000-0000-0000-0000-000000000000",
