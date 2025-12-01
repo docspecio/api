@@ -399,19 +399,18 @@ defmodule DocSpec.Writer.BlockNote do
   @spec set_text_alignment(props, [NLdoc.Spec.descriptor()]) :: props
         when props: map()
   defp set_text_alignment(props, descriptors) when is_map(props) and is_list(descriptors) do
-    descriptor =
-      descriptors
-      |> Enum.find(fn
-        %NLdoc.Spec.StringDescriptor{uri: @uri_text_alignment} -> true
-        _ -> false
-      end)
+    descriptors
+    |> Enum.reduce(
+      props,
+      fn
+        %NLdoc.Spec.StringDescriptor{uri: @uri_text_alignment, value: value}, props
+        when value in ["right", "center", "justify"] ->
+          Map.put(props, :text_alignment, value)
 
-    if is_nil(descriptor) do
-      props
-    else
-      %NLdoc.Spec.StringDescriptor{value: alignment} = descriptor
-      Map.put(props, :text_alignment, alignment)
-    end
+        _, props ->
+          props
+      end
+    )
   end
 
   # Normalizes table rows by ensuring all rows have equal total colspan
