@@ -487,7 +487,7 @@ defmodule BlockNote.Writer do
           value: color
         },
         styling = %{} ->
-          color_name = nearest_color(color)
+          color_name = nearest_color(:text, color)
 
           if is_nil(color_name) do
             styling
@@ -500,7 +500,7 @@ defmodule BlockNote.Writer do
           value: color
         },
         styling = %{} ->
-          color_name = nearest_color(color)
+          color_name = nearest_color(:background, color)
 
           if is_nil(color_name) do
             styling
@@ -514,11 +514,13 @@ defmodule BlockNote.Writer do
     )
   end
 
-  @spec nearest_color(color :: String.t()) :: Color.name() | nil
-  defp nearest_color(color) when is_binary(color) do
+  @spec nearest_color(type :: :text | :background, color :: String.t()) :: Color.name() | nil
+  defp nearest_color(type, color)
+       when is_binary(color)
+       when type == :background or type == :text do
     with {:ok, rgb} <- RGB.Hex.to_rgb(color),
          false <- rgb == {0, 0, 0},
-         {:ok, name} <- Color.nearest(rgb) do
+         {:ok, name} <- Color.nearest(type, rgb) do
       name
     else
       _ -> nil

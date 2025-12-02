@@ -239,7 +239,7 @@
       },
       {
         "styles": {
-          "backgroundColor": "yellow"
+          "backgroundColor": "orange"
         },
         "text": "yellow highlight",
         "type": "text"

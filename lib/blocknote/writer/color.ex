@@ -20,7 +20,7 @@ defmodule BlockNote.Writer.Color do
 
   require RGB
 
-  @colors [
+  @colors_text [
     {"gray", "#9b9a97"},
     {"brown", "#64473a"},
     {"red", "#e03e3e"},
@@ -32,11 +32,28 @@ defmodule BlockNote.Writer.Color do
     {"pink", "#ad1a72"}
   ]
 
+  @colors_background [
+    {"gray", "#ebeced"},
+    {"brown", "#e9e5e3"},
+    {"red", "#fbe4e4"},
+    {"orange", "#f6e9d9"},
+    {"yellow", "#fbf3db"},
+    {"green", "#ddedea"},
+    {"blue", "#ddebf1"},
+    {"purple", "#eae4f2"},
+    {"pink", "#f4dfeb"}
+  ]
+
   # {name, {r, g, b}} — 8-bit sRGB
-  @rgb_palette (for {name, hex} <- @colors do
-                  {:ok, rgb} = RGB.Hex.to_rgb(hex)
-                  {name, rgb}
-                end)
+  @rgb_palette_text (for {name, hex} <- @colors_text do
+                       {:ok, rgb} = RGB.Hex.to_rgb(hex)
+                       {name, rgb}
+                     end)
+
+  @rgb_palette_background (for {name, hex} <- @colors_background do
+                             {:ok, rgb} = RGB.Hex.to_rgb(hex)
+                             {name, rgb}
+                           end)
 
   @typedoc """
   The name of a BlockNote color in the built-in palette.
@@ -80,29 +97,41 @@ defmodule BlockNote.Writer.Color do
 
   ## Examples
 
-      iex> BlockNote.Writer.Color.nearest("#d9730d")
+      iex> BlockNote.Writer.Color.nearest(:text, "#d9730d")
       {:ok, "orange"}
 
-      iex> BlockNote.Writer.Color.nearest("#64473a")
+      iex> BlockNote.Writer.Color.nearest(:background, "#d9730d")
+      {:ok, "orange"}
+
+      iex> BlockNote.Writer.Color.nearest(:text, "#64473a")
       {:ok, "brown"}
 
-      iex> BlockNote.Writer.Color.nearest({224, 62, 62})
+      iex> BlockNote.Writer.Color.nearest(:background, "#64473a")
+      {:ok, "brown"}
+
+      iex> BlockNote.Writer.Color.nearest(:text, {224, 62, 62})
       {:ok, "red"}
 
-      iex> BlockNote.Writer.Color.nearest("not-a-color")
+      iex> BlockNote.Writer.Color.nearest(:background, {224, 62, 62})
+      {:ok, "orange"}
+
+      iex> BlockNote.Writer.Color.nearest(:text, "not-a-color")
+      {:error, :invalid}
+
+      iex> BlockNote.Writer.Color.nearest(:background, "not-a-color")
       {:error, :invalid}
   """
-  @spec nearest(color()) :: {:ok, name()} | error()
-  def nearest(color) when is_binary(color) do
+  @spec nearest(:background | :text, color()) :: {:ok, name()} | error()
+  def nearest(type, color) when is_binary(color) and (type == :background or type == :text) do
     with {:ok, rgb} <- RGB.Hex.to_rgb(color) do
-      nearest(rgb)
+      nearest(type, rgb)
     end
   end
 
-  def nearest(rgb) when RGB.is_rgb(rgb) do
+  def nearest(type, rgb) when RGB.is_rgb(rgb) and (type == :background or type == :text) do
     {name, _dist} =
       Enum.reduce(
-        @rgb_palette,
+        if(type == :text, do: @rgb_palette_text, else: @rgb_palette_background),
         nil,
         fn
           {name, rgb_candidate}, acc = {_name, current_distance} ->
