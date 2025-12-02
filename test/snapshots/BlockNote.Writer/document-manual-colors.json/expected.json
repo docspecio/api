@@ -43,7 +43,7 @@
     "content": [
       {
         "styles": {
-          "backgroundColor": "yellow",
+          "backgroundColor": "orange",
           "textColor": "gray"
         },
         "text": "This is a manually colored text. Text is blue with yellow background.",

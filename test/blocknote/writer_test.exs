@@ -1,16 +1,16 @@
-defmodule DocSpec.Writer.BlockNoteTest do
+defmodule BlockNote.WriterTest do
   @moduledoc false
   use ExUnit.Case, async: true
   use Mimic
-  doctest DocSpec.Writer.BlockNote
+  doctest BlockNote.Writer
 
   import NLdoc.Test.Snapshot
 
-  alias DocSpec.Writer.BlockNote
+  alias BlockNote.Writer
   alias NLdoc.Spec.Document
   alias NLdoc.Util.Recase
 
-  @fixtures_dir Path.join([__DIR__, "../../fixtures"])
+  @fixtures_dir Path.join([__DIR__, "../fixtures"])
   @fixtures @fixtures_dir
             |> Path.join("**/*.json")
             |> Path.wildcard()
@@ -33,13 +33,13 @@ defmodule DocSpec.Writer.BlockNoteTest do
         |> Jason.decode!()
         |> Recase.to_snake()
         |> Document.new!()
-        |> BlockNote.write()
+        |> Writer.write()
 
       json = blocknote |> Recase.to_camel() |> Jason.encode!() |> Jason.decode!()
 
       # TODO: figure out if we can validate that the result is indeed a valid BlockNote JSON object.
 
-      snapshot_path = "DocSpec.Writer.BlockNote/#{filename |> Path.basename()}"
+      snapshot_path = "BlockNote.Writer/#{filename |> Path.basename()}"
       assert_snapshot(json, snapshot_path, format: :json)
     end
   end
@@ -56,7 +56,7 @@ defmodule DocSpec.Writer.BlockNoteTest do
         ]
       }
 
-      assert {:ok, result} = BlockNote.write(document)
+      assert {:ok, result} = Writer.write(document)
       assert result == []
     end
 
@@ -72,7 +72,7 @@ defmodule DocSpec.Writer.BlockNoteTest do
         ]
       }
 
-      assert {:ok, result} = BlockNote.write(document)
+      assert {:ok, result} = Writer.write(document)
       assert result == []
     end
 
@@ -87,7 +87,7 @@ defmodule DocSpec.Writer.BlockNoteTest do
         ]
       }
 
-      assert {:ok, result} = BlockNote.write(document)
+      assert {:ok, result} = Writer.write(document)
       assert result == []
     end
 
@@ -102,7 +102,7 @@ defmodule DocSpec.Writer.BlockNoteTest do
         ]
       }
 
-      assert {:ok, result} = BlockNote.write(document)
+      assert {:ok, result} = Writer.write(document)
       assert result == []
     end
 
@@ -117,7 +117,7 @@ defmodule DocSpec.Writer.BlockNoteTest do
         ]
       }
 
-      assert {:ok, result} = BlockNote.write(document)
+      assert {:ok, result} = Writer.write(document)
       assert result == []
     end
 
@@ -132,7 +132,7 @@ defmodule DocSpec.Writer.BlockNoteTest do
         ]
       }
 
-      assert {:ok, result} = BlockNote.write(document)
+      assert {:ok, result} = Writer.write(document)
       assert result == []
     end
 
@@ -147,7 +147,7 @@ defmodule DocSpec.Writer.BlockNoteTest do
         ]
       }
 
-      assert {:ok, result} = BlockNote.write(document)
+      assert {:ok, result} = Writer.write(document)
       assert result == []
     end
 
@@ -164,7 +164,7 @@ defmodule DocSpec.Writer.BlockNoteTest do
         ]
       }
 
-      assert {:ok, result} = BlockNote.write(document)
+      assert {:ok, result} = Writer.write(document)
       assert result == []
     end
   end

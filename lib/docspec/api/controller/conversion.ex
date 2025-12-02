@@ -23,7 +23,7 @@ defmodule DocSpec.API.Controller.Conversion do
          docx = %Docx{} <- Docx.open!(path),
          document <- Docx.convert!(docx),
          :ok <- Docx.close!(docx),
-         {:ok, blocknote} <- DocSpec.Writer.BlockNote.write(document) do
+         {:ok, blocknote} <- BlockNote.Writer.write(document) do
       Respond.json(conn, 200, blocknote |> NLdoc.Util.Recase.to_camel())
     else
       {:error, :no_upload} ->

@@ -80,7 +80,7 @@ jobs:
         working-directory: .ci
 
       - name: Validate BlockNote snapshots
-        run: deno run --allow-env --allow-read .ci/main.ts ./test/snapshots/DocSpec.Writer.BlockNote/*/expected.json
+        run: deno run --allow-env --allow-read .ci/main.ts ./test/snapshots/BlockNote.Writer/*/expected.json
 
   docker:
     name: Docker Build and Push
