@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.4](https://github.com/docspecio/api/compare/2.4.3...v2.4.4) (2025-12-02)
+
+
+### Bug Fixes
+
+* different colors for text and background ([441442d](https://github.com/docspecio/api/commit/441442dbd2a625ac794068169044f56ccb7adba3))
+
 ## [2.4.3](https://github.com/docspecio/api/compare/2.4.2...v2.4.3) (2025-12-01)
 
 
