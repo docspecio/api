@@ -1,12 +1,12 @@
-defmodule DocSpec.Writer.BlockNote do
+defmodule BlockNote.Writer do
   @moduledoc """
   Writer for BlockNote structure.
   """
 
   use TypedStruct
 
+  alias BlockNote.Writer.Color
   alias DocSpec.Util.Color.RGB
-  alias DocSpec.Writer.BlockNote.Color
 
   defmodule State do
     @moduledoc """

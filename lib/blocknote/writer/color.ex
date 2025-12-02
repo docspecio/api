@@ -1,4 +1,4 @@
-defmodule DocSpec.Writer.BlockNote.Color do
+defmodule BlockNote.Writer.Color do
   @moduledoc """
   Color helpers for the BlockNote writer.
 
@@ -80,16 +80,16 @@ defmodule DocSpec.Writer.BlockNote.Color do
 
   ## Examples
 
-      iex> DocSpec.Writer.BlockNote.Color.nearest("#d9730d")
+      iex> BlockNote.Writer.Color.nearest("#d9730d")
       {:ok, "orange"}
 
-      iex> DocSpec.Writer.BlockNote.Color.nearest("#64473a")
+      iex> BlockNote.Writer.Color.nearest("#64473a")
       {:ok, "brown"}
 
-      iex> DocSpec.Writer.BlockNote.Color.nearest({224, 62, 62})
+      iex> BlockNote.Writer.Color.nearest({224, 62, 62})
       {:ok, "red"}
 
-      iex> DocSpec.Writer.BlockNote.Color.nearest("not-a-color")
+      iex> BlockNote.Writer.Color.nearest("not-a-color")
       {:error, :invalid}
   """
   @spec nearest(color()) :: {:ok, name()} | error()
