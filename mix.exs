@@ -14,13 +14,6 @@ defmodule DocSpec.MixProject do
       dialyzer: dialyzer_config(Mix.env()),
       elixirc_paths: elixirc_paths(Mix.env()),
       elixirc_options: [warnings_as_errors: true],
-      preferred_cli_env: [
-        coveralls: :test,
-        "coveralls.detail": :test,
-        "coveralls.post": :test,
-        "coveralls.html": :test,
-        "coveralls.cobertura": :test
-      ],
       test_coverage: [tool: ExCoveralls],
 
       # Docs and publishing
@@ -28,6 +21,18 @@ defmodule DocSpec.MixProject do
       description: @description,
       docs: &docs/0,
       package: package()
+    ]
+  end
+
+  def cli do
+    [
+      preferred_envs: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test,
+        "coveralls.cobertura": :test
+      ]
     ]
   end
 

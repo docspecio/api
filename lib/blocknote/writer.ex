@@ -17,6 +17,7 @@ defmodule BlockNote.Writer do
       field :assets, [NLdoc.Spec.Asset.t()], default: []
       field :parent_list_type, :bullet | :numbered | nil, default: nil
       field :parent_list_start, number() | nil, default: nil
+      field :extracted_blocks, [BlockNote.Spec.Document.content()], default: []
     end
   end
 
@@ -28,10 +29,6 @@ defmodule BlockNote.Writer do
     typedstruct enforce: true do
       field :inline_mode?, boolean(), default: false
     end
-
-    @spec enable_inline_mode(context :: t()) :: t()
-    def enable_inline_mode(context = %__MODULE__{}),
-      do: %__MODULE__{context | inline_mode?: true}
   end
 
   @type error() :: {:error, term()}
@@ -68,26 +65,9 @@ defmodule BlockNote.Writer do
     end
   end
 
-  defp write_resource({%NLdoc.Spec.Table{children: []}, state = %State{}, _context}),
-    do: {:ok, {[], state}}
-
-  defp write_resource({%NLdoc.Spec.Heading{children: []}, state = %State{}, _context}),
-    do: {:ok, {[], state}}
-
-  defp write_resource({%NLdoc.Spec.Paragraph{children: []}, state = %State{}, _context}),
-    do: {:ok, {[], state}}
-
-  defp write_resource({%NLdoc.Spec.UnorderedList{children: []}, state = %State{}, _context}),
-    do: {:ok, {[], state}}
-
-  defp write_resource({%NLdoc.Spec.OrderedList{children: []}, state = %State{}, _context}),
-    do: {:ok, {[], state}}
-
-  defp write_resource({%NLdoc.Spec.Preformatted{children: []}, state = %State{}, _context}),
-    do: {:ok, {[], state}}
-
-  defp write_resource({%NLdoc.Spec.BlockQuotation{children: []}, state = %State{}, _context}),
-    do: {:ok, {[], state}}
+  defp write_resource({%mod{children: []}, state = %State{}, _context})
+       when mod in [NLdoc.Spec.Table, NLdoc.Spec.UnorderedList, NLdoc.Spec.OrderedList],
+       do: {:ok, {[], state}} |> add_extracted_blocks()
 
   @spec write_resource({resource :: NLdoc.Spec.Paragraph.t(), State.t(), Context.t()}) ::
           {:ok, {[BlockNote.Spec.Paragraph.t()], State.t()}} | error()
@@ -97,7 +77,7 @@ defmodule BlockNote.Writer do
        ) do
     with {:ok, {contents, state}} <-
            write_children(
-             {resource.children, state, Context.enable_inline_mode(context)},
+             {resource.children, state, %Context{} = %{context | inline_mode?: true}},
              &write_resource/1
            ) do
       {:ok,
@@ -108,6 +88,7 @@ defmodule BlockNote.Writer do
             props: set_text_alignment(%{}, resource.descriptors)
           }
         ], state}}
+      |> add_extracted_blocks()
     end
   end
 
@@ -119,6 +100,7 @@ defmodule BlockNote.Writer do
        ) do
     {resource.children, %State{state | parent_list_type: :bullet}, context}
     |> write_children(&write_resource/1)
+    |> add_extracted_blocks()
   end
 
   @spec write_resource({resource :: NLdoc.Spec.OrderedList.t(), State.t(), Context.t()}) ::
@@ -130,6 +112,7 @@ defmodule BlockNote.Writer do
     {resource.children,
      %State{state | parent_list_type: :numbered, parent_list_start: resource.start}, context}
     |> write_children(&write_resource/1)
+    |> add_extracted_blocks()
   end
 
   @spec write_resource({resource :: NLdoc.Spec.ListItem.t(), State.t(), Context.t()}) ::
@@ -191,6 +174,7 @@ defmodule BlockNote.Writer do
 
     if is_nil(asset) do
       {:ok, {[], state}}
+      |> add_extracted_blocks()
     else
       {:ok,
        {[
@@ -202,6 +186,7 @@ defmodule BlockNote.Writer do
             }
           }
         ], state}}
+      |> add_extracted_blocks()
     end
   end
 
@@ -213,7 +198,7 @@ defmodule BlockNote.Writer do
        ) do
     with {:ok, {contents, state}} <-
            write_children(
-             {resource.children, state, Context.enable_inline_mode(context)},
+             {resource.children, state, %Context{} = %{context | inline_mode?: true}},
              &write_resource/1
            ) do
       {:ok,
@@ -229,6 +214,7 @@ defmodule BlockNote.Writer do
               |> set_text_alignment(resource.descriptors)
           }
         ], state}}
+      |> add_extracted_blocks()
     end
   end
 
@@ -239,8 +225,8 @@ defmodule BlockNote.Writer do
           context = %Context{inline_mode?: false}}
        ) do
     with {:ok, {contents, state}} <-
-           write_children(
-             {resource.children, state, Context.enable_inline_mode(context)},
+           write_text_children(
+             {resource.children, state, %Context{} = %{context | inline_mode?: true}},
              &write_resource/1
            ) do
       {:ok,
@@ -251,6 +237,7 @@ defmodule BlockNote.Writer do
             props: set_text_alignment(%{}, resource.descriptors)
           }
         ], state}}
+      |> add_extracted_blocks()
     end
   end
 
@@ -261,8 +248,8 @@ defmodule BlockNote.Writer do
           context = %Context{inline_mode?: false}}
        ) do
     with {:ok, {contents, state}} <-
-           write_children(
-             {resource.children, state, Context.enable_inline_mode(context)},
+           write_text_children(
+             {resource.children, state, %Context{} = %{context | inline_mode?: true}},
              &write_resource/1
            ) do
       {:ok,
@@ -273,6 +260,7 @@ defmodule BlockNote.Writer do
             props: set_text_alignment(%{}, resource.descriptors)
           }
         ], state}}
+      |> add_extracted_blocks()
     end
   end
 
@@ -294,6 +282,7 @@ defmodule BlockNote.Writer do
             content: %BlockNote.Spec.Table.Content{rows: normalized_rows}
           }
         ], state}}
+      |> add_extracted_blocks()
     end
   end
 
@@ -316,8 +305,8 @@ defmodule BlockNote.Writer do
           context = %Context{inline_mode?: false}}
        ) do
     with {:ok, {bn_texts, state}} <-
-           write_children(
-             {resource.children, state, Context.enable_inline_mode(context)},
+           write_text_children(
+             {resource.children, state, %Context{} = %{context | inline_mode?: true}},
              &write_resource/1
            ) do
       {:ok,
@@ -341,8 +330,8 @@ defmodule BlockNote.Writer do
           context = %Context{inline_mode?: false}}
        ) do
     with {:ok, {bn_texts, state}} <-
-           write_children(
-             {resource.children, state, Context.enable_inline_mode(context)},
+           write_text_children(
+             {resource.children, state, %Context{} = %{context | inline_mode?: true}},
              &write_resource/1
            ) do
       {:ok,
@@ -533,6 +522,7 @@ defmodule BlockNote.Writer do
         ) ::
           {:ok, {[result], State.t()}} | error()
         when child: var, result: var
+
   defp write_children({children, state = %State{}, context = %Context{}}, write_fn) do
     Enum.reduce(
       children,
@@ -545,27 +535,74 @@ defmodule BlockNote.Writer do
     )
   end
 
-  defp reverse(content) when is_list(content) do
-    content
-    |> Enum.map(&reverse/1)
-    |> Enum.reverse()
+  @spec write_text_children(
+          {children :: [child], State.t(), Context.t()},
+          ({child, State.t(), Context.t()} -> {:ok, {[result], State.t()}} | error())
+        ) ::
+          {:ok, {[result], State.t()}} | error()
+        when child: var, result: var
+  defp write_text_children({children, state = %State{}, context = %Context{}}, write_fn) do
+    Enum.reduce(
+      children,
+      {:ok, {[], state}},
+      fn
+        %NLdoc.Spec.Paragraph{children: children}, {:ok, {contents, state}} ->
+          with {:ok, {content, state}} <-
+                 write_children(
+                   {children, state, %Context{} = %{context | inline_mode?: true}},
+                   write_fn
+                 ) do
+            {:ok, {content ++ contents, state}}
+          end
+
+        # Handle inline content (Text, Link) - keep in contents
+        resource = %mod{}, {:ok, {contents, state}}
+        when mod in [NLdoc.Spec.Text, NLdoc.Spec.Link] ->
+          with {:ok, {inline_content, state}} <-
+                 write_resource({resource, state, %Context{} = %{context | inline_mode?: true}}) do
+            {:ok, {inline_content ++ contents, state}}
+          end
+
+        # Handle block-level elements - extract as separate blocks
+        resource, {:ok, {contents, state}} ->
+          with {:ok, {block_contents, state}} <-
+                 write_resource({resource, state, %Context{} = %{context | inline_mode?: false}}) do
+            {:ok,
+             {contents,
+              %State{} = %{
+                state
+                | extracted_blocks: block_contents ++ state.extracted_blocks
+              }}}
+          end
+      end
+    )
   end
 
-  defp reverse(resource = %{content: content}) when is_list(content) do
-    Map.put(resource, :content, reverse(content))
-  end
+  @spec add_extracted_blocks({[BlockNote.Spec.Document.content()], State.t()}) ::
+          {[BlockNote.Spec.Document.content()], State.t()}
+  @spec add_extracted_blocks({:ok, {[BlockNote.Spec.Document.content()], State.t()}}) ::
+          {:ok, {[BlockNote.Spec.Document.content()], State.t()}}
+  defp add_extracted_blocks({blocks, state = %State{}}) when is_list(blocks),
+    do: {state.extracted_blocks ++ blocks, %State{} = %{state | extracted_blocks: []}}
 
-  defp reverse(resource = %{content: content}) when is_map(content) do
-    Map.put(resource, :content, reverse(content))
-  end
+  defp add_extracted_blocks({:ok, {blocks, state = %State{}}}) when is_list(blocks),
+    do: {:ok, add_extracted_blocks({blocks, state})}
 
-  defp reverse(resource = %{rows: rows}) when is_list(rows) do
-    Map.put(resource, :rows, reverse(rows))
-  end
+  @spec reverse(content) :: content when content: term()
+  defp reverse(content) when is_list(content),
+    do:
+      content
+      |> Enum.map(&reverse/1)
+      |> Enum.reverse()
 
-  defp reverse(resource = %{cells: cells}) when is_list(cells) do
-    Map.put(resource, :cells, reverse(cells))
-  end
+  defp reverse(resource = %{content: content}) when is_list(content) or is_map(content),
+    do: Map.put(resource, :content, reverse(content))
+
+  defp reverse(resource = %{rows: rows}) when is_list(rows),
+    do: Map.put(resource, :rows, reverse(rows))
+
+  defp reverse(resource = %{cells: cells}) when is_list(cells),
+    do: Map.put(resource, :cells, reverse(cells))
 
   defp reverse(other),
     do: other

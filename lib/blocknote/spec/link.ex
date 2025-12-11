@@ -10,7 +10,7 @@ defmodule BlockNote.Spec.Link do
   typedstruct enforce: true do
     field :id, String.t()
     field :type, :link, default: :link
-    field :content, content(), default: []
+    field :content, [content()], default: []
     field :href, String.t()
   end
 end

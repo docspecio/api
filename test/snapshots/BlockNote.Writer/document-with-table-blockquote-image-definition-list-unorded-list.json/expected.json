@@ -225,33 +225,7 @@
         {
           "cells": [
             {
-              "content": [
-                {
-                  "styles": {},
-                  "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. Suspendisse molestie viverra purus ut eleifend. Nunc id facilisis erat, ut blandit tellus.",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. ",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Suspendisse molestie viverra purus ut eleifend. ",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Nunc id facilisis erat, ut blandit tellus.",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. Suspendisse molestie viverra purus ut eleifend. Nunc id facilisis erat, ut blandit tellus.",
-                  "type": "text"
-                }
-              ],
+              "content": [],
               "id": "4d88e9e3-1294-439a-bb67-67a069d164a5",
               "props": {
                 "colspan": 1,
@@ -296,6 +270,66 @@
     },
     "id": "4b7afbaf-01b9-47a1-b278-fb71d08c6cc8",
     "type": "table"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {},
+        "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. Suspendisse molestie viverra purus ut eleifend. Nunc id facilisis erat, ut blandit tellus.",
+        "type": "text"
+      }
+    ],
+    "id": "25700539-2d36-4e18-8336-9d5b6a0866f7",
+    "type": "bulletListItem"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {},
+        "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. ",
+        "type": "text"
+      }
+    ],
+    "id": "4e47509f-c499-4620-bbd7-80f52debb888",
+    "type": "bulletListItem"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {},
+        "text": "Suspendisse molestie viverra purus ut eleifend. ",
+        "type": "text"
+      }
+    ],
+    "id": "f65abff9-8b9f-49c5-803e-06e4a818d0f1",
+    "type": "bulletListItem"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {},
+        "text": "Nunc id facilisis erat, ut blandit tellus.",
+        "type": "text"
+      }
+    ],
+    "id": "26a979af-e96e-41dc-85b9-8259b1dc141f",
+    "type": "bulletListItem"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {},
+        "text": "Nam dignissim commodo metus eu imperdiet. Duis molestie fringilla scelerisque. Sed quis lacinia erat, nec consequat turpis. Suspendisse molestie viverra purus ut eleifend. Nunc id facilisis erat, ut blandit tellus.",
+        "type": "text"
+      }
+    ],
+    "id": "fd49acb7-9312-4e0b-ba71-bac47474dd8f",
+    "type": "bulletListItem"
   },
   {
     "content": [

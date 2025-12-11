@@ -10,7 +10,7 @@ defmodule BlockNote.Spec.BulletListItem do
   typedstruct enforce: true do
     field :id, String.t()
     field :type, :bulletListItem, default: :bulletListItem
-    field :content, content(), default: []
+    field :content, [content()], default: []
     field :children, [__MODULE__.t() | BlockNote.Spec.NumberedListItem.t()], default: []
   end
 end

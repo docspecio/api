@@ -11,7 +11,7 @@ defmodule BlockNote.Spec.Paragraph do
   typedstruct enforce: true do
     field :id, String.t()
     field :type, :paragraph, default: :paragraph
-    field :content, content(), default: []
+    field :content, [content()], default: []
     field :props, props(), default: %{}
   end
 end

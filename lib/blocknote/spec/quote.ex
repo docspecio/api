@@ -13,7 +13,7 @@ defmodule BlockNote.Spec.Quote do
   typedstruct enforce: true do
     field :id, String.t()
     field :type, :quote, default: :quote
-    field :content, content(), default: []
+    field :content, [content()], default: []
     field :props, props(), default: %{}
   end
 end
