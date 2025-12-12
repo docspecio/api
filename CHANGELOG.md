@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.5](https://github.com/docspecio/api/compare/2.4.4...2.4.5) (2025-12-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies ([b5ab978](https://github.com/docspecio/api/commit/b5ab9785deeba4777ef54f013a03ac56a465ca8e))
+
 ## [2.4.4](https://github.com/docspecio/api/compare/2.4.3...v2.4.4) (2025-12-02)
 
 
