@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/docspecio/api/compare/2.5.0...2.6.0) (2025-12-12)
+
+
+### Features
+
+* fallback for DefinitionList, DefinitionTerm, DefinitionDetails ([c55e458](https://github.com/docspecio/api/commit/c55e4586ef1350b55582693f3cc2116298f8aed7))
+
 ## [2.5.0](https://github.com/docspecio/api/compare/2.4.5...2.5.0) (2025-12-12)
 
 
