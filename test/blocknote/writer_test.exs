@@ -17,30 +17,40 @@ defmodule BlockNote.WriterTest do
             |> Enum.filter(&File.regular?/1)
             # Ignore Word temporary files
             |> Enum.reject(&String.starts_with?(Path.basename(&1), "~$"))
+            |> Enum.map(&Path.expand/1)
+
+  @opts [
+    %{name: "strict", opts: [strict: true]},
+    %{name: "no-opts", opts: []}
+  ]
 
   if @fixtures == [] do
     raise "No fixtures found in #{@fixtures_dir}"
   end
 
   for filename <- @fixtures do
-    test "successfully converts #{filename}" do
-      stub(Ecto.UUID, :generate, fn -> "00000000-0000-0000-0000-000000000000" end)
-      filename = unquote(filename)
+    for %{name: name, opts: opts} <- @opts do
+      relative_path = String.replace_prefix(filename, @fixtures_dir, "")
 
-      {:ok, blocknote} =
-        filename
-        |> File.read!()
-        |> Jason.decode!()
-        |> Recase.to_snake()
-        |> Document.new!()
-        |> Writer.write()
+      test "successfully converts #{relative_path} (#{name})" do
+        stub(Ecto.UUID, :generate, fn -> "00000000-0000-0000-0000-000000000000" end)
+        filename = unquote(filename)
 
-      json = blocknote |> Recase.to_camel() |> Jason.encode!() |> Jason.decode!()
+        {:ok, blocknote} =
+          filename
+          |> File.read!()
+          |> Jason.decode!()
+          |> Recase.to_snake()
+          |> Document.new!()
+          |> Writer.write(unquote(opts))
 
-      # TODO: figure out if we can validate that the result is indeed a valid BlockNote JSON object.
+        json = blocknote |> Recase.to_camel() |> Jason.encode!() |> Jason.decode!()
 
-      snapshot_path = "BlockNote.Writer/#{filename |> Path.basename()}"
-      assert_snapshot(json, snapshot_path, format: :json)
+        # TODO: figure out if we can validate that the result is indeed a valid BlockNote JSON object.
+
+        snapshot_path = "BlockNote.Writer/#{unquote(name)}/#{filename |> Path.basename()}"
+        assert_snapshot(json, snapshot_path, format: :json)
+      end
     end
   end
 end
