@@ -125,7 +125,11 @@ defmodule BlockNote.Writer do
          {resource = %NLdoc.Spec.UnorderedList{}, state = %State{},
           context = %Context{inline_mode?: false}}
        ) do
-    with {:ok, {children, state}} <- write_children({resource.children, %State{state | parent_list_type: :bullet}, context}, &write_resource/1) do
+    with {:ok, {children, state}} <-
+           write_children(
+             {resource.children, %State{state | parent_list_type: :bullet}, context},
+             &write_resource/1
+           ) do
       {:ok, add_extracted_blocks({children, state})}
     end
   end
@@ -136,7 +140,13 @@ defmodule BlockNote.Writer do
          {resource = %NLdoc.Spec.OrderedList{}, state = %State{},
           context = %Context{inline_mode?: false}}
        ) do
-    with {:ok, {children, state}} <- write_children({resource.children, %State{state | parent_list_type: :numbered, parent_list_start: resource.start}, context}, &write_resource/1) do
+    with {:ok, {children, state}} <-
+           write_children(
+             {resource.children,
+              %State{state | parent_list_type: :numbered, parent_list_start: resource.start},
+              context},
+             &write_resource/1
+           ) do
       {:ok, add_extracted_blocks({children, state})}
     end
   end
@@ -412,6 +422,35 @@ defmodule BlockNote.Writer do
   defp write_resource({%NLdoc.Spec.FootnoteReference{}, state = %State{}, _ctx}),
     do: {:ok, {[], state}}
 
+  defp write_resource(
+         {%NLdoc.Spec.DefinitionList{children: children}, state = %State{}, context = %Context{}}
+       ),
+       do: write_children({children, state, context}, &write_resource/1)
+
+  defp write_resource(
+         {term = %NLdoc.Spec.DefinitionTerm{}, state = %State{}, context = %Context{}}
+       ),
+       do:
+         write_resource(
+           {%NLdoc.Spec.Paragraph{
+              id: term.id,
+              children: term.children,
+              descriptors: term.descriptors
+            }, state, context}
+         )
+
+  defp write_resource(
+         {details = %NLdoc.Spec.DefinitionDetails{}, state = %State{}, context = %Context{}}
+       ),
+       do:
+         write_resource(
+           {%NLdoc.Spec.Paragraph{
+              id: details.id,
+              children: details.children,
+              descriptors: details.descriptors
+            }, state, context}
+         )
+
   defp write_resource({resource, _state, %Context{strict?: true}}),
     do: {:error, %UnsupportedResource{resource: resource}}
 
@@ -562,11 +601,12 @@ defmodule BlockNote.Writer do
       {:ok, {[], state}},
       fn
         child, {:ok, {contents, state}} ->
-        with {:ok, {content, state}} <- write_fn.({child, state, context}) do
-          {:ok, {content ++ contents, state}}
-        end
+          with {:ok, {content, state}} <- write_fn.({child, state, context}) do
+            {:ok, {content ++ contents, state}}
+          end
 
-        _, {:error, reason} -> {:error, reason}
+        _, {:error, reason} ->
+          {:error, reason}
       end
     )
   end
@@ -611,7 +651,8 @@ defmodule BlockNote.Writer do
               }}}
           end
 
-          _, {:error, reason} -> {:error, reason}
+        _, {:error, reason} ->
+          {:error, reason}
       end
     )
   end

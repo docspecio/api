@@ -81,7 +81,7 @@ jobs:
         working-directory: .ci
 
       - name: Validate BlockNote snapshots
-        run: deno run --allow-env --allow-read .ci/main.ts ./test/snapshots/BlockNote.Writer/*/expected.json
+        run: deno run --allow-env --allow-read .ci/main.ts ./test/snapshots/BlockNote.Writer/*/*/expected.json
 
   # Always build (no push) so every normal pipeline proves the Dockerfile builds.
   docker-build:
