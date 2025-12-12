@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.5.0](https://github.com/docspecio/api/compare/2.4.5...2.5.0) (2025-12-12)
+
+
+### Features
+
+* extract unsupported nested blocks ([90ca7de](https://github.com/docspecio/api/commit/90ca7de6d448dbb7cc13ddf92e88714eeb7de699))
+
+## [2.4.5](https://github.com/docspecio/api/compare/2.4.4...2.4.5) (2025-12-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies ([b5ab978](https://github.com/docspecio/api/commit/b5ab9785deeba4777ef54f013a03ac56a465ca8e))
+
 ## [2.4.4](https://github.com/docspecio/api/compare/2.4.3...v2.4.4) (2025-12-02)
 
 
