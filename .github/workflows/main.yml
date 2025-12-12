@@ -17,12 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        elixir: ['1.17', '1.18', '1.19']
-        otp: ['25', '26', '27', '28']
+        elixir: ['1.18', '1.19']
+        otp: ['26', '27', '28']
         exclude:
-          - { elixir: '1.17', otp: '28' }
           - { elixir: '1.18', otp: '28' }
-          - { elixir: '1.19', otp: '25' }
     steps:
       - uses: actions/checkout@v4
       - uses: erlef/setup-beam@v1
@@ -81,7 +79,7 @@ jobs:
         working-directory: .ci
 
       - name: Validate BlockNote snapshots
-        run: deno run --allow-env --allow-read .ci/main.ts ./test/snapshots/BlockNote.Writer/*/expected.json
+        run: deno run --allow-env --allow-read .ci/main.ts ./test/snapshots/BlockNote.Writer/*/*/expected.json
 
   # Always build (no push) so every normal pipeline proves the Dockerfile builds.
   docker-build:

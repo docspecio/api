@@ -1,0 +1,1170 @@
+[
+  {
+    "content": {
+      "rows": [
+        {
+          "cells": [
+            {
+              "content": [
+                {
+                  "styles": {
+                    "bold": true
+                  },
+                  "text": "1 ",
+                  "type": "text"
+                },
+                {
+                  "styles": {
+                    "bold": true
+                  },
+                  "text": "Peter Ivanyi*, ",
+                  "type": "text"
+                },
+                {
+                  "styles": {
+                    "bold": true
+                  },
+                  "text": "2 ",
+                  "type": "text"
+                },
+                {
+                  "styles": {
+                    "bold": true
+                  },
+                  "text": "Amalia Ivanyi",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": "1 ",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": "Department of Systems and Software Technologies, Faculty of Engineering and Information Technology, University of Pécs, Boszorkány u. 2, H-7624 Pécs, Hungary",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": "2 ",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": "Department of Technical Informatics, Faculty of Engineering and Information Technology, University of Pécs, Rókus u. 2, H-7624 Pécs, Hungary ",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": "Received day Month year; revised day Month year; accepted day Month year",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": "Article type (Original Research Paper)",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": "Open Access type (CC-BY-NC 4.0, CC-BY 4.0_SID_1, CC-BY 4.0)",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": "Copyright: ",
+                  "type": "text"
+                },
+                {
+                  "styles": {
+                    "bold": true
+                  },
+                  "text": "Publisher",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": " or ",
+                  "type": "text"
+                },
+                {
+                  "styles": {
+                    "bold": true
+                  },
+                  "text": "Open Access",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": " (type CC-BY-NC 4.0, CC-BY 4.0_SID_1, CC-BY 4.0)",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": "* Corresponding author, e-mail: peter@mik.pte.hu",
+                  "type": "text"
+                },
+                {
+                  "styles": {},
+                  "text": "© [year] Akadémiai Kiadó, Budapest/The Author(s)",
+                  "type": "text"
+                }
+              ],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "props": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "type": "tableCell"
+            }
+          ]
+        }
+      ],
+      "type": "tableContent"
+    },
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "table"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Instruction for preparation of papers for Pollack Periodica",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {
+      "level": 1,
+      "textAlignment": "left"
+    },
+    "type": "heading"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Manuscripts are accepted on the basis of scientific significance and suitability for publication on the understanding that they have not been published, submitted, or accepted for publication elsewhere. Only original research papers are processed. No review papers or short communications are accepted. The submitted papers are checked for plagiarism by the iThenticate program package. The papers having high coincidence with published materials are rejected. Acceptance depends on the opinion of one or more referees and the decision of the Editorial Board. Papers accepted for publication are subject to editorial revision. A copy of the License Agreement will be sent to the authors of papers accepted for publication. Manuscripts will be published only after receiving the signed copy of the agreement.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "1. Important ethical rule for manuscript submission",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Submission of a manuscript implies: that the work described has not been published before; that it is not under consideration for publication anywhere else; that its publication has been approved by all co-authors, if any, as well as by the responsible authorities – tacitly or explicitly – at the institute where the work has been carried out. The publisher will not be held legally responsible should there be any claims for compensation.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "1.1. Permissions",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Plagiarism, or copying text or results from other sources is unethical behavior and is not tolerated.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Authors wishing to include figures, tables, or text passages that have already been published elsewhere are required to obtain permission from the copyright owner(s) for both the print and online format and to include evidence that the permission has been granted when submitting their papers. Material available under a creative commons license must be republished in accordance with the terms of that CC license. Any material received without the aforementioned evidence or a CC license will be assumed to originate from the authors.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "2. Manuscript submission",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "2.1. Manuscript style",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Authors should submit their manuscripts online, via ",
+        "type": "text"
+      },
+      {
+        "content": [
+          {
+            "styles": {},
+            "text": "https://submit.akademiai.com/pollack",
+            "type": "text"
+          }
+        ],
+        "href": "https://submit.akademiai.com/pollack",
+        "id": "00000000-0000-0000-0000-000000000000",
+        "type": "link"
+      },
+      {
+        "styles": {},
+        "text": ". To submit, first register on the website and then proceed with the upload.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "All further processing, reviewing, commenting on the paper will be evaluated via this website.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Manuscripts should be written in clear, concise, and grammatically correct US English (usage of UK English is not accepted, especially a mixture of the two).The text of the manuscript should be written in a MS Word file using Times New Roman font of 10 pt size. They should be typed single-spaced with wide margins in Microsoft Word, the total length of the paper should not exceed 30 000 characters including spaces, illustrations, figures, tables (should not exceed page numbers 10 in this template format).",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Divide the manuscript into clearly defined sections. Subsections may be used in the Materials and methods and Results sections. Each heading should appear in a separate line. Short communications will not be accepted. ",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "3. Form of manuscript",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "3.1. Title",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "The title (with lower-case letters) should be a brief, clear and concise statement of the contents and it should not exceed 70 characters including spaces. Titles are important since they are often used in information-retrieval systems. Avoid abbreviations and formulae in the title.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "The title is followed by the authors’ full first name and surname and the name of the institution(s) along with the city and the country where the work was done. Corresponding author is marked with an ‘*’. The e-mail address of the corresponding author must also be given in the first page.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "3.2. Abstract",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "The abstract should not exceed 800 character including spaces and should state briefly the purpose of the research, the principal results and major conclusions. An abstract is often presented separately from the article, so it must be able to stand alone. For this reason, references and abbreviations should be avoided. Redundant phrases, generally known information and repetition should be avoided.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Authors should avoid the use of personal pronouns within the abstract and body of the paper (e.g. ‘this paper investigates...’ is correct; ‘I have investigated ...’ is incorrect).",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "3.3. Keywords",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "5–6 keywords should also be supplied. No abbreviations should be used in the abstract and keywords. The keywords will be used for indexing purposes.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "3.4. Introduction",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "This part should briefly state the nature and purpose of the work and cite recent important works by others. ",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "3.5. Materials and methods",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Describe the applied methods, experiments and procedures in sufficient detail to allow other authors to reproduce the result. This part may have subheadings.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "3.6. Results and discussion",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "The theoretical and experimental data should be presented clearly and concisely. Avoid repeating information presented in tables and figures. ",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "3.7. Conclusion ",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Conclusion should be focused on the interpretation of the new scientific results. Do not repeat literary data presented in the Introduction or information given in the Results section. Summarize the new scientific results of the paper. In the conclusion citation of references, figures, and tables should be avoided.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "3.8. Acknowledgements",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Acknowledgements of grants and technical help are allowed and should clearly declare all support of organizations or people.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "3.9. References",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Cite only essential references, however, all references mentioned in the Reference list must be cited in the text, and vice versa. The format of referencing and the Reference List must follow the IEEE Reference Guide: https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "For example: references should be numbered in the order of their citation. When a reference is cited in the text, the number of the reference should appear in square brackets with or without the authors’ name e.g. Eden and Hansson [1], Frankel [2], Gelbart et al. [3] or simply [1], [2].",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "The reference list at the end of the paper should contain:",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "Citation of Internet page",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ": Title of the page, [Online]. Available: web address, ‘(last accessed day Month year)’.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "bulletListItem"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "Citation of patent",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ": Patent number, Title of the patent, names and initials of all owners, year.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "bulletListItem"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "Citation of standard",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ": Standard number, Title of the standard, emitter, year.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "bulletListItem"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {},
+        "text": "C",
+        "type": "text"
+      },
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "itation of conference paper",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ": names and initials of all authors, Title of the paper, Title of the Conference, City, Country, day-day Month year, page numbers and year of publication.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "bulletListItem"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "Citation for book chapters",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ": names and initials of all authors, Title of chapter in lower case letters, in: names and initials of all editors, Title of book, Publisher, place of publication, page numbers and year of publication.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "bulletListItem"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "Citation for books",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ": names and initials of all authors/editors, Title of the book in lower case letters, Publisher (place of publication), year of publication.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "bulletListItem"
+  },
+  {
+    "children": [],
+    "content": [
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "Citation for journals:",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": " names and initials of all authors, Title of the article in lower case letters, Journal title, volume, number, page numbers and year.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "bulletListItem"
+  },
+  {
+    "content": [
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "Examples:",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "E. Skoplaki J. A. Palyvos, “Operating temperature of photovoltaic modules: A survey of pertinent correlations,” ",
+        "type": "text"
+      },
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "Renewable Energy",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ", vol. 34, no. 1, pp. 23–29, 2009.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "O. Dupré, R. Vaillon, and M. A. Green, ",
+        "type": "text"
+      },
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "Thermal Behavior of Photovoltaic Devices",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ". (Location]: Springer, 2017.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "J. A. Menéndez-Díaz, I. Martín-Gullón, “Types of carbon adsorbents and their production”, in: ",
+        "type": "text"
+      },
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "Activated Carbon Surfaces in Environmental Remediation ",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": "(Ser. Interface Science and Technology, vol. 7), T. J. Bandosz, Ed, . (Location]: Elsevier, 2006, pp. 1‒47.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "B. Plesz, J. Mizsei, “Influence of the photoactive layer thickness on the device parameters and their temperature dependence in thin crystalline silicon photovoltaic devices,” in ",
+        "type": "text"
+      },
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "22nd International Workshop on Thermal Investigations of ICs and Systems",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ", Budapest, Hungary, 21-23 September 2016, pp. 311‒314.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "EN 1993-1-5, Eurocode 3",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ", Design of steel structures, Part 1-5: Plated structural elements, CEN, Bruxelles, 2006.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {
+          "italic": true
+        },
+        "text": "Pesticide ingredients",
+        "type": "text"
+      },
+      {
+        "styles": {},
+        "text": ", National pesticide information center, 2019. [Online]. Available:  http://npic.orst.edu/ ingred (last accessed 1 December 2019).",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "4. Additional guide",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "4.1. Equations",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Equations should be written with the built in equation editor of Microsoft Word and numbered in parenthesis. Equations should be numbered in the order of their appearance and referred in the text as (xx).",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "4.2. Tables",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "They should be inserted in the text and should also be added on separate sheets at the end of the paper and have a concise heading. Tables should be submitted as an editable text not as images. Tables are to be numbered consecutively using Arabic numbers. All tables should be referred in the text, in consecutive order. ",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "4.3. Illustrations",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Photographs should be submitted electronically in TIF, BMP or JPG format in separate files (at least 600 dpi). ",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "4.4. Figures",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "It is important to send figures either in the original file format in which they were prepared (e.g. *.xlsx), or in image formats (BMP, TIFF or JPG; in at least 600 DPI). They should be inserted in the text and should also be added on separate sheets at the end of the paper and have a concise caption. This ensures that the figures are editable by the editorial staff. Statements on magnification are not acceptable. Histograms should be kept simple, be two-dimensional, have no background grid, and tones and colors should be avoided. Please submit images with the maximum size 8 cm width and ensure that all captions on the figures are easy to read. Color figures submitted by the authors will appear in color on the web; however, only black-and white version is printed. ",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "The figures are to be numbered sequentially by Arabic numbers in the order of citation. The list of Figure captions should be provided on a separate sheet at the end of the manuscript file. All figures should be referred in the text.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "4.5. Abbreviations and symbols",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Quantities should be expressed in the metric system or in SI units. Units should be written in Roman, not italic. All abbreviations should be spelled out when first used in the text. Please avoid unusual symbols. Ensure consistency of abbreviations throughout the article.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "4.6. Proofs ",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Corresponding authors will receive an email from ",
+        "type": "text"
+      },
+      {
+        "content": [
+          {
+            "styles": {},
+            "text": "akjournals@tnq.co.in",
+            "type": "text"
+          }
+        ],
+        "href": "mailto:akjournals@tnq.co.in",
+        "id": "00000000-0000-0000-0000-000000000000",
+        "type": "link"
+      },
+      {
+        "styles": {},
+        "text": " with a URL link to their proof in editable HTML format, with PDF view also available to check for formatting. Authors are requested to return the proof corrections within the specified period, indicating the necessary changes. Any queries by the editor should be answered in full",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "5. Review process",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "A paper is published if none of the double blind reviews recommends rejection. The two reviewers are selected from among those suggested by the authors, from the members of the Editorial Board and from the members of the International Scientific Community in the field of the paper. Officially the review process lasts four weeks, however, in cases it may take longer.  ",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "6. Self-archiving, offprints and PDF files",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "The Author is entitled to self-archive the postprint version of their manuscript. The postprint version is the Author’s manuscript or the Author’s manuscript along with the corrections made in the course of the peer review process. The Author’s right to self-archive is irrespective of the format of the postprint (*.doc, *.pdf) version and self-archiving includes the free circulation of this file via e-mail or publication of this postprint on the Author’s webpage or on the Author’s institutional repository with open or restricted access. When self-archiving a paper the Author should clearly declare that the archived file is not the final published version of the paper, they should quote the correct citation and enclose a link to the published paper (https:// doi.org/[DOI of the Article without brackets]). ",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "7. Open Access",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Akadémiai Kiadó provides a possibility to publish Open Access articles in its subscription based journals. It is an option for the author to pay the Article Processing Charge and have the final full text version of their article published as an Open Access one.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Beside new manuscripts, Optional Open Access can work with papers already published. Authors can ask for opening their archive article if they pay the article processing charge.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "The peer review process and the quality requirements are the same in the case of both traditional and Open Access manuscripts. ",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "For the price list of Open Access journals please visit https://akjournals.com/fileasset/kiado/OA_%C3%A1rak/APC_EUR.pdf",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Akadémiai Kiadó offers discounts for Hungarian authors, institutions of low- and middle-income countries and Editorial Board members. Discounts may not be combined. By signing the Open Access License Agreement and paying the APC, the Author retains the ownership and further rights related to the Article while ensuring the wide accessibility of the Article in the written and electronic media controlled by Akadémiai Kiadó.",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {},
+    "type": "paragraph"
+  }
+]

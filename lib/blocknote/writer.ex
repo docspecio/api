@@ -28,10 +28,35 @@ defmodule BlockNote.Writer do
 
     typedstruct enforce: true do
       field :inline_mode?, boolean(), default: false
+      field :strict?, boolean(), default: false
     end
   end
 
-  @type error() :: {:error, term()}
+  defmodule UnsupportedResource do
+    @moduledoc """
+    Exception raised when a resource type is not supported during conversion.
+    """
+
+    defexception [:resource]
+
+    @type t() :: %__MODULE__{
+            resource: term()
+          }
+
+    @impl true
+    def message(%__MODULE__{resource: resource}) do
+      module_name =
+        case resource do
+          %mod{} -> inspect(mod)
+          other -> inspect(other)
+        end
+
+      "Unsupported resource: #{module_name}"
+    end
+  end
+
+  @type error() :: {:error, UnsupportedResource.t()}
+  @type opt() :: {:strict, boolean()}
 
   @uri_color "https://docspec.org/ns/style#color"
   @uri_highlight_color "https://docspec.org/ns/style#highlightColor"
@@ -39,11 +64,13 @@ defmodule BlockNote.Writer do
 
   @max_heading_level 6
 
-  @spec write(document :: NLdoc.Spec.Document.t()) ::
+  @spec write(document :: NLdoc.Spec.Document.t(), opts: [opt()]) ::
           {:ok, [BlockNote.Spec.Document.content()]} | error()
-  def write(document = %NLdoc.Spec.Document{}) do
+  def write(document = %NLdoc.Spec.Document{}, opts \\ []) do
+    ctx = %Context{strict?: Keyword.get(opts, :strict, false)}
+
     with {:ok, {[blocknote_document], _state}} <-
-           write_resource({document, %State{assets: document.assets}, %Context{}}),
+           write_resource({document, %State{assets: document.assets}, %Context{} = ctx}),
          do: {:ok, reverse(blocknote_document.content)}
   end
 
@@ -76,7 +103,7 @@ defmodule BlockNote.Writer do
           context = %Context{inline_mode?: false}}
        ) do
     with {:ok, {contents, state}} <-
-           write_children(
+           write_text_children(
              {resource.children, state, %Context{} = %{context | inline_mode?: true}},
              &write_resource/1
            ) do
@@ -98,9 +125,13 @@ defmodule BlockNote.Writer do
          {resource = %NLdoc.Spec.UnorderedList{}, state = %State{},
           context = %Context{inline_mode?: false}}
        ) do
-    {resource.children, %State{state | parent_list_type: :bullet}, context}
-    |> write_children(&write_resource/1)
-    |> add_extracted_blocks()
+    with {:ok, {children, state}} <-
+           write_children(
+             {resource.children, %State{state | parent_list_type: :bullet}, context},
+             &write_resource/1
+           ) do
+      {:ok, add_extracted_blocks({children, state})}
+    end
   end
 
   @spec write_resource({resource :: NLdoc.Spec.OrderedList.t(), State.t(), Context.t()}) ::
@@ -109,10 +140,15 @@ defmodule BlockNote.Writer do
          {resource = %NLdoc.Spec.OrderedList{}, state = %State{},
           context = %Context{inline_mode?: false}}
        ) do
-    {resource.children,
-     %State{state | parent_list_type: :numbered, parent_list_start: resource.start}, context}
-    |> write_children(&write_resource/1)
-    |> add_extracted_blocks()
+    with {:ok, {children, state}} <-
+           write_children(
+             {resource.children,
+              %State{state | parent_list_type: :numbered, parent_list_start: resource.start},
+              context},
+             &write_resource/1
+           ) do
+      {:ok, add_extracted_blocks({children, state})}
+    end
   end
 
   @spec write_resource({resource :: NLdoc.Spec.ListItem.t(), State.t(), Context.t()}) ::
@@ -197,7 +233,7 @@ defmodule BlockNote.Writer do
           context = %Context{inline_mode?: false}}
        ) do
     with {:ok, {contents, state}} <-
-           write_children(
+           write_text_children(
              {resource.children, state, %Context{} = %{context | inline_mode?: true}},
              &write_resource/1
            ) do
@@ -382,8 +418,44 @@ defmodule BlockNote.Writer do
        ),
        do: write_children({children, state, context}, &write_resource/1)
 
-  # Fallback for unsupported stuff.
-  defp write_resource({_, state, _context}), do: {:ok, {[], state}}
+  # Fallbacks for unsupported stuff.
+  defp write_resource({%NLdoc.Spec.FootnoteReference{}, state = %State{}, _ctx}),
+    do: {:ok, {[], state}}
+
+  defp write_resource(
+         {%NLdoc.Spec.DefinitionList{children: children}, state = %State{}, context = %Context{}}
+       ),
+       do: write_children({children, state, context}, &write_resource/1)
+
+  defp write_resource(
+         {term = %NLdoc.Spec.DefinitionTerm{}, state = %State{}, context = %Context{}}
+       ),
+       do:
+         write_resource(
+           {%NLdoc.Spec.Paragraph{
+              id: term.id,
+              children: term.children,
+              descriptors: term.descriptors
+            }, state, context}
+         )
+
+  defp write_resource(
+         {details = %NLdoc.Spec.DefinitionDetails{}, state = %State{}, context = %Context{}}
+       ),
+       do:
+         write_resource(
+           {%NLdoc.Spec.Paragraph{
+              id: details.id,
+              children: details.children,
+              descriptors: details.descriptors
+            }, state, context}
+         )
+
+  defp write_resource({resource, _state, %Context{strict?: true}}),
+    do: {:error, %UnsupportedResource{resource: resource}}
+
+  defp write_resource({_, state, _context}),
+    do: {:ok, {[], state}}
 
   @spec set_text_alignment(props, [NLdoc.Spec.descriptor()]) :: props
         when props: map()
@@ -527,10 +599,14 @@ defmodule BlockNote.Writer do
     Enum.reduce(
       children,
       {:ok, {[], state}},
-      fn child, {:ok, {contents, state}} ->
-        with {:ok, {content, state}} <- write_fn.({child, state, context}) do
-          {:ok, {content ++ contents, state}}
-        end
+      fn
+        child, {:ok, {contents, state}} ->
+          with {:ok, {content, state}} <- write_fn.({child, state, context}) do
+            {:ok, {content ++ contents, state}}
+          end
+
+        _, {:error, reason} ->
+          {:error, reason}
       end
     )
   end
@@ -574,6 +650,9 @@ defmodule BlockNote.Writer do
                 | extracted_blocks: block_contents ++ state.extracted_blocks
               }}}
           end
+
+        _, {:error, reason} ->
+          {:error, reason}
       end
     )
   end
