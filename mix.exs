@@ -7,7 +7,7 @@ defmodule DocSpec.MixProject do
   def project do
     [
       app: :docspec_api,
-      version: "2.4.4",
+      version: "2.6.0",
       elixir: "~> 1.18",
       version: "2.5.0",
       elixir: "~> 1.18",
