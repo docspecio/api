@@ -10,6 +10,6 @@ defmodule BlockNote.Spec.Table do
   typedstruct enforce: true do
     field :id, String.t()
     field :type, :table, default: :table
-    field :content, content(), default: []
+    field :content, content()
   end
 end

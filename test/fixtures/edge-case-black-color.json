@@ -1,0 +1,28 @@
+{
+  "children": [
+    {
+      "type": "https://spec.nldoc.nl/Resource/Paragraph",
+      "id": "00000000-0000-0000-0000-000000000001",
+      "descriptors": [],
+      "children": [
+        {
+          "type": "https://spec.nldoc.nl/Resource/Text",
+          "id": "00000000-0000-0000-0000-000000000002",
+          "descriptors": [
+            {
+              "type": "https://spec.nldoc.nl/Resource/StringDescriptor",
+              "uri": "https://docspec.org/ns/style#color",
+              "value": "#000000"
+            }
+          ],
+          "text": "Text",
+          "styling": []
+        }
+      ]
+    }
+  ],
+  "descriptors": [],
+  "assets": [],
+  "id": "00000000-0000-0000-0000-000000000000",
+  "type": "https://spec.nldoc.nl/Resource/Document"
+}

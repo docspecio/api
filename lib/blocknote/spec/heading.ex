@@ -12,7 +12,7 @@ defmodule BlockNote.Spec.Heading do
   typedstruct enforce: true do
     field :id, String.t()
     field :type, :heading, default: :heading
-    field :content, content(), default: []
+    field :content, [content()], default: []
     field :props, Props.t()
   end
 end

@@ -13,7 +13,7 @@ defmodule BlockNote.Spec.CodeBlock do
   typedstruct enforce: true do
     field :id, String.t()
     field :type, :codeBlock, default: :codeBlock
-    field :content, content(), default: []
+    field :content, [content()], default: []
     field :props, props(), default: %{}
   end
 end

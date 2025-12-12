@@ -7,11 +7,6 @@
             {
               "content": [
                 {
-                  "styles": {},
-                  "text": "Instruction for preparation of papers for Pollack Periodica",
-                  "type": "text"
-                },
-                {
                   "styles": {
                     "bold": true
                   },
@@ -128,6 +123,21 @@
     },
     "id": "00000000-0000-0000-0000-000000000000",
     "type": "table"
+  },
+  {
+    "content": [
+      {
+        "styles": {},
+        "text": "Instruction for preparation of papers for Pollack Periodica",
+        "type": "text"
+      }
+    ],
+    "id": "00000000-0000-0000-0000-000000000000",
+    "props": {
+      "level": 1,
+      "textAlignment": "left"
+    },
+    "type": "heading"
   },
   {
     "content": [

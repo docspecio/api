@@ -1640,6 +1640,43 @@
         {
           "cells": [
             {
+              "content": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "props": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "type": "tableCell"
+            },
+            {
+              "content": [
+                {
+                  "styles": {},
+                  "text": "To the left is a table inside a table, with some cells merged.",
+                  "type": "text"
+                }
+              ],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "props": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "type": "tableCell"
+            }
+          ]
+        }
+      ],
+      "type": "tableContent"
+    },
+    "id": "00000000-0000-0000-0000-000000000000",
+    "type": "table"
+  },
+  {
+    "content": {
+      "rows": [
+        {
+          "cells": [
+            {
               "content": [
                 {
                   "styles": {},
@@ -1649,16 +1686,6 @@
                 {
                   "styles": {},
                   "text": "Three",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Two",
-                  "type": "text"
-                },
-                {
-                  "styles": {},
-                  "text": "Four",
                   "type": "text"
                 }
               ],
@@ -1673,7 +1700,35 @@
               "content": [
                 {
                   "styles": {},
-                  "text": "To the left is a table inside a table, with some cells merged.",
+                  "text": "Two",
+                  "type": "text"
+                }
+              ],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "props": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "type": "tableCell"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "content": [],
+              "id": "00000000-0000-0000-0000-000000000000",
+              "props": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "type": "tableCell"
+            },
+            {
+              "content": [
+                {
+                  "styles": {},
+                  "text": "Four",
                   "type": "text"
                 }
               ],

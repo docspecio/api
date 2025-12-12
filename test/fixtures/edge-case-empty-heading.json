@@ -1,0 +1,15 @@
+{
+  "children": [
+    {
+      "type": "https://spec.nldoc.nl/Resource/Heading",
+      "id": "00000000-0000-0000-0000-000000000001",
+      "level": 1,
+      "descriptors": [],
+      "children": []
+    }
+  ],
+  "descriptors": [],
+  "assets": [],
+  "id": "00000000-0000-0000-0000-000000000000",
+  "type": "https://spec.nldoc.nl/Resource/Document"
+}
