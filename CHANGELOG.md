@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.1](https://github.com/docspecio/api/compare/2.6.0...2.6.1) (2026-01-08)
+
+
+### Bug Fixes
+
+* run container as non-root user ([bc1be67](https://github.com/docspecio/api/commit/bc1be672c31cd1aeee889ba8a7f825fa1c282297))
+
 ## [2.6.0](https://github.com/docspecio/api/compare/2.5.0...2.6.0) (2025-12-12)
 
 
