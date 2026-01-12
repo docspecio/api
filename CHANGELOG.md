@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.3](https://github.com/docspecio/api/compare/2.6.2...2.6.3) (2026-01-12)
+
+
+### Bug Fixes
+
+* run container as non-root user for Kubernetes compliance ([349b678](https://github.com/docspecio/api/commit/349b678dbc673a38ec4af51b5e9cca6b5139961f))
+
 ## [2.6.2](https://github.com/docspecio/api/compare/2.6.1...2.6.2) (2026-01-12)
 
 
