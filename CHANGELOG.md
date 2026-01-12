@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.2](https://github.com/docspecio/api/compare/2.6.1...2.6.2) (2026-01-12)
+
+
+### Bug Fixes
+
+* remove non-root user configuration that caused Kubernetes issues ([d972dff](https://github.com/docspecio/api/commit/d972dff4007814d9cf5d892fc1bcc9d83aafca5f))
+
 ## [2.6.1](https://github.com/docspecio/api/compare/2.6.0...2.6.1) (2026-01-08)
 
 
