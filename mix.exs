@@ -7,7 +7,7 @@ defmodule DocSpec.API.MixProject do
   def project do
     [
       app: :docspec_api,
-      version: "2.6.3",
+      version: "2.7.0",
       elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
