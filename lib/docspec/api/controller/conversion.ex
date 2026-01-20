@@ -8,7 +8,8 @@ defmodule DocSpec.API.Controller.Conversion do
   require Logger
 
   alias DocSpec.API.Respond
-  alias NLdoc.Conversion.Reader.Docx
+  alias DocSpec.Core.BlockNote.Writer, as: BlockNoteWriter
+  alias DocSpec.Core.DOCX
 
   @docx "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
 
@@ -20,11 +21,11 @@ defmodule DocSpec.API.Controller.Conversion do
 
   def handle(conn = %Plug.Conn{method: "POST"}, _opts) do
     with {:ok, %Plug.Upload{path: path}} <- first_file(conn),
-         docx = %Docx{} <- Docx.open!(path),
-         document <- Docx.convert!(docx),
-         :ok <- Docx.close!(docx),
-         {:ok, blocknote} <- BlockNote.Writer.write(document) do
-      Respond.json(conn, 200, blocknote |> NLdoc.Util.Recase.to_camel())
+         docx <- DOCX.Reader.open!(path),
+         document_spec <- DOCX.Reader.convert!(docx),
+         :ok <- DOCX.Reader.close!(docx),
+         {:ok, blocknote} <- BlockNoteWriter.write(document_spec) do
+      Respond.json(conn, 200, DocSpec.JSON.to_encodable(blocknote))
     else
       {:error, :no_upload} ->
         Respond.error(conn, 400, "No DOCX file uploaded.")
