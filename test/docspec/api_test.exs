@@ -4,41 +4,23 @@ defmodule DocSpec.APITest do
   use Mimic
 
   alias DocSpec.API
-  alias NLdoc.Conversion.Reader.Docx
-  alias NLdoc.Spec.Document
+  alias DocSpec.Core.BlockNote.Writer, as: BlockNoteWriter
+  alias DocSpec.Core.DOCX.Reader, as: DOCXReader
+  alias DocSpec.Spec.DocumentSpecification
 
   import Plug.Test
   import Plug.Conn
 
   doctest API
 
-  @blocknote_document %BlockNote.Spec.Document{
-    id: "abc",
-    content: [
-      %BlockNote.Spec.Paragraph{
-        id: "xyz",
-        content: [
-          %BlockNote.Spec.Text{text: "Example"}
-        ]
-      }
-    ]
-  }
-
-  @docx %Docx{
-    files: %Docx.Files{
-      dir: "/tmp/extracted",
-      files: [],
-      types: %Docx.Files.ContentTypes{}
-    },
-    core_properties: %{},
-    document: %Docx.Files.Document{
-      path: "word/document.xml",
-      root: {"x", [], []},
-      rels: %{}
-    },
-    numberings: %{},
-    styles: %{}
-  }
+  @blocknote_document [
+    %DocSpec.Core.BlockNote.Spec.Paragraph{
+      id: "xyz",
+      content: [
+        %DocSpec.Core.BlockNote.Spec.Text{text: "Example"}
+      ]
+    }
+  ]
 
   @not_found_text """
   To use the Conversion API, upload a file.
@@ -161,18 +143,23 @@ defmodule DocSpec.APITest do
   describe "calling POST /conversion with a docx file" do
     test "responds with 200 and converted document" do
       path = "/tmp/upload.docx"
+      docx_reader = :mock_docx_reader
 
-      Docx
-      |> expect(:open!, fn ^path -> @docx end)
+      document_spec = %DocumentSpecification{
+        document: %DocSpec.Spec.Document{id: "doc-1", children: []}
+      }
 
-      Docx
-      |> expect(:convert!, fn @docx -> %Document{} end)
+      DOCXReader
+      |> expect(:open!, fn ^path -> docx_reader end)
 
-      Docx
-      |> expect(:close!, fn @docx -> :ok end)
+      DOCXReader
+      |> expect(:convert!, fn ^docx_reader -> document_spec end)
 
-      BlockNote.Writer
-      |> expect(:write, fn %Document{} -> {:ok, @blocknote_document} end)
+      DOCXReader
+      |> expect(:close!, fn ^docx_reader -> :ok end)
+
+      BlockNoteWriter
+      |> expect(:write, fn ^document_spec -> {:ok, @blocknote_document} end)
 
       upload = %Plug.Upload{
         path: path,
@@ -189,17 +176,13 @@ defmodule DocSpec.APITest do
 
       assert 200 == status
 
-      assert %{
-               "content" => [
-                 %{
-                   "content" => [%{"styles" => %{}, "text" => "Example", "type" => "text"}],
-                   "id" => "xyz",
-                   "type" => "paragraph",
-                   "props" => %{}
-                 }
-               ],
-               "id" => "abc"
-             } == Jason.decode!(body)
+      assert [
+               %{
+                 "content" => [%{"text" => "Example", "type" => "text"}],
+                 "id" => "xyz",
+                 "type" => "paragraph"
+               }
+             ] == Jason.decode!(body)
 
       assert [
                {"cache-control", "max-age=0, private, must-revalidate"},

@@ -1,4 +1,4 @@
-defmodule DocSpec.MixProject do
+defmodule DocSpec.API.MixProject do
   use Mix.Project
 
   @name "DocSpec API"
@@ -8,8 +8,6 @@ defmodule DocSpec.MixProject do
     [
       app: :docspec_api,
       version: "2.6.3",
-      elixir: "~> 1.18",
-      version: "2.5.0",
       elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -71,25 +69,19 @@ defmodule DocSpec.MixProject do
 
   defp deps do
     [
-      {:nldoc_spec, "~> 3.1"},
-      {:nldoc_util, "~> 1.0"},
-      {:nldoc_conversion_reader_docx, "~> 1.1"},
-
-      # Defining data structures
-      {:typed_struct, "~> 0.3.0"},
+      {:docspec, "~> 1.0"},
 
       # Logging
       {:logger_json, "~> 7.0"},
 
-      # HTTP Server for Plug
-      {:phoenix, "~> 1.7"},
+      # HTTP Server
+      {:plug, "~> 1.16"},
       {:bandit, "~> 1.0"},
 
       # JSON Parsing
       {:jason, "~> 1.4"},
 
       # Testing: coverage, JUnit-style test reports for CI, mocking and snapshot testing.
-      {:nldoc_test, "~> 3.0", only: :test},
       {:excoveralls, "~> 0.18", only: :test},
       {:mimic, "~> 2.1", only: :test},
 
