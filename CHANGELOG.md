@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/docspecio/api/compare/2.6.3...2.7.0) (2026-01-20)
+
+
+### Features
+
+* migrate from nldoc packages to docspec ([3c8605c](https://github.com/docspecio/api/commit/3c8605cc3a435e389cf3e4ab4a533f0038a7c80f))
+
 ## [2.6.3](https://github.com/docspecio/api/compare/2.6.2...2.6.3) (2026-01-12)
 
 
