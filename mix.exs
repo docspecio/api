@@ -69,7 +69,7 @@ defmodule DocSpec.API.MixProject do
 
   defp deps do
     [
-      {:docspec, "~> 1.0"},
+      {:docspec, "1.0.0"},
 
       # Logging
       {:logger_json, "~> 7.0"},
