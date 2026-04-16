@@ -3,19 +3,10 @@ defmodule DocSpec.API do
   Plug for the API.
   """
 
-  @not_found_text """
-  To use the Conversion API, upload a file.
-  You can do this, for example by using the following command (replace HOSTNAME by the actual hostname):
-
-      curl -X POST https://HOSTNAME/conversion -F "file=@<path on your filesystem to your docx>"
-
-  The source code for this API can be found at https://github.com/docspecio/api.
-  """
-
   require Logger
 
   alias DocSpec.API.Controller
-  alias DocSpec.API.Respond
+  alias DocSpec.API.Plug.ProblemDetails
 
   use Plug.Router
   use DocSpec.API.Plug.ErrorHandler
@@ -31,14 +22,16 @@ defmodule DocSpec.API do
   match "/health", to: Controller.Health
 
   match _ do
-    conn
-    |> put_resp_content_type("text/plain")
-    |> Respond.respond(404, @not_found_text)
+    ProblemDetails.send(conn, 404, "Not Found", "The requested resource does not exist.")
   end
 
   @impl DocSpec.API.Plug.ErrorHandler
-  def handle_errors(conn, _, %Plug.Parsers.UnsupportedMediaTypeError{media_type: media_type}, _) do
-    conn |> Respond.error(415, "Unsupported Media Type: " <> media_type)
+  def handle_errors(conn, _, %Plug.Parsers.RequestTooLargeError{}, _) do
+    ProblemDetails.payload_too_large(conn, "Request body exceeds maximum size")
+  end
+
+  def handle_errors(conn, _, error = %Plug.Parsers.UnsupportedMediaTypeError{}, _) do
+    ProblemDetails.unsupported_media_type(conn, unsupported_media_type_detail(error.media_type))
   end
 
   def handle_errors(conn, _kind, reason, stack) do
@@ -47,6 +40,21 @@ defmodule DocSpec.API do
       crash_reason: {reason, stack}
     )
 
-    conn |> Respond.error(500, "Internal Server Error")
+    ProblemDetails.internal_server_error(
+      conn,
+      "An unexpected error occurred during conversion"
+    )
+  end
+
+  defp unsupported_media_type_detail("multipart/" <> _) do
+    "Multipart uploads are not supported. Send raw binary body."
+  end
+
+  defp unsupported_media_type_detail(media_type) when is_binary(media_type) do
+    "Unsupported media type: #{media_type}."
+  end
+
+  defp unsupported_media_type_detail(_) do
+    "Unsupported media type."
   end
 end

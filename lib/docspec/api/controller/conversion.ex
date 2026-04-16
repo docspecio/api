@@ -5,59 +5,139 @@ defmodule DocSpec.API.Controller.Conversion do
 
   use Plug.Builder
 
+  import Plug.Conn
+
   require Logger
 
+  alias DocSpec.API.Plug.AcceptValidator
+  alias DocSpec.API.Plug.ProblemDetails
+  alias DocSpec.API.Plug.RawUpload
   alias DocSpec.API.Respond
   alias DocSpec.Core.BlockNote.Writer, as: BlockNoteWriter
   alias DocSpec.Core.DOCX
 
   @docx "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  @blocknote "application/vnd.docspec.blocknote+json"
 
-  plug Plug.Parsers,
-    parsers: [{:multipart, validate_utf8: false, length: 256_000_000}],
-    pass: ["*/*"]
-
+  plug AcceptValidator, accept: @blocknote
+  plug :default_content_type
+  plug :parse_body
   plug :handle
 
-  def handle(conn = %Plug.Conn{method: "POST"}, _opts) do
-    with {:ok, %Plug.Upload{path: path}} <- first_file(conn),
-         docx <- DOCX.Reader.open!(path),
-         document_spec <- DOCX.Reader.convert!(docx),
-         :ok <- DOCX.Reader.close!(docx),
-         {:ok, blocknote} <- BlockNoteWriter.write(document_spec) do
-      Respond.json(conn, 200, DocSpec.JSON.to_encodable(blocknote))
+  def default_content_type(conn = %Plug.Conn{method: "POST"}, _opts) do
+    case get_req_header(conn, "content-type") do
+      [] -> put_req_header(conn, "content-type", @docx)
+      _ -> conn
+    end
+  end
+
+  def default_content_type(conn, _opts), do: conn
+
+  def parse_body(conn = %Plug.Conn{method: "POST"}, _opts) do
+    if @docx == content_type(conn) do
+      max_size = Application.get_env(:docspec_api, :max_upload_size, 256_000_000)
+
+      opts =
+        Plug.Parsers.init(
+          parsers: [RawUpload],
+          length: max_size,
+          read_length: 1_000_000,
+          pass: ["*/*"]
+        )
+
+      Plug.Parsers.call(conn, opts)
     else
-      {:error, :no_upload} ->
-        Respond.error(conn, 400, "No DOCX file uploaded.")
+      conn
+    end
+  end
+
+  def parse_body(conn, _opts), do: conn
+
+  def handle(conn = %Plug.Conn{method: "POST"}, _opts) do
+    case {content_type(conn), conn.params} do
+      {"multipart/" <> _, _params} ->
+        ProblemDetails.unsupported_media_type(
+          conn,
+          "Multipart uploads are not supported. Send raw binary body."
+        )
+
+      {@docx, %{"file" => %Plug.Upload{path: path}}} ->
+        convert(conn, path)
+
+      {@docx, _params} ->
+        ProblemDetails.bad_request(conn, "Request body is empty")
+
+      _ ->
+        ProblemDetails.unsupported_media_type(
+          conn,
+          "Content-Type must be #{@docx}"
+        )
     end
   end
 
   def handle(conn = %Plug.Conn{method: "OPTIONS"}, _opts),
     do: Respond.options(conn, [:post])
 
-  def handle(conn, _opts),
-    do: Respond.method_not_allowed(conn, [:post])
+  def handle(conn, _opts) do
+    conn
+    |> Plug.Conn.put_resp_header("access-control-allow-methods", "POST")
+    |> Plug.Conn.put_resp_header("allow", "POST")
+    |> ProblemDetails.send(405, "Method Not Allowed", "Only POST is supported on this endpoint.")
+  end
 
-  @spec first_file(conn :: Plug.Conn.t()) :: {:ok, Plug.Upload.t()} | {:error, :no_upload}
-  defp first_file(conn) do
-    upload =
-      conn.params
-      |> Map.values()
-      |> Enum.find(
-        nil,
-        fn
-          %Plug.Upload{content_type: @docx} ->
-            true
+  defp convert(conn, path) do
+    case File.stat(path) do
+      {:ok, %{size: 0}} ->
+        ProblemDetails.bad_request(conn, "Request body is empty")
 
-          _ ->
-            false
+      {:ok, _stat} ->
+        with {:ok, document_spec} <- read_document_spec(path),
+             {:ok, blocknote} <- BlockNoteWriter.write(document_spec) do
+          conn
+          |> Plug.Conn.put_resp_content_type(@blocknote)
+          |> Respond.respond(200, Jason.encode!(DocSpec.JSON.to_encodable(blocknote)))
+        else
+          {:error, :invalid_docx} ->
+            ProblemDetails.unprocessable_entity(
+              conn,
+              "Document could not be parsed as valid DOCX"
+            )
         end
-      )
 
-    if is_nil(upload) do
-      {:error, :no_upload}
-    else
-      {:ok, upload}
+      {:error, _reason} ->
+        ProblemDetails.bad_request(conn, "Request body is empty")
+    end
+  after
+    File.rm(path)
+  end
+
+  defp read_document_spec(path) do
+    docx = DOCX.Reader.open!(path)
+
+    try do
+      document_spec = DOCX.Reader.convert!(docx)
+      {:ok, document_spec}
+    after
+      DOCX.Reader.close!(docx)
+    end
+  rescue
+    _error in [RuntimeError, ArgumentError, File.Error, Saxy.ParseError] ->
+      {:error, :invalid_docx}
+  catch
+    :throw, _reason ->
+      {:error, :invalid_docx}
+  end
+
+  defp content_type(conn) do
+    case Plug.Conn.get_req_header(conn, "content-type") do
+      [value | _rest] ->
+        case Plug.Conn.Utils.content_type(value) do
+          {:ok, type, subtype, _params} -> "#{type}/#{subtype}"
+          :error -> value
+        end
+
+      [] ->
+        nil
     end
   end
 end

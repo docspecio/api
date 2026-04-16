@@ -16,3 +16,5 @@ config :logger, :console,
     :"service.environment",
     :"trace.id"
   ]
+
+import_config "#{config_env()}.exs"

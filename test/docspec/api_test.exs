@@ -4,32 +4,11 @@ defmodule DocSpec.APITest do
   use Mimic
 
   alias DocSpec.API
-  alias DocSpec.Core.BlockNote.Writer, as: BlockNoteWriter
-  alias DocSpec.Core.DOCX.Reader, as: DOCXReader
-  alias DocSpec.Spec.DocumentSpecification
 
   import Plug.Test
   import Plug.Conn
 
   doctest API
-
-  @blocknote_document [
-    %DocSpec.Core.BlockNote.Spec.Paragraph{
-      id: "xyz",
-      content: [
-        %DocSpec.Core.BlockNote.Spec.Text{text: "Example"}
-      ]
-    }
-  ]
-
-  @not_found_text """
-  To use the Conversion API, upload a file.
-  You can do this, for example by using the following command (replace HOSTNAME by the actual hostname):
-
-      curl -X POST https://HOSTNAME/conversion -F "file=@<path on your filesystem to your docx>"
-
-  The source code for this API can be found at https://github.com/docspecio/api.
-  """
 
   describe "using a method that is not supported" do
     test "will respond with 405" do
@@ -40,16 +19,41 @@ defmodule DocSpec.APITest do
 
       assert 405 == status
 
-      assert %{"code" => 405, "message" => "Method Not Allowed"} == Jason.decode!(body)
+      assert %{
+               "type" => "about:blank",
+               "title" => "Method Not Allowed",
+               "status" => 405,
+               "detail" => "Only POST is supported on this endpoint."
+             } ==
+               Jason.decode!(body)
 
       assert [
                {"cache-control", "max-age=0, private, must-revalidate"},
                {"access-control-allow-origin", "*"},
                {"access-control-allow-methods", "POST"},
                {"allow", "POST"},
-               {"content-type", "application/json; charset=utf-8"},
+               {"content-type", "application/problem+json; charset=utf-8"},
                {"access-control-expose-headers", "x-trace-id, x-request-id"}
              ] == headers
+    end
+  end
+
+  describe "requesting the health endpoint" do
+    test "returns 200 OK" do
+      assert {status, headers, body} =
+               conn(:get, "/health")
+               |> API.call(API.init([]))
+               |> sent_resp()
+
+      assert status == 200
+
+      assert headers == [
+               {"cache-control", "max-age=0, private, must-revalidate"},
+               {"access-control-allow-origin", "*"},
+               {"access-control-expose-headers", "x-trace-id, x-request-id"}
+             ]
+
+      assert body == "Healthy."
     end
   end
 
@@ -62,12 +66,18 @@ defmodule DocSpec.APITest do
 
       assert 404 == status
 
-      assert @not_found_text == body
+      assert %{
+               "type" => "about:blank",
+               "title" => "Not Found",
+               "status" => 404,
+               "detail" => "The requested resource does not exist."
+             } ==
+               Jason.decode!(body)
 
       assert [
                {"cache-control", "max-age=0, private, must-revalidate"},
                {"access-control-allow-origin", "*"},
-               {"content-type", "text/plain; charset=utf-8"},
+               {"content-type", "application/problem+json; charset=utf-8"},
                {"access-control-expose-headers", "x-trace-id, x-request-id"}
              ] == headers
     end
@@ -94,139 +104,60 @@ defmodule DocSpec.APITest do
     end
   end
 
-  describe "calling POST /conversion but with no file" do
-    test "responds with 400" do
-      assert {status, headers, body} =
-               conn(:post, "/conversion")
-               |> API.call(API.init([]))
-               |> sent_resp()
-
-      assert 400 == status
-
-      assert %{"code" => 400, "message" => "No DOCX file uploaded."} == Jason.decode!(body)
-
-      assert [
-               {"cache-control", "max-age=0, private, must-revalidate"},
-               {"access-control-allow-origin", "*"},
-               {"content-type", "application/json; charset=utf-8"},
-               {"access-control-expose-headers", "x-trace-id, x-request-id"}
-             ] == headers
-    end
-  end
-
-  describe "calling POST /conversion with a file but the wrong content type" do
-    test "responds with 400" do
-      upload = %Plug.Upload{
-        path: "some/path",
-        filename: "calibre-demo.json",
-        content_type: "application/json"
-      }
-
-      assert {status, headers, body} =
-               conn(:post, "/conversion", %{"file" => upload})
-               |> API.call(API.init([]))
-               |> sent_resp()
-
-      assert 400 == status
-
-      assert %{"code" => 400, "message" => "No DOCX file uploaded."} == Jason.decode!(body)
-
-      assert [
-               {"cache-control", "max-age=0, private, must-revalidate"},
-               {"access-control-allow-origin", "*"},
-               {"content-type", "application/json; charset=utf-8"},
-               {"access-control-expose-headers", "x-trace-id, x-request-id"}
-             ] == headers
-    end
-  end
-
-  describe "calling POST /conversion with a docx file" do
-    test "responds with 200 and converted document" do
-      path = "/tmp/upload.docx"
-      docx_reader = :mock_docx_reader
-
-      document_spec = %DocumentSpecification{
-        document: %DocSpec.Spec.Document{id: "doc-1", children: []}
-      }
-
-      DOCXReader
-      |> expect(:open!, fn ^path -> docx_reader end)
-
-      DOCXReader
-      |> expect(:convert!, fn ^docx_reader -> document_spec end)
-
-      DOCXReader
-      |> expect(:close!, fn ^docx_reader -> :ok end)
-
-      BlockNoteWriter
-      |> expect(:write, fn ^document_spec -> {:ok, @blocknote_document} end)
-
-      upload = %Plug.Upload{
-        path: path,
-        filename: "calibre-demo.docx",
-        content_type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-      }
-
-      assert {status, headers, body} =
-               conn(:post, "/conversion", %{"file" => upload})
-               |> put_req_header("x-request-id", "REQUEST_ID")
-               |> put_req_header("x-trace-id", "TRACE_ID")
-               |> API.call(API.init([]))
-               |> sent_resp()
-
-      assert 200 == status
-
-      assert [
-               %{
-                 "content" => [%{"text" => "Example", "type" => "text"}],
-                 "id" => "xyz",
-                 "type" => "paragraph"
-               }
-             ] == Jason.decode!(body)
-
-      assert [
-               {"cache-control", "max-age=0, private, must-revalidate"},
-               {"x-request-id", "REQUEST_ID"},
-               {"x-trace-id", "TRACE_ID"},
-               {"access-control-allow-origin", "*"},
-               {"content-type", "application/json; charset=utf-8"},
-               {"access-control-expose-headers", "x-trace-id, x-request-id"}
-             ] == headers
-    end
-  end
-
   describe "error handling" do
-    test "handles UnsupportedMediaTypeError with 415" do
+    test "handles UnsupportedMediaTypeError with RFC 7807 415" do
       conn =
         conn(:post, "/conversion")
         |> put_req_header("content-type", "text/plain")
 
       error = %Plug.Parsers.UnsupportedMediaTypeError{media_type: "text/plain"}
 
-      result_conn =
+      {status, headers, body} =
         conn
         |> API.handle_errors(%{}, error, [])
+        |> sent_resp()
 
-      assert {status, _headers, body} = sent_resp(result_conn)
-      assert 415 == status
+      assert status == 415
 
-      assert %{"code" => 415, "message" => "Unsupported Media Type: text/plain"} ==
-               Jason.decode!(body)
+      assert headers == [
+               {"cache-control", "max-age=0, private, must-revalidate"},
+               {"content-type", "application/problem+json; charset=utf-8"},
+               {"access-control-expose-headers", "x-trace-id, x-request-id"}
+             ]
+
+      assert Jason.decode!(body) == %{
+               "type" => "about:blank",
+               "title" => "Unsupported Media Type",
+               "status" => 415,
+               "detail" => "Unsupported media type: text/plain."
+             }
     end
 
-    test "handles unexpected errors with 500" do
+    test "handles unexpected errors with RFC 7807 500" do
       conn = conn(:get, "/conversion")
 
       error = %RuntimeError{message: "Something went wrong"}
       stack = [{SomeModule, :some_function, 1, [file: ~c"lib/some_file.ex", line: 42]}]
 
-      result_conn =
+      {status, headers, body} =
         conn
         |> API.handle_errors(:error, error, stack)
+        |> sent_resp()
 
-      assert {status, _headers, body} = sent_resp(result_conn)
-      assert 500 == status
-      assert %{"code" => 500, "message" => "Internal Server Error"} == Jason.decode!(body)
+      assert status == 500
+
+      assert headers == [
+               {"cache-control", "max-age=0, private, must-revalidate"},
+               {"content-type", "application/problem+json; charset=utf-8"},
+               {"access-control-expose-headers", "x-trace-id, x-request-id"}
+             ]
+
+      assert Jason.decode!(body) == %{
+               "type" => "about:blank",
+               "title" => "Internal Server Error",
+               "status" => 500,
+               "detail" => "An unexpected error occurred during conversion"
+             }
     end
   end
 end
