@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/docspecio/api/compare/2.7.0...3.0.0) (2026-04-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Multipart POST /conversion requests now return 415 Unsupported Media Type. Clients must send a raw binary body instead.
+
+### Features
+
+* replace multipart upload with raw binary upload + RFC 7807 errors ([c09d794](https://github.com/docspecio/api/commit/c09d7943945be4e4326d5f3f27d74c84f5d3ab04))
+
 ## [2.7.0](https://github.com/docspecio/api/compare/2.6.3...2.7.0) (2026-01-20)
 
 
