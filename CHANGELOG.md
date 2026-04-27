@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/docspecio/api/compare/3.0.0...3.0.1) (2026-04-27)
+
+
+### Bug Fixes
+
+* support multiple representations of accept header values ([8bb6a33](https://github.com/docspecio/api/commit/8bb6a3352755c617aee998cdc7fd87cd07df03b7))
+
 ## [3.0.0](https://github.com/docspecio/api/compare/2.7.0...3.0.0) (2026-04-16)
 
 
