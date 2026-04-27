@@ -136,7 +136,8 @@ defmodule DocSpec.API.Controller.ConversionTest do
                "type" => "about:blank",
                "title" => "Not Acceptable",
                "status" => 406,
-               "detail" => "Accept header must include #{@blocknote_accept}"
+               "detail" =>
+                 "Accept header must include application/vnd.docspec.blocknote+json or application/vnd.blocknote+json"
              }
     end
 
@@ -458,13 +459,12 @@ defmodule DocSpec.API.Controller.ConversionTest do
     end
   end
 
-  defp raw_request(body) do
-    conn(:post, "/conversion", body)
-  end
+  defp raw_request(body),
+    do: conn(:post, "/conversion", body)
 
-  defp request(conn) do
-    conn
-    |> API.call(API.init([]))
-    |> sent_resp()
-  end
+  defp request(conn),
+    do:
+      conn
+      |> API.call(API.init([]))
+      |> sent_resp()
 end

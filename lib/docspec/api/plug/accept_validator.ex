@@ -38,7 +38,9 @@ defmodule DocSpec.API.Plug.AcceptValidator do
           conn
         else
           conn
-          |> ProblemDetails.not_acceptable("Accept header must include #{required}")
+          |> ProblemDetails.not_acceptable(
+            "Accept header must include #{format_accept(required)}"
+          )
           |> halt()
         end
     end
@@ -46,10 +48,16 @@ defmodule DocSpec.API.Plug.AcceptValidator do
 
   def call(conn, _opts), do: conn
 
-  defp accepts?(accept, required) do
-    required = String.downcase(required)
+  defp format_accept(types) when is_list(types), do: Enum.join(types, " or ")
+  defp format_accept(type), do: type
 
-    accept
+  defp accepts?(actual, acceptables) when is_list(acceptables),
+    do: Enum.any?(acceptables, &accepts?(actual, &1))
+
+  defp accepts?(actual, acceptable) do
+    acceptable = String.downcase(acceptable)
+
+    actual
     |> String.split(",")
     |> Enum.any?(fn part ->
       media_type =
@@ -59,7 +67,7 @@ defmodule DocSpec.API.Plug.AcceptValidator do
         |> String.trim()
         |> String.downcase()
 
-      media_type == required or media_type == "*/*"
+      media_type == acceptable or media_type == "*/*"
     end)
   end
 end

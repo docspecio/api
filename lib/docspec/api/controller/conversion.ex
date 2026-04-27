@@ -17,7 +17,7 @@ defmodule DocSpec.API.Controller.Conversion do
   alias DocSpec.Core.DOCX
 
   @docx "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-  @blocknote "application/vnd.docspec.blocknote+json"
+  @blocknote ["application/vnd.docspec.blocknote+json", "application/vnd.blocknote+json"]
 
   plug AcceptValidator, accept: @blocknote
   plug :default_content_type
@@ -94,7 +94,7 @@ defmodule DocSpec.API.Controller.Conversion do
         with {:ok, document_spec} <- read_document_spec(path),
              {:ok, blocknote} <- BlockNoteWriter.write(document_spec) do
           conn
-          |> Plug.Conn.put_resp_content_type(@blocknote)
+          |> Plug.Conn.put_resp_content_type(accepted_content_type(conn))
           |> Respond.respond(200, Jason.encode!(DocSpec.JSON.to_encodable(blocknote)))
         else
           {:error, :invalid_docx} ->
@@ -138,6 +138,13 @@ defmodule DocSpec.API.Controller.Conversion do
 
       [] ->
         nil
+    end
+  end
+
+  defp accepted_content_type(conn) do
+    case get_req_header(conn, "accept") do
+      [accept | _] when accept != "*/*" -> accept
+      _ -> List.first(@blocknote)
     end
   end
 end
