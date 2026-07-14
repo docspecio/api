@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> Project is being actively ported to Rust and is moving to https://github.com/docspec/docspec.
+> Project is actively being ported to Rust and moved to https://github.com/docspec/docspec.
 
 ---
 
