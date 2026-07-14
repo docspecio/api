@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> Project is being actively ported to Rust and is moving to https://github.com/docspec/docspec.
+
+---
+
 # DocSpec Import API
 
 This repository contains an Elixir application that exposes a small HTTP API for converting DOCX documents into [BlockNote](https://blocknotejs.org/) JSON.  It also provides a companion Node based service that converts BlockNote blocks into Y.js updates.
